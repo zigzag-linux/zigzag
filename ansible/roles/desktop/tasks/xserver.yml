@@ -1,0 +1,22 @@
+---
+- name: install xorg packages
+  zypper: name={{item}} state=present
+  with_items:
+  - x11-tools
+  - xrandr
+  - xdpyinfo
+  - xkeyboard-config
+  - xorg-x11
+  - xorg-x11-server
+  - xclip
+  - xdg-user-dirs
+  - xdg-utils
+  - Mesa-demo-x
+
+- name: install drivers
+  zypper: name={{item}} state=present
+  with_items:
+  - xorg-x11-driver-video
+  - xf86-video-amdgpu
+  - xf86-video-nouveau
+  - xf86-input-libinput

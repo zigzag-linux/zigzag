@@ -1,0 +1,12 @@
+---
+- hosts: all
+  roles:
+  - base
+  - sudo
+  - rngd
+  - network
+  - apparmor
+  - firewalld
+  - ioscheduler
+  - polkit
+  - { role: plasma, when: target == 'graphical' }

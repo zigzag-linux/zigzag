@@ -1,0 +1,13 @@
+---
+- name: install plasma packages
+  zypper: name={{item}} state=present
+  with_items:
+  - sddm
+  - plasma5-session
+
+- name: install desktop applications
+  zypper: name={{item}} state=present
+  with_items:
+  - chromium
+  - dolphin
+  - konsole

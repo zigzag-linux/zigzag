@@ -1,0 +1,5 @@
+---
+- include: repos.yml
+- include: zypp.yml
+- include: runlevel.yml
+- include: packages.yml

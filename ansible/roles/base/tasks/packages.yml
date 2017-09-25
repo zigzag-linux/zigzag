@@ -1,0 +1,10 @@
+---
+- name: install base packages
+  zypper: name={{item}} state=present
+  with_items:
+  - finger
+  - timezone
+  - man
+  - psmisc
+  - lsof
+  - curl

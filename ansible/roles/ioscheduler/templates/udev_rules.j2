@@ -1,0 +1,4 @@
+# Set deadline scheduler for non-rotating disks
+ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="{{ ssd_scheduler }}"
+# Set deadline scheduler for rotating disks
+ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="1", ATTR{queue/scheduler}="{{ hdd_scheduler }}"

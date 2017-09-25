@@ -1,0 +1,8 @@
+---
+# Default runlevel target
+# valid options: text graphical
+target: 'graphical'
+
+# openSUSE base version for the system
+# valid options: tumbleweed
+base_version: 'tumbleweed'

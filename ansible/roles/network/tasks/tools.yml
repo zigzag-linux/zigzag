@@ -1,0 +1,6 @@
+---
+- name: install basic networking tools
+  zypper: name={{item}} state=present
+  with_items:
+  - iproute2
+  - iputils

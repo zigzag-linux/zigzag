@@ -1,0 +1,15 @@
+---
+- name: install sudo
+  zypper: name=sudo state=present
+
+- name: copy sudoers config
+  copy:
+    src: files/sudoers
+    dest: /etc/sudoers
+    owner: root
+    group: root
+    validate: 'visudo -c -f %s'
+    mode: 0440
+
+- name: lock root user account
+  command: passwd -l root

@@ -1,0 +1,14 @@
+polkit.addRule(function(action, subject) {
+    var permitted_actions = [
+        "org.freedesktop.udisks2.filesystem-mount",
+        "org.freedesktop.udisks2.encrypted-unlock",
+        "org.freedesktop.udisks2.eject-media",
+        "org.freedesktop.udisks2.power-off-drive",
+        "org.freedesktop.udisks2.filesystem-mount-system",
+        "org.freedesktop.udisks2.encrypted-unlock-system"
+    ];
+
+    if (subject.isInGroup("wheel") && ~permitted_actions.indexOf(action.id)) {
+	return polkit.Result.YES
+    }
+});

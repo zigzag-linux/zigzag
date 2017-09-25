@@ -1,0 +1,17 @@
+---
+- include: packages.yml
+
+- name: set 'sddm' as default display manager
+  lineinfile:
+    path: /etc/sysconfig/displaymanager
+    regexp: '^DISPLAYMANAGER='
+    line: 'DISPLAYMANAGER="sddm"'
+
+- name: create directory for default cursor
+  file:
+    path: /usr/share/icons/default
+    recurse: yes
+    state: directory
+
+- name: set default cursor
+  template: src=cursor.j2 dest=/usr/share/icons/default/index.theme

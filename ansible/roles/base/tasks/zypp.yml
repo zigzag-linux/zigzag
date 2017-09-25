@@ -1,0 +1,14 @@
+---
+- name: set 'solver.onlyRequires = true'
+  lineinfile:
+    path: /etc/zypp/zypp.conf
+    regexp: '^solver.onlyRequires'
+    insertafter: '^# solver.onlyRequires'
+    line: 'solver.onlyRequires = true'
+
+- name: set 'solver.cleandepsOnRemove = true'
+  lineinfile:
+    path: /etc/zypp/zypp.conf
+    regexp: '^solver.cleandepsOnRemove'
+    insertafter: '^# solver.cleandepsOnRemove'
+    line: 'solver.cleandepsOnRemove = true'
