@@ -6,10 +6,16 @@ declare extra_vars=''
 
 write_config()
 {
-  ansible-playbook \
-    -i "localhost," \
-    -c local $ZIGZAG_CONFIG_ROOT \
-    --extra-vars $extra_vars
+  local params=(
+    -i "localhost,"
+    -c local $ZIGZAG_CONFIG_ROOT
+  )
+
+  if [ -n "$extra_vars" ]; then
+    params+=("--extra-vars $extra_vars")
+  fi
+
+  ansible-playbook "${params[@]}"
 }
 
 show_warning()
