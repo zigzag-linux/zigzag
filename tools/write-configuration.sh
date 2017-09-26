@@ -6,7 +6,7 @@ write_config()
 {
   shift # first argument is force flag
 
-  echo ansible-playbook \
+  ansible-playbook \
     -i "localhost," \
     -c local \
     "$@" \
