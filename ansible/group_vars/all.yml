@@ -1,8 +1,13 @@
 ---
 # Default runlevel target
-# valid options: text graphical
+# valid options: text|graphical
 target: 'graphical'
 
 # openSUSE base version for the system
 # valid options: tumbleweed
 base_version: 'tumbleweed'
+
+# perform additional tasks in order to setup
+# live cd images
+# valid options: true|false
+live_image: false

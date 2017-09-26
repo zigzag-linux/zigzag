@@ -1,0 +1,9 @@
+---
+- name: add guest user
+  user: name=guest groups=wheel uid=2000
+
+- name: enable autologin for guest user
+  lineinfile:
+    path: /etc/sysconfig/displaymanager
+    regexp: '^DISPLAYMANAGER_AUTOLOGIN='
+    line: 'DISPLAYMANAGER_AUTOLOGIN="guest"'
