@@ -33,7 +33,7 @@ suseConfig
 #======================================
 # Configure Zigzag
 #--------------------------------------
-zigzag-write-configuration -f
+zigzag-write-configuration -f '--extra-vars live_image=true'
 
 #======================================
 # Remove yast if not in use
