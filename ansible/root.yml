@@ -12,4 +12,4 @@
   - { role: plasma, when: target == 'graphical' }
 
   # live-image tasks should be performed at the end
-  - { role: live-image, when: live_image == true }
+  - { role: live-image, when: live_image | default(false) }
