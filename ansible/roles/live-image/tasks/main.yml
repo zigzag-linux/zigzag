@@ -7,3 +7,6 @@
     path: /etc/sysconfig/displaymanager
     regexp: '^DISPLAYMANAGER_AUTOLOGIN='
     line: 'DISPLAYMANAGER_AUTOLOGIN="guest"'
+
+- name: install calamares package
+  zypper: name=calamares state=present
