@@ -2,6 +2,9 @@
 - name: install sudo
   zypper: name=sudo state=present
 
+- name: ensure that wheel group exists
+  group: name=wheel state=present
+
 - name: copy sudoers config
   copy:
     src: files/sudoers
