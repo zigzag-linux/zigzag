@@ -9,7 +9,7 @@
 - name: install basic desktop components
   zypper: name={{item}} state=present
   with_items:
-  - kaskpass5
+  - ksshaskpass5
   - pinentry-qt5
   - kde-gtk-config5-gtk2
   - kde-gtk-config5-gtk3
