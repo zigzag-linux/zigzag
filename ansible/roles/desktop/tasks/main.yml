@@ -1,2 +1,16 @@
 ---
 - include: xserver.yml
+
+- name: install flatpak
+  zypper: name=flatpak state=present
+
+- name: install audio stack
+  zypper: name={{item}} state=present
+  with_items:
+  - alsa-firmware
+  - alsa-utils
+  - alsa-plugins-pulse
+  - pulseaudio
+  - pulseaudio-module-bluetooth
+  - pulseaudio-module-zeroconf
+  - pulseaudio-module-x11

@@ -4,6 +4,18 @@
   with_items:
   - sddm
   - plasma5-session
+  - plasma5-pa
+
+- name: install basic desktop components
+  zypper: name={{item}} state=present
+  with_items:
+  - kaskpass5
+  - pinentry-qt5
+  - kde-gtk-config5-gtk2
+  - kde-gtk-config5-gtk3
+  - kio_mtp
+  - kio_iso
+  - xdg-desktop-portal-kde
 
 - name: install desktop applications
   zypper: name={{item}} state=present
@@ -11,3 +23,19 @@
   - chromium
   - dolphin
   - konsole
+  - kwrite
+  - kcalc
+  - kolourpaint
+  - kcolorchooser
+  - okular
+  - ark
+  - gwenview
+  - transmission-qt
+  - ksysguard5
+  - discover
+  - kwalletmanager5
+  - spectacle
+  - keepassxc
+
+- name: install kde-connect
+  zypper: name=kdeconnect-kde state=present

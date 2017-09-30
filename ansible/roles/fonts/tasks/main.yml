@@ -6,9 +6,9 @@
   - xorg-x11-fonts
   - liberation-fonts
   - dejavu-fonts
-  - google-opensans-fonts
   - iosevka-fonts
   - fetchmsttfonts
+  - noto-sans-fonts
   - noto-coloremoji-fonts
 
 - name: copy font config
