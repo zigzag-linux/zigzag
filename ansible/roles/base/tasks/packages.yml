@@ -10,5 +10,53 @@
   - curl
   - less
   - deltarpm
+  - ca-certificates-mozilla
+  - mozilla-nss-certs
+
+- name: install extra cli utils
+  zypper: name={{item}} state=present
+  with_items:
+  - tree
+  - patch
+  - colordiff
+  - rpmconf
+  - the_silver_searcher
+  - dos2unix
+  - screenfetch
+  - neovim
+  - python3-neovim
+  - neovim-symlinks
+  - command-not-found
+
+- name: install filesystem progs
+  zypper: name={{item}} state=present
+  with_items:
   - xfsprogs
   - btrfsprogs
+  - hfsutils
+  - ntfs-3g
+  - ntfsprogs
+  - dosfstools
+  - f2fs-tools
+
+- name: install hardware info and management utils
+  zypper: name={{item}} state=present
+  with_items:
+  - inxi
+  - sensors
+  - dmidecode
+  - hddtemp
+  - hdparm
+  - sysfsutils
+  - schedtool
+  - pciutils
+  - usbutils
+  - smartmontools
+  - iotop
+
+- name: install archivers
+  zypper: name={{item}} state=present
+  with_items:
+  - p7zip
+  - rar
+  - xar
