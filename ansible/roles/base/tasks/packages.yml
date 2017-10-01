@@ -8,3 +8,7 @@
   - psmisc
   - lsof
   - curl
+  - less
+  - deltarpm
+  - xfsprogs
+  - btrfsprogs

@@ -1,6 +1,12 @@
 ---
 - include: xserver.yml
 
+- name: install packagekit integration
+  zypper: name={{item}} state=present
+  with_items:
+  - PackageKit-backend-zypp
+  - PackageKit-gstreamer-plugin
+
 - name: install flatpak
   zypper: name=flatpak state=present
 

@@ -9,6 +9,7 @@
   - firewalld
   - ioscheduler
   - polkit
+  - extra
   - { role: plasma, when: target == 'graphical' }
 
   # live-image tasks should be performed at the end

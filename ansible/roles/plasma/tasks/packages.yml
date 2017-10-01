@@ -15,6 +15,7 @@
   - kde-gtk-config5-gtk3
   - kio_mtp
   - kio_iso
+  - pam_kwallet
   - xdg-desktop-portal-kde
 
 - name: install desktop applications
@@ -25,6 +26,7 @@
   - konsole
   - kwrite
   - kcalc
+  - partitionmanager
   - kolourpaint
   - kcolorchooser
   - okular
