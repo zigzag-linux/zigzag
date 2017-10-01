@@ -26,4 +26,4 @@ if os.geteuid() != 0:
     exit("You need to have root privileges to apply the configuration.")
 
 preset_path = '{}/{}.yml'.format(CONFIG_ROOT, args.preset)
-subprocess.run(['ansible-playbook', '-i', '"localhost,"' '-c', 'local', preset_path], check=True)
+subprocess.run(['ansible-playbook', '-i', 'localhost,', '-c', 'local', preset_path], check=True)
