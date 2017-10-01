@@ -19,6 +19,7 @@
     repo: 'http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/'
     auto_import_keys: yes
     state: present
+    priority: 98
 
 - name: enable 'zigzag' repo
   zypper_repository:
@@ -26,3 +27,4 @@
     repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag/openSUSE_Tumbleweed/'
     auto_import_keys: yes
     state: present
+    priority: 60
