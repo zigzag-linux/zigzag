@@ -4,7 +4,7 @@ SHARE=$(DESTDIR)$(PREFIX)/share/zigzag
 all:
 
 install:
-	install -Dpm755 tools/write-configuration.sh $(DESTDIR)$(PREFIX)/bin/zigzag-write-configuration
+	install -Dpm755 tools/write-configuration.py $(DESTDIR)$(PREFIX)/bin/zigzag-write-configuration
 	mkdir -p $(SHARE)
 	cp -R ansible $(SHARE)
 
