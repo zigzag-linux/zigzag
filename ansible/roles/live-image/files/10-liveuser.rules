@@ -1,0 +1,9 @@
+/**
+ * Allow live user to execute polkit commands without
+ * password authentication, similar to "sudo NOPASSWD:"
+ */
+polkit.addRule(function(action, subject) {
+   if (subject.user == 'liveuser') {
+       return polkit.Result.YES;
+   }
+});

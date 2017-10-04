@@ -1,12 +1,30 @@
 ---
-- name: add guest user
-  user: name=guest groups=wheel uid=2000
+- name: install calamares package
+  zypper: name=calamares state=present
 
-- name: enable autologin for guest user
+- name: add liveuser user
+  user: name=liveuser groups=wheel uid=2000
+
+- name: enable autologin for liveuser user
   lineinfile:
     path: /etc/sysconfig/displaymanager
     regexp: '^DISPLAYMANAGER_AUTOLOGIN='
-    line: 'DISPLAYMANAGER_AUTOLOGIN="guest"'
+    line: 'DISPLAYMANAGER_AUTOLOGIN="liveuser"'
 
-- name: install calamares package
-  zypper: name=calamares state=present
+- name: permit empty passwords in pam
+  command: pam-config -a --nullok
+
+- name: disable sudo password prompt for liveuser
+  lineinfile:
+    path: /etc/sudoers
+    line: 'liveuser ALL=(ALL) NOPASSWD:ALL'
+    owner: root
+    group: root
+    mode: 0400
+
+- name: disable polkit password prompt for liveuser
+  copy:
+    src: "10-liveuser.rules"
+    dest: /etc/polkit-1/rules.d/
+    owner: polkitd
+    group: polkitd
