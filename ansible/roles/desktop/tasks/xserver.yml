@@ -4,6 +4,7 @@
   with_items:
   - x11-tools
   - xrandr
+  - xhost
   - xdpyinfo
   - xkeyboard-config
   - xorg-x11

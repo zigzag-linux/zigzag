@@ -31,3 +31,6 @@
     path: /etc/sysconfig/displaymanager
     regexp: '^DISPLAYMANAGER_AUTOLOGIN='
     line: 'DISPLAYMANAGER_AUTOLOGIN="liveuser"'
+
+- name: refresh repositories to gather appstream data
+  zypper_repository: name='*' runrefresh=yes
