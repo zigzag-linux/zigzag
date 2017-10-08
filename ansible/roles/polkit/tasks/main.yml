@@ -1,4 +1,7 @@
 ---
+- name: install default polkit rules
+  zypper: name=polkit-default-privs state=present
+
 - name: copy polkit rules
   copy:
     src: "{{item}}"
