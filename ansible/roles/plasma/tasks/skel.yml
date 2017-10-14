@@ -1,0 +1,7 @@
+---
+- name: set sudo as authentication method for kdesu
+  ini_file:
+    path: /etc/skel/.config/kdesurc
+    section: super-user-command
+    option: super-user-command
+    value: sudo

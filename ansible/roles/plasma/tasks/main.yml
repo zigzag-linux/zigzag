@@ -1,5 +1,6 @@
 ---
 - include: packages.yml
+- include: skel.yml
 
 - name: set 'sddm' as default display manager
   lineinfile:
