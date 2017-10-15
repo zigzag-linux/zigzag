@@ -60,7 +60,7 @@
     no_extra_spaces: yes
     path: /etc/skel/.config/kwinrc
     section: Plugins
-    option: {{item}}
+    option: '{{item}}'
     value: false
   with_items:
   - kwin4_effect_translucencyEnabled
