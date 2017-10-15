@@ -1,0 +1,86 @@
+---
+- name: set sudo as authentication method for kdesu
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/kdesurc
+    section: super-user-command
+    option: super-user-command
+    value: sudo
+
+- name: use double-click across the interface
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/kdeglobals
+    section: KDE
+    option: SingleClick
+    value: false
+
+- name: change default interface fonts
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/kdeglobals
+    section: General
+    option: {{item.option}}
+    value: {{item.value}}
+  with_items:
+  - { option: 'fixed', value: 'Iosevka Term,14,-1,5,50,0,0,0,0,0,Regular'}
+  - { option: 'font', value: 'Noto Sans,11,-1,5,50,0,0,0,0,0,Regular'}
+  - { option: 'menuFont', value: 'Noto Sans,11,-1,5,50,0,0,0,0,0,Regular'}
+  - { option: 'smallestReadableFont', value: 'Noto Sans,11,-1,5,50,0,0,0,0,0,Regular'}
+  - { option: 'toolBarFont', value: 'Noto Sans,11,-1,5,50,0,0,0,0,0,Regular'}
+
+- name: change default window manager font
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/kdeglobals
+    section: WM
+    option: activeFont
+    value: 'Noto Sans,11,-1,5,75,0,0,0,0,0,Bold'
+
+- name: disable plasma tooltips
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/plasmarc
+    section: PlasmaToolTips
+    option: Delay
+    value: -1
+
+- name: reduce bouncing coursor timeout
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/klaunchrc
+    section: BusyCursorSettings
+    option: Timeout
+    value: 1
+
+- name: always start with fresh session
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/ksmserverrc
+    section: General
+    option: loginMode
+    value: default
+
+- name: only allow dragging windows by titlebars
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/breezerc
+    section: Style
+    option: WindowDragMode
+    value: WD_NONE
+
+- name: disable baloo search engine
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/baloofilerc
+    section: Basic Settings
+    option: Indexing-Enabled
+    value: false
+
+- name: use common properties for all directories
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/dolphinrc
+    section: General
+    option: GlobalViewProps
+    value: true
