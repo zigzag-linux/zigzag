@@ -13,6 +13,8 @@
   - pinentry-qt5
   - kde-gtk-config5-gtk2
   - kde-gtk-config5-gtk3
+  - gtk2-metatheme-breeze
+  - gtk3-metatheme-breeze
   - kio_mtp
   - kio_iso
   - pam_kwallet
@@ -38,6 +40,7 @@
   - kwalletmanager5
   - spectacle
   - keepassxc
+  - mpv
 
 - name: install kde-connect
   zypper: name=kdeconnect-kde state=present

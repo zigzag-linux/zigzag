@@ -20,3 +20,6 @@
   - pulseaudio-module-bluetooth
   - pulseaudio-module-zeroconf
   - pulseaudio-module-x11
+
+- name: install ffmpeg
+  zypper: name=ffmpeg state=present
