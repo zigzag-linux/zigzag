@@ -26,7 +26,7 @@
   - { option: 'fixed', value: 'Iosevka Term,14,-1,5,50,0,0,0,0,0,Regular'}
   - { option: 'font', value: 'Noto Sans,11,-1,5,50,0,0,0,0,0,Regular'}
   - { option: 'menuFont', value: 'Noto Sans,11,-1,5,50,0,0,0,0,0,Regular'}
-  - { option: 'smallestReadableFont', value: 'Noto Sans,11,-1,5,50,0,0,0,0,0,Regular'}
+  - { option: 'smallestReadableFont', value: 'Noto Sans,10,-1,5,50,0,0,0,0,0,Regular'}
   - { option: 'toolBarFont', value: 'Noto Sans,11,-1,5,50,0,0,0,0,0,Regular'}
 
 - name: change default window manager font
@@ -35,7 +35,7 @@
     path: /etc/skel/.config/kdeglobals
     section: WM
     option: activeFont
-    value: 'Noto Sans,11,-1,5,75,0,0,0,0,0,Bold'
+    value: 'Noto Sans,11,-1,5,50,0,0,0,0,0,Regular'
 
 - name: disable plasma tooltips
   ini_file:

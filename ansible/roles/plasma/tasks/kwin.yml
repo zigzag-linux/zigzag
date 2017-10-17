@@ -1,11 +1,11 @@
 ---
-- name: use minimal window borders
+- name: disable window side borders
   ini_file:
     no_extra_spaces: yes
     path: /etc/skel/.config/kwinrc
     section: org.kde.kdecoration2
     option: BorderSize
-    value: None
+    value: NoSides
 
 - name: set toolbar controls (left)
   ini_file:
