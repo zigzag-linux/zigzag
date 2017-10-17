@@ -9,4 +9,5 @@
   - firewalld
   - ioscheduler
   - polkit
+  - { role: non_free, when: non_free == true }
   - { role: plasma, when: target == 'graphical' }
