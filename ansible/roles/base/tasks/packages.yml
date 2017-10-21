@@ -2,24 +2,7 @@
 - name: install base packages
   zypper: name={{item}} state=present
   with_items:
-  - finger
-  - timezone
-  - man
-  - psmisc
-  - lsof
-  - curl
-  - less
-  - deltarpm
-  - ca-certificates-mozilla
-  - mozilla-nss-certs
-
-- name: install extra cli utils
-  zypper: name={{item}} state=present
-  with_items:
-  - tree
-  - patch
-  - colordiff
-  - rpmconf
+  - patterns-zigzag-base
   - the_silver_searcher
   - dos2unix
   - screenfetch
@@ -27,6 +10,9 @@
   - python3-neovim
   - neovim-symlinks
   - command-not-found
+
+- name: install firmware
+  zypper: name=patterns-zigzag-firmware state=present
 
 - name: install filesystem progs
   zypper: name={{item}} state=present
