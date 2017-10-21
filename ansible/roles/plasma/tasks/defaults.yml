@@ -84,3 +84,24 @@
     section: General
     option: GlobalViewProps
     value: true
+
+- name: disable some of krunner plugins
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/krunnerrc
+    section: Plugins
+    option: '{{item}}'
+    value: false
+  with_items:
+  - appstreamrunnerEnabled
+  - bookmarksEnabled
+  - desktopsessionsEnabled
+  - kwinEnabled
+  - locationsEnabled
+  - org.kde.activitiesEnabled
+  - org.kde.windowedwidgetsEnabled
+  - placesEnabled
+  - plasma-desktopEnabled
+  - recentdocumentsEnabled
+  - shellEnabled
+  - webshortcutsEnabled
