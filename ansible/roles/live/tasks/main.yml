@@ -1,0 +1,6 @@
+---
+- import_tasks: common.yml
+- import_tasks: apply.yml
+  when: live_additions == 'present'
+- import_tasks: revert.yml
+  when: live_additions == 'absent'

@@ -1,0 +1,14 @@
+---
+- name: forbid empty passwords
+  command: pam-config -d --nullok
+
+- name: remove polkit rule for liveuser
+  file:
+    path: /etc/polkit-1/rules.d/10-liveuser.rules
+    state: absent
+
+- name: clear autologin configuration
+  lineinfile:
+    path: /etc/sysconfig/displaymanager
+    regexp: '^DISPLAYMANAGER_AUTOLOGIN='
+    line: 'DISPLAYMANAGER_AUTOLOGIN=""'

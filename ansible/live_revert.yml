@@ -1,0 +1,6 @@
+---
+- hosts: all
+  vars:
+    live_additions: 'absent'
+  roles:
+  - live
