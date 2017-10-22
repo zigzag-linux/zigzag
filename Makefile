@@ -9,6 +9,6 @@ install:
 	cp -R ansible $(SHARE)
 
 check:
-	ansible-playbook --check $(SHARE)/ansible/root.yml
+	ansible-playbook --check $(SHARE)/ansible/*.yml
 
 .PHONY: all install check
