@@ -33,8 +33,10 @@ suseConfig
 #======================================
 # Configure Zigzag
 #--------------------------------------
+set -e
 zigzag-write-configuration --force root
-zigzag-write-configuration --force live-image
+zigzag-write-configuration --force live
+set +e
 
 #======================================
 # Remove yast if not in use

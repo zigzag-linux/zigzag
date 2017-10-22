@@ -22,13 +22,10 @@
         <!-- password: linux -->
         <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
     </users>
-    <repository type="rpm-md" alias="kiwi" priority="1">
-        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Tumbleweed"/>
-    </repository>
     <repository type="yast2" alias="oss">
         <source path="http://download.opensuse.org/tumbleweed/repo/oss"/>
     </repository>
-    <repository type="rpm-md" alias="zigzag">
+    <repository type="rpm-md" alias="zigzag" priority="5">
         <source path="obs://home:mkrwc:zigzag/openSUSE_Tumbleweed"/>
     </repository>
     <packages type="image">
@@ -47,6 +44,7 @@
         <package name="glibc-locale"/>
         <package name="cracklib-dict-full"/>
         <package name="ca-certificates"/>
+        <package name="systemd-presets-branding-openSUSE"/>
         <package name="openSUSE-release"/>
     </packages>
 </image>
