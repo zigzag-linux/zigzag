@@ -20,3 +20,9 @@
   - pulseaudio-module-bluetooth
   - pulseaudio-module-zeroconf
   - pulseaudio-module-x11
+
+- name: install live medium tools
+  zypper: name={{item}} state=present
+  with_items:
+  - calamares-branding-zigzag
+  - zigzag-live-service

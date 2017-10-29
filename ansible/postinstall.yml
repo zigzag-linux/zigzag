@@ -1,6 +1,12 @@
 ---
 - hosts: all
-  vars:
-    live_additions: 'absent'
-  roles:
-  - live
+  tasks:
+  - name: remove live medium tools
+    zypper: name={{item}} state=absent
+    with_items:
+    - calamares-branding-zigzag
+    - zigzag-live-service
+
+  - name: install translation packages
+    command: zigzag-languages
+    ignore_errors: yes

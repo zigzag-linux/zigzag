@@ -1,6 +1,31 @@
 ---
-- import_tasks: common.yml
-- import_tasks: apply.yml
-  when: live_additions == 'present'
-- import_tasks: revert.yml
-  when: live_additions == 'absent'
+- name: add liveuser user
+  user: name=liveuser groups=wheel uid=2000 state=present
+
+- name: permit empty passwords in pam
+  command: pam-config -a --nullok
+
+- name: make sure liveuser has empty password
+  command: passwd -d liveuser
+
+- name: disable sudo password prompt for liveuser
+  lineinfile:
+    path: /etc/sudoers
+    line: 'liveuser ALL=(ALL) NOPASSWD:ALL'
+    owner: root
+    group: root
+    mode: 0400
+    state: present
+
+- name: disable polkit password prompt for liveuser
+  copy:
+    src: "10-liveuser.rules"
+    dest: /etc/polkit-1/rules.d/
+    owner: polkitd
+    group: polkitd
+
+- name: enable autologin for liveuser
+  lineinfile:
+    path: /etc/sysconfig/displaymanager
+    regexp: '^DISPLAYMANAGER_AUTOLOGIN='
+    line: 'DISPLAYMANAGER_AUTOLOGIN="liveuser"'
