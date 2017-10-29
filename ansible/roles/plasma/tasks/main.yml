@@ -3,12 +3,6 @@
 - include: defaults.yml
 - include: kwin.yml
 
-- name: set 'sddm' as default display manager
-  lineinfile:
-    path: /etc/sysconfig/displaymanager
-    regexp: '^DISPLAYMANAGER='
-    line: 'DISPLAYMANAGER="sddm"'
-
 - name: create directory for default cursor
   file:
     path: /usr/share/icons/default
