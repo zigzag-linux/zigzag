@@ -35,7 +35,7 @@ suseConfig
 #--------------------------------------
 set -e
 zigzag-write-configuration --force root
-zigzag-write-configuration --force live
+zigzag-write-configuration --force medium
 set +e
 
 #======================================
