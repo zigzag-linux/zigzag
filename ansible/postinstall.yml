@@ -8,5 +8,5 @@
     - zigzag-live-service
 
   - name: install translation packages
-    command: zigzag-languages
+    command: zigzag-languages -y
     ignore_errors: yes
