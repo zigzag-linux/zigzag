@@ -26,3 +26,6 @@
   with_items:
   - calamares-branding-zigzag
   - zigzag-live-service
+
+- name: enable zigzag-live service
+  systemd: name=zigzag-live enabled=yes
