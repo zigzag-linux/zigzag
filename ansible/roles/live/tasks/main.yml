@@ -29,3 +29,9 @@
     path: /etc/sysconfig/displaymanager
     regexp: '^DISPLAYMANAGER_AUTOLOGIN='
     line: 'DISPLAYMANAGER_AUTOLOGIN="liveuser"'
+
+- name: add installer shortcut to the desktop
+  copy:
+    src: /usr/share/applications/calamares.desktop
+    dest: /home/liveuser/Desktop/
+    mode: 0755
