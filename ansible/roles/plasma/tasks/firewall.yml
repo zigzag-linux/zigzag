@@ -1,0 +1,12 @@
+---
+- name: allow kde-connect service in firewall
+  firewalld:
+    service: kdeconnect-kde
+    permanent: true
+    state: enabled
+
+- name: allow transmission-client service in firewall
+  firewalld:
+    service: transmission-client
+    permanent: true
+    state: enabled

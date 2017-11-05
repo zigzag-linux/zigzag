@@ -3,10 +3,7 @@
   zypper: name={{item}} state=present
   with_items:
   - patterns-zigzag-graphical
-  - patterns-zigzag-laptop
   - flatpak
-  - xdg-user-dirs
-  - xdg-utils
   - PackageKit-backend-zypp
   - PackageKit-gstreamer-plugin
 
@@ -20,3 +17,6 @@
   - pulseaudio-module-bluetooth
   - pulseaudio-module-zeroconf
   - pulseaudio-module-x11
+
+- import_tasks: networkmanager.yml
+- import_tasks: laptop.yml

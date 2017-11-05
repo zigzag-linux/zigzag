@@ -24,10 +24,10 @@
     value: '{{item.value}}'
   with_items:
   - { option: 'fixed', value: 'Iosevka Term,14,-1,5,50,0,0,0,0,0,Regular'}
-  - { option: 'font', value: 'Noto Sans,11,-1,5,50,0,0,0,0,0,Regular'}
-  - { option: 'menuFont', value: 'Noto Sans,11,-1,5,50,0,0,0,0,0,Regular'}
+  - { option: 'font', value: 'Noto Sans,10,-1,5,50,0,0,0,0,0,Regular'}
+  - { option: 'menuFont', value: 'Noto Sans,10,-1,5,50,0,0,0,0,0,Regular'}
   - { option: 'smallestReadableFont', value: 'Noto Sans,10,-1,5,50,0,0,0,0,0,Regular'}
-  - { option: 'toolBarFont', value: 'Noto Sans,11,-1,5,50,0,0,0,0,0,Regular'}
+  - { option: 'toolBarFont', value: 'Noto Sans,10,-1,5,50,0,0,0,0,0,Regular'}
 
 - name: change default window manager font
   ini_file:
@@ -35,7 +35,7 @@
     path: /etc/skel/.config/kdeglobals
     section: WM
     option: activeFont
-    value: 'Noto Sans,11,-1,5,50,0,0,0,0,0,Regular'
+    value: 'Noto Sans,10,-1,5,50,0,0,0,0,0,Regular'
 
 - name: disable plasma tooltips
   ini_file:
@@ -95,7 +95,6 @@
   with_items:
   - appstreamrunnerEnabled
   - bookmarksEnabled
-  - desktopsessionsEnabled
   - kwinEnabled
   - locationsEnabled
   - org.kde.activitiesEnabled
@@ -105,3 +104,35 @@
   - recentdocumentsEnabled
   - shellEnabled
   - webshortcutsEnabled
+
+- name: enable natural scrolling
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/touchpadrc
+    section: parameters
+    option: InvertVertScroll
+    value: true
+
+- name: set keyboard repeat delay value
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/kcminputrc
+    section: Keyboard
+    option: RepeatDelay
+    value: 500
+
+- name: set keyboard repeat rate value
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/kcminputrc
+    section: Keyboard
+    option: RepeatRate
+    value: 30
+
+- name: show tabs in konsole only when needed
+  ini_file:
+    no_extra_spaces: yes
+    path: /etc/skel/.config/konsolerc
+    section: TabBar
+    option: TabBarVisibility
+    value: ShowTabBarWhenNeeded

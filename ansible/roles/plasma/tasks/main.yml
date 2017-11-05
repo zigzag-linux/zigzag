@@ -1,7 +1,8 @@
 ---
-- include: packages.yml
-- include: defaults.yml
-- include: kwin.yml
+- import_tasks: packages.yml
+- import_tasks: defaults.yml
+- import_tasks: kwin.yml
+- import_tasks: firewall.yml
 
 - name: create directory for default cursor
   file:

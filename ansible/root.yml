@@ -4,7 +4,6 @@
   - base
   - sudo
   - rngd
-  - network
   - apparmor
   - firewalld
   - ioscheduler

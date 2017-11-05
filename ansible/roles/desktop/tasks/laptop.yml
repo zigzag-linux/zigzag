@@ -1,0 +1,10 @@
+---
+- name: install laptop pattern
+  zypper: name=patterns-zigzag-laptop state=present
+
+- name: enable laptop services at startup
+  systemd: name={{item}} enabled=yes
+  with_items:
+    - thermald
+    - tlp
+    - tlp-sleep

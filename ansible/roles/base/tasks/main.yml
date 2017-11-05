@@ -1,5 +1,8 @@
 ---
-- include: repos.yml
-- include: zypp.yml
-- include: runlevel.yml
-- include: packages.yml
+- import_tasks: repos.yml
+- import_tasks: zypp.yml
+- import_tasks: runlevel.yml
+- import_tasks: packages.yml
+
+- name: enable time synchronization service
+  systemd: name=systemd-timesyncd enabled=yes
