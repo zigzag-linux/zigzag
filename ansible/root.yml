@@ -5,7 +5,6 @@
   - sudo
   - rngd
   - apparmor
-  - firewalld
   - ioscheduler
   - polkit
   - { role: non_free, when: non_free == true }
