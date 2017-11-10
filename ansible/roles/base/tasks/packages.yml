@@ -14,12 +14,9 @@
 - name: install firmware
   zypper: name=patterns-zigzag-firmware state=present
 
-- name: install filesystem progs
+- name: install extra filesystem progs
   zypper: name={{item}} state=present
   with_items:
-  - xfsprogs
-  - btrfsprogs
-  - hfsutils
   - ntfs-3g
   - ntfsprogs
   - dosfstools
