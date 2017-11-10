@@ -1,13 +1,29 @@
 ---
-- import_tasks: packages.yml
-- import_tasks: defaults.yml
-- import_tasks: kwin.yml
+- name: install plasma pattern
+  zypper: name=patterns-zigzag-plasma state=present
 
-- name: create directory for default cursor
-  file:
-    path: /usr/share/icons/default
-    recurse: yes
-    state: directory
+- name: install desktop applications
+  zypper: name={{item}} state=present
+  with_items:
+  - chromium
+  - dolphin
+  - konsole
+  - kwrite
+  - kcalc
+  - partitionmanager
+  - kolourpaint
+  - kcolorchooser
+  - okular
+  - ark
+  - gwenview
+  - transmission-qt
+  - ksysguard5
+  - discover
+  - kwalletmanager5
+  - spectacle
+  - filelight
+  - keepassxc
+  - mpv
 
-- name: set default cursor
-  template: src=cursor.j2 dest=/usr/share/icons/default/index.theme
+- name: install kde-connect
+  zypper: name=kdeconnect-kde state=present
