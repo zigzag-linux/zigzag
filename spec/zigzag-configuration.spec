@@ -11,13 +11,14 @@ BuildArch:      noarch
 BuildRequires:  make
 BuildRequires:  ansible
 Requires:       ansible
-Requires:       python3 >= 3.5
 
 %description
 Configuration files (Ansible Playbooks) preserving default configuration of Zigzag Linux images.
 
 %prep
 %autosetup
+
+%build
 
 %install
 make install DESTDIR=%{buildroot}
