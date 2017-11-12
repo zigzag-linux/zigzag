@@ -19,4 +19,5 @@
   - pulseaudio-module-x11
 
 - import_tasks: networkmanager.yml
+- import_tasks: samba.yml
 - import_tasks: laptop.yml
