@@ -24,6 +24,7 @@
   - filelight
   - keepassxc
   - mpv
+  - youtube-dl
 
 - name: install kde-connect
   zypper: name=kdeconnect-kde state=present

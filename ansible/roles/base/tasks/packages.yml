@@ -3,6 +3,7 @@
   zypper: name={{item}} state=present
   with_items:
   - patterns-zigzag-base
+  - firewalld
   - the_silver_searcher
   - dos2unix
   - screenfetch
