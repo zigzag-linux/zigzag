@@ -1,0 +1,40 @@
+---
+- name: enable 'oss' repo
+  zypper_repository:
+    name: oss
+    repo: 'http://download.opensuse.org/{{base_version}}/repo/oss/'
+    auto_import_keys: yes
+    state: present
+
+- name: enable 'oss-update' repo
+  zypper_repository:
+    name: oss-update
+    repo: 'http://download.opensuse.org/update/{{base_version}}/'
+    auto_import_keys: yes
+    state: present
+
+- name: enable 'packman' repo
+  zypper_repository:
+    name: packman
+    repo: 'http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/'
+    auto_import_keys: yes
+    state: present
+    priority: 98
+  when: non_free == true
+
+- name: enable 'zigzag' repo
+  zypper_repository:
+    name: zigzag
+    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag/openSUSE_Tumbleweed/'
+    auto_import_keys: yes
+    state: present
+    priority: 20
+
+- name: enable 'zigzag-testing' repo
+  zypper_repository:
+    name: zigzag-testing
+    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/testing/openSUSE_Tumbleweed/'
+    auto_import_keys: yes
+    state: present
+    priority: 10
+  when: testing_repo == true

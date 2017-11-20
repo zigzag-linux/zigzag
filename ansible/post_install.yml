@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+    - name: remove live medium tools
+      zypper: name={{item}} state=absent
+      with_items:
+        - calamares-branding-zigzag
+        - dracut-kiwi-live
+        - zigzag-live-service
+
+    - name: install translation packages
+      command: zigzag-languages -y
+      ignore_errors: yes

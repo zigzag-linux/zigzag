@@ -1,11 +1,9 @@
 ---
 - hosts: all
   roles:
-  - base
-  - sudo
-  - rngd
-  - apparmor
-  - ioscheduler
-  - polkit
-  - { role: non_free, when: non_free == true }
-  - { role: plasma, when: target == 'graphical' }
+    - base
+    - sudo
+    - desktop
+    - ioscheduler
+    - polkit
+    - fonts

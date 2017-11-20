@@ -1,0 +1,22 @@
+---
+- name: install general desktop base
+  zypper: name={{item}} state=present
+  with_items:
+    - xdg-user-dirs
+    - xdg-utils
+    - alsa-firmware
+    - alsa-utils
+    - alsa-plugins-pulse
+    - pulseaudio
+    - pulseaudio-module-bluetooth
+    - pulseaudio-module-zeroconf
+    - pulseaudio-module-x11
+    - bluez-firmware
+    - NetworkManager
+    - NetworkManager-openvpn
+    - samba
+    - samba-client
+    - cifs-utils
+    - PackageKit-backend-zypp
+    - PackageKit-gstreamer-plugin
+    - flatpak

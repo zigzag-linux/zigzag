@@ -1,0 +1,26 @@
+---
+- name: install management and info tools
+  zypper: name={{item}} state=present
+  with_items:
+    - deltarpm
+    - rpmconf
+    - fwupdate
+    - inxi
+    - sensors
+    - dmidecode
+    - hddtemp
+    - hdparm
+    - sysfsutils
+    - schedtool
+    - pciutils
+    - usbutils
+    - smartmontools
+    - cryptsetup
+    - iotop
+    - xfsprogs
+    - btrfsprogs
+    - e2fsprogs
+    - ntfs-3g
+    - ntfsprogs
+    - dosfstools
+    - f2fs-tools

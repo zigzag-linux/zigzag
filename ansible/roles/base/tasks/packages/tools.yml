@@ -1,0 +1,16 @@
+---
+- name: install additional cli tools
+  zypper: name={{item}} state=present
+  with_items:
+    - tree
+    - patch
+    - colordiff
+    - the_silver_searcher
+    - dos2unix
+    - screenfetch
+    - neovim
+    - python3-neovim
+    - neovim-symlinks
+    - command-not-found
+    - p7zip
+    - firewalld

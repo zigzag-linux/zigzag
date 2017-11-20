@@ -28,4 +28,13 @@
     repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag/openSUSE_Tumbleweed/'
     auto_import_keys: yes
     state: present
-    priority: 5
+    priority: 20
+
+- name: enable 'zigzag-testing' repo
+  zypper_repository:
+    name: zigzag-testing
+    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/testing/openSUSE_Tumbleweed/'
+    auto_import_keys: yes
+    state: present
+    priority: 10
+  when: testing_repo == true

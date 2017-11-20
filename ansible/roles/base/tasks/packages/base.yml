@@ -1,0 +1,25 @@
+---
+- name: install base packages
+  zypper: name={{item}} state=present
+  with_items:
+    - patterns-base-minimal_base
+    - patterns-zigzag-firmware
+    - rng-tools
+    - sudo
+    - finger
+    - timezone
+    - man
+    - psmisc
+    - lsof
+    - curl
+    - less
+    - tar
+    - iproute2
+    - iputils
+    - ca-certificates-mozilla
+    - mozilla-nss-certs
+    - crda
+    - audit
+    - apparmor-profiles
+    - apparmor-parser
+    - avahi

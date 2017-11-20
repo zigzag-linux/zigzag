@@ -1,6 +1,0 @@
----
-- name: install rng-tools
-  zypper: name=rng-tools state=present
-
-- name: enable rng-tools service
-  systemd: name=rng-tools enabled=yes

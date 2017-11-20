@@ -1,8 +1,15 @@
 ---
-- import_tasks: repos.yml
 - import_tasks: zypp.yml
-- import_tasks: runlevel.yml
-- import_tasks: packages.yml
 
-- name: enable time synchronization service
-  systemd: name=systemd-timesyncd enabled=yes
+- import_tasks: repos/tumbleweed.yml
+  when: base_version == 'tumbleweed'
+- import_tasks: repos/leap.yml
+  when: base_version == 'leap'
+
+- import_tasks: packages/base.yml
+- import_tasks: packages/management.yml
+- import_tasks: packages/tools.yml
+- import_tasks: packages/non_free.yml
+  when: non_free == true
+
+- import_tasks: services.yml

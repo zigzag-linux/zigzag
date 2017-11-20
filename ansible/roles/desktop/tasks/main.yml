@@ -1,23 +1,8 @@
 ---
-- name: install desktop base
-  zypper: name={{item}} state=present
-  with_items:
-  - patterns-zigzag-graphical
-  - flatpak
-  - PackageKit-backend-zypp
-  - PackageKit-gstreamer-plugin
+- import_tasks: packages/base.yml
+- import_tasks: packages/x11.yml
+- import_tasks: packages/plasma.yml
+- import_tasks: packages/apps.yml
+- import_tasks: packages/laptop.yml
 
-- name: install audio stack
-  zypper: name={{item}} state=present
-  with_items:
-  - alsa-firmware
-  - alsa-utils
-  - alsa-plugins-pulse
-  - pulseaudio
-  - pulseaudio-module-bluetooth
-  - pulseaudio-module-zeroconf
-  - pulseaudio-module-x11
-
-- import_tasks: networkmanager.yml
-- import_tasks: samba.yml
-- import_tasks: laptop.yml
+- import_tasks: services.yml

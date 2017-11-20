@@ -1,12 +1,12 @@
 ---
-# Default runlevel target
-# valid options: text, graphical
-target: 'graphical'
-
 # openSUSE base version for the system
-# valid options: tumbleweed
+# valid options: leap, tumbleweed
 base_version: 'tumbleweed'
 
 # Include non-free packages
 # valid options: true, false
 non_free: true
+
+# Enable testing repository
+# valid options: true, false
+testing_repo: false

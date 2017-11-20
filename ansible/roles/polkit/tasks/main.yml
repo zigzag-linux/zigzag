@@ -9,4 +9,4 @@
     owner: polkitd
     group: polkitd
   with_fileglob:
-  - "*"
+    - "*"

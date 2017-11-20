@@ -2,15 +2,18 @@
 - name: install font packages
   zypper: name={{item}} state=present
   with_items:
-  - fonts-config
-  - xorg-x11-fonts
-  - liberation-fonts
-  - dejavu-fonts
-  - iosevka-fonts
-  - noto-sans-fonts
-  - noto-coloremoji-fonts
+    - fonts-config
+    - liberation-fonts
+    - dejavu-fonts
+    - iosevka-fonts
+    - noto-sans-fonts
+    - noto-coloremoji-fonts
+
+- name: install microsoft fonts
+  zypper: name=fetchmsttfonts state=present
+  when: non_free == true
 
 - name: copy font config
   template: src=fonts-config.j2 dest=/etc/sysconfig/fonts-config
   notify:
-  - apply fonts-config
+    - apply fonts-config

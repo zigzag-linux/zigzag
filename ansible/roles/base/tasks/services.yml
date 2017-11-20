@@ -1,0 +1,15 @@
+---
+- name: enable time synchronization service
+  systemd: name=systemd-timesyncd enabled=yes
+
+- name: enable apparmor service
+  systemd: name=apparmor enabled=yes
+
+- name: enable rng-tools service
+  systemd: name=rng-tools enabled=yes
+
+- name: enable avahi service
+  systemd: name=avahi-daemon enabled=yes
+
+- name: disable firewalld service
+  systemd: name=firewalld enabled=no
