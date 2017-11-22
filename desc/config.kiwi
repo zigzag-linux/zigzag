@@ -26,6 +26,9 @@
         <bootsplash-theme>openSUSE</bootsplash-theme>
         <bootloader-theme>openSUSE</bootloader-theme>
     </preferences>
+    <profiles>
+        <profile name="testing" description="Run Test Branch"/>
+    </profiles>
     <users>
         <!-- password: linux -->
         <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
@@ -33,18 +36,18 @@
     <repository type="yast2" alias="oss">
         <source path="http://download.opensuse.org/tumbleweed/repo/oss"/>
     </repository>
-    <repository type="rpm-md" alias="zigzag" priority="5">
+    <repository type="rpm-md" alias="zigzag" priority="20">
         <source path="obs://home:mkrwc:zigzag/openSUSE_Tumbleweed"/>
     </repository>
+    <!-- additional testing repo enabled only in testing profile -->
+    <repository type="rpm-md" alias="zigzag-testing" profiles="testing" priority="10">
+        <source path="obs://home:mkrwc:zigzag:testing/openSUSE_Tumbleweed"/>
+    </repository>
     <packages type="image">
-        <namedCollection name="minimal_base"/>
-        <package name="grub2-branding-openSUSE" bootinclude="true"/>
-        <package name="grub2-i386-pc"/>
-        <package name="grub2-x86_64-efi"/>
-        <package name="syslinux"/>
-        <package name="kernel-default"/>
-        <package name="dracut-kiwi-live"/>
         <package name="zigzag-configuration"/>
+    </packages>
+    <packages type="iso">
+        <package name="dracut-kiwi-live"/>
     </packages>
     <packages type="bootstrap">
         <package name="udev"/>

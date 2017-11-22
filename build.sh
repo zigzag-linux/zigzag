@@ -5,7 +5,7 @@
 # Usage: ./build.sh
 #
 
-declare -r DOCKER_TAG=zigzag:0.3
+declare -r DOCKER_TAG=zigzag:0.4
 
 container_build()
 {
@@ -22,10 +22,8 @@ container_run()
 
 gekon_build()
 {
-    local param_type="--type ${1:-iso}"; shift
-
-    container_run "kiwi-ng ${param_type} system build --description /kiwi/desc --target-dir /kiwi/out"
+    container_run "kiwi-ng $@ system build --description /kiwi/desc --target-dir /kiwi/out"
 }
 
 container_build
-gekon_build $1
+gekon_build $@

@@ -7,3 +7,7 @@ Kiwi build descriptions of Zigzag Linux images
         $ ./build.sh
 
 Build runs inside of a Docker container, once done the output iso will be located in `out/` directory. **Before running the script make sure that Docker daemon is running and user has sufficient permissions.**
+
+To enable not fully stabilized, [testing repostory](https://build.opensuse.org/project/show/home:mkrwc:zigzag:testing), pass additional param to the build command:
+
+        $ ./build.sh --profile=testing

@@ -34,8 +34,12 @@ suseConfig
 # Configure Zigzag
 #--------------------------------------
 set -e
+if [[ $kiwi_profiles == *testing* ]]; then
+    sed -i 's/^testing_repo:.*/testing_repo: true/g' /usr/share/zigzag/ansible/group_vars/all.yml
+fi
+
 zigzag-write-configuration --force root
-zigzag-write-configuration --force medium
+zigzag-write-configuration --force live_create
 set +e
 
 #======================================
