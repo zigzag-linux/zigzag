@@ -11,3 +11,16 @@
     - name: install translation packages
       command: zigzag-languages -y
       ignore_errors: yes
+
+    # relock root user account as calamares will set password
+    - name: lock root user account
+      command: passwd -l root
+
+    # fix locale settings after installation (opensuse quirk)
+    # set the value of /etc/locale.conf into a /etc/sysconfig/language
+    - name: set the language in /etc/sysconfig/language
+      lineinfile:
+        path: /etc/sysconfig/language
+        regexp: '^RC_LANG'
+        line: 'RC_LANG="{{ item }}"'
+      with_items: "{{ lookup('ini', 'LANG type=properties file=/etc/locale.conf') }}"
