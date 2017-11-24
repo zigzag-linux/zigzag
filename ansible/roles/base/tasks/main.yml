@@ -1,15 +1,26 @@
 ---
 - import_tasks: zypp.yml
 
+# Repositories
 - import_tasks: repos/tumbleweed.yml
   when: base_version == 'tumbleweed'
 - import_tasks: repos/leap.yml
   when: base_version == 'leap'
 
+# Packages
 - import_tasks: packages/base.yml
 - import_tasks: packages/management.yml
 - import_tasks: packages/tools.yml
 - import_tasks: packages/non_free.yml
   when: non_free == true
 
+# Systemd services
 - import_tasks: services.yml
+
+# This file is not provided by aaa_base
+# Without it update process won't regenerate grub config
+- task: fillup /etc/sysconfig/bootloader
+  copy:
+    src: sysconfig.bootloader
+    dest: /etc/sysconfig/bootloader
+    mode: 0644
