@@ -4,6 +4,7 @@
   with_items:
     - deltarpm
     - rpmconf
+    - zypper-log
     - fwupdate
     - inxi
     - sensors
