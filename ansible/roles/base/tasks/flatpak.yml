@@ -1,0 +1,8 @@
+---
+- name: install flatpak package
+  zypper: name=flatpak state=present
+
+- name: add 'flathub' remote
+  command: >
+    flatpak remote-add --if-not-exists flathub
+    https://flathub.org/repo/flathub.flatpakrepo
