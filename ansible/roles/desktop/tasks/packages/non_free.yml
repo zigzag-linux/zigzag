@@ -1,0 +1,5 @@
+---
+- name: install non-free packages for desktop
+  zypper: name={{item}} state=present
+  with_items:
+    - chromium-plugin-widevinecdm
