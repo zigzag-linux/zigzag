@@ -4,6 +4,7 @@
   with_items:
     - xdg-user-dirs
     - xdg-utils
+    - gsettings-backend-dconf
     - alsa-firmware
     - alsa-utils
     - alsa-plugins-pulse
