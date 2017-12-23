@@ -6,3 +6,6 @@
   command: >
     flatpak remote-add --if-not-exists flathub
     https://flathub.org/repo/flathub.flatpakrepo
+
+- name: refresh metadata from flatpak remotes
+  command: flatpak update --appstream
