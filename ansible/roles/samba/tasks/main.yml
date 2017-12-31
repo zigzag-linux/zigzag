@@ -1,0 +1,26 @@
+---
+- name: install samba packages
+  zypper: name={{item}} state=present
+  with_items:
+    - samba
+    - samba-client
+    - cifs-utils
+
+- name: setup usershares directory
+  file:
+    path: /var/lib/samba/usershares
+    owner: root
+    group: users
+    state: directory
+    mode: 1770
+
+- name: copy samba configuration
+  copy:
+    src: smb.conf
+    dest: /etc/samba/smb.conf
+
+- name: enable smb service
+  systemd: name=smb enabled=yes
+
+- name: enable nmb service
+  systemd: name=nmb enabled=yes

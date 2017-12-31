@@ -3,7 +3,8 @@
   roles:
     - base
     - sudo
-    - desktop
+    - samba
     - ioscheduler
+    - desktop
     - polkit
     - fonts

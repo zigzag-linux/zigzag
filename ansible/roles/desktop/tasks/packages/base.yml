@@ -15,8 +15,5 @@
     - bluez-firmware
     - NetworkManager
     - NetworkManager-openvpn
-    - samba
-    - samba-client
-    - cifs-utils
     - PackageKit-backend-zypp
     - PackageKit-gstreamer-plugin

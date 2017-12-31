@@ -8,12 +8,6 @@
 - name: enable NetworkManager service
   systemd: name=NetworkManager enabled=yes
 
-- name: enable smb service
-  systemd: name=smb enabled=yes
-
-- name: enable nmb service
-  systemd: name=nmb enabled=yes
-
 - name: enable laptop services
   systemd: name={{item}} enabled=yes
   with_items:
