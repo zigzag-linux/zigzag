@@ -1,8 +1,4 @@
 ---
-# openSUSE base version for the system
-# valid options: leap, tumbleweed
-base_version: 'tumbleweed'
-
 # Include non-free packages
 # valid options: true, false
 non_free: true
@@ -10,3 +6,7 @@ non_free: true
 # Enable testing repository
 # valid options: true, false
 testing_repo: false
+
+# Distinguish between base versions of the distro
+is_tumbleweed: ansible_distribution == 'openSUSE Tumbleweed'
+is_leap: ansible_distribution == 'openSUSE Leap'

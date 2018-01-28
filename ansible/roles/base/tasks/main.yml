@@ -3,9 +3,9 @@
 
 # Repositories
 - import_tasks: repos/tumbleweed.yml
-  when: base_version == 'tumbleweed'
+  when: is_tumbleweed
 - import_tasks: repos/leap.yml
-  when: base_version == 'leap'
+  when: is_leap
 
 # Packages
 - import_tasks: packages/base.yml

@@ -2,14 +2,14 @@
 - name: enable 'oss' repo
   zypper_repository:
     name: oss
-    repo: 'http://download.opensuse.org/{{base_version}}/repo/oss/'
+    repo: 'http://download.opensuse.org/tumbleweed/repo/oss/'
     auto_import_keys: yes
     state: present
 
 - name: enable 'oss-update' repo
   zypper_repository:
     name: oss-update
-    repo: 'http://download.opensuse.org/update/{{base_version}}/'
+    repo: 'http://download.opensuse.org/update/tumbleweed'
     auto_import_keys: yes
     state: present
 
