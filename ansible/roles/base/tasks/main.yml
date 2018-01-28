@@ -22,7 +22,7 @@
 
 # This file is not provided by aaa_base
 # Without it update process won't regenerate grub config
-- task: fillup /etc/sysconfig/bootloader
+- name: fillup /etc/sysconfig/bootloader
   copy:
     src: sysconfig.bootloader
     dest: /etc/sysconfig/bootloader
