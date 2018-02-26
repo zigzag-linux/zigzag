@@ -11,8 +11,6 @@
 - import_tasks: packages/base.yml
 - import_tasks: packages/management.yml
 - import_tasks: packages/tools.yml
-- import_tasks: packages/non_free.yml
-  when: non_free == true
 
 # Flatpak
 - import_tasks: flatpak.yml

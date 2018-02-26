@@ -1,5 +1,0 @@
----
-- name: install non-free packages for base
-  zypper: name={{item}} state=present
-  with_items:
-    - rar

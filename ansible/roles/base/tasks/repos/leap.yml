@@ -13,10 +13,10 @@
     auto_import_keys: yes
     state: present
 
-- name: enable 'packman' repo
+- name: enable 'packman-essentials' repo
   zypper_repository:
-    name: packman
-    repo: 'http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_15.0/'
+    name: packman-essentials
+    repo: 'http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_15.0/Essentials/'
     auto_import_keys: yes
     state: present
     priority: 98
