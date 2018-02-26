@@ -5,7 +5,6 @@
     - deltarpm
     - rpmconf
     - zypper-log
-    - fwupdate
     - inxi
     - sensors
     - dmidecode
