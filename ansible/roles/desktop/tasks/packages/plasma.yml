@@ -15,6 +15,7 @@
     - kde-gtk-config5-gtk3
     - gtk2-metatheme-breeze
     - gtk3-metatheme-breeze
+    - kio-extras5
     - pam_kwallet
     - xdg-desktop-portal-kde
     - kdenetwork4-filesharing
