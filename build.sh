@@ -6,6 +6,14 @@
 #
 
 declare -r DOCKER_TAG=zigzag:0.4
+declare -a ARGUMENT_ARRAY
+
+case $1 in
+    *|leap-stable) ARGUMENT_ARRAY=('' 'leap-15.0') ;;
+    leap-testing) ARGUMENT_ARRAY=('--profile=testing' 'leap-15.0') ;;
+    tumbleweed-stable) ARGUMENT_ARRAY=('' 'tumbleweed') ;;
+    tumbleweed-testing) ARGUMENT_ARRAY=('--profile=testing' 'tumbleweed') ;;
+esac
 
 container_build()
 {
@@ -22,8 +30,8 @@ container_run()
 
 gekon_build()
 {
-    container_run "kiwi-ng $@ system build --description /kiwi/desc --target-dir /kiwi/out"
+    container_run "kiwi-ng ${ARGUMENT_ARRAY[0]} system build --description /kiwi/${ARGUMENT_ARRAY[1]} --target-dir /kiwi/out"
 }
 
 container_build
-gekon_build $@
+gekon_build
