@@ -9,10 +9,11 @@ declare -r DOCKER_TAG=zigzag:0.4
 declare -a ARGUMENT_ARRAY
 
 case $1 in
-    *|leap-stable) ARGUMENT_ARRAY=('' 'leap-15.0') ;;
+    leap-stable|'') ARGUMENT_ARRAY=('' 'leap-15.0') ;;
     leap-testing) ARGUMENT_ARRAY=('--profile=testing' 'leap-15.0') ;;
     tumbleweed-stable) ARGUMENT_ARRAY=('' 'tumbleweed') ;;
     tumbleweed-testing) ARGUMENT_ARRAY=('--profile=testing' 'tumbleweed') ;;
+    *) echo 'invalid variant'; exit 1 ;;
 esac
 
 container_build()
