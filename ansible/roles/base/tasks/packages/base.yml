@@ -15,6 +15,7 @@
     - grub2-x86_64-efi
     - syslinux
     - kernel-default
+    - shim
     - rng-tools
     - sudo
     - finger
