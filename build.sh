@@ -34,5 +34,12 @@ gekon_build()
     container_run "kiwi-ng ${ARGUMENT_ARRAY[0]} system build --description /kiwi/${ARGUMENT_ARRAY[1]} --target-dir /kiwi/out"
 }
 
+save_pkg_list()
+{
+    # store the package list inside the repo for reference of what has changed
+    cat out/*.packages | cut -d '|' -f1 | sort > ${ARGUMENT_ARRAY[1]}/package-reference.txt
+}
+
 container_build
 gekon_build
+save_pkg_list
