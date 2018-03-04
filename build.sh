@@ -37,7 +37,9 @@ gekon_build()
 save_pkg_list()
 {
     # store the package list inside the repo for reference of what has changed
-    cat out/*.packages | cut -d '|' -f1 | sort > ${ARGUMENT_ARRAY[1]}/package-reference.txt
+    if [ $? == 0 ]; then
+        cat out/*.packages | cut -d '|' -f1 | sort > ${ARGUMENT_ARRAY[1]}/package-reference.txt
+    fi
 }
 
 container_build
