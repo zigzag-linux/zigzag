@@ -20,3 +20,6 @@
     - name: install translation packages
       command: zigzag-languages -y
       ignore_errors: yes
+
+    - name: enable translation periodic check
+      systemd: name=zigzag-languages.timer enabled=yes
