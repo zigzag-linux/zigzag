@@ -17,9 +17,8 @@
         <version>0.0.1</version>
         <packagemanager>zypper</packagemanager>
         <locale>en_US</locale>
-        <keytable>us.map.gz</keytable>
+        <keytable>us</keytable>
         <timezone>Etc/UTC</timezone>
-        <hwclock>utc</hwclock>
         <rpm-excludedocs>true</rpm-excludedocs>
         <rpm-check-signatures>false</rpm-check-signatures>
         <bootsplash-theme>openSUSE</bootsplash-theme>
