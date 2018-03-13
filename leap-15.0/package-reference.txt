@@ -711,7 +711,7 @@ libv4l2-0
 libv4lconvert0
 libva2
 libva-drm2
-libvapoursynth-40
+libvapoursynth-43
 libvapoursynth-script0
 libva-vdpau-driver
 libva-wayland2
@@ -745,8 +745,8 @@ libwrap0
 libX11-6
 libX11-data
 libX11-xcb1
-libx264-148
-libx265-146
+libx264-152
+libx265-151
 libx86emu1
 libXau6
 libXaw7
