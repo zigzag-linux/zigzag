@@ -5,7 +5,7 @@
 # Usage: ./build.sh
 #
 
-declare -r DOCKER_TAG=zigzag:0.6
+declare -r DOCKER_TAG=zigzag:0.7
 declare -a ARGUMENT_ARRAY
 
 case $1 in
