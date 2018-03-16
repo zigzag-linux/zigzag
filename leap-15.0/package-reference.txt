@@ -40,6 +40,7 @@ breeze5-style
 breeze5-wallpapers
 btrfsprogs
 btrfsprogs-udev-rules
+bubblewrap
 bzip2
 cabextract
 ca-certificates
@@ -955,7 +956,7 @@ python3-decorator
 python3-firewall
 python3-gobject
 python3-greenlet
-python3-msgpack-python
+python3-msgpack
 python3-neovim
 python3-ply
 python3-rpm
@@ -1017,6 +1018,7 @@ sysfsutils
 syslinux
 systemd
 systemd-presets-branding-openSUSE
+systemd-presets-common-SUSE
 systemd-sysvinit
 system-group-hardware
 systemsettings5
