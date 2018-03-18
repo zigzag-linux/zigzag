@@ -21,3 +21,5 @@
     - kdenetwork4-filesharing
     - kdeconnect-kde
     - phonon4qt5-backend-vlc
+    - ffmpegthumbs
+    - kdegraphics-thumbnailers
