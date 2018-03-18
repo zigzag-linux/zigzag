@@ -17,3 +17,5 @@
     - NetworkManager-openvpn
     - PackageKit-backend-zypp
     - PackageKit-gstreamer-plugin
+    - ffmpeg
+    - libva-utils

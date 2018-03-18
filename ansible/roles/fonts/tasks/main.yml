@@ -7,6 +7,8 @@
     - dejavu-fonts
     - iosevka-fonts
     - noto-sans-fonts
+    - noto-sans-sc-fonts
+    - noto-sans-jp-fonts
     - noto-coloremoji-fonts
 
 - name: install microsoft fonts
