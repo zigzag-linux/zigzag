@@ -20,5 +20,7 @@
     - spectacle
     - filelight
     - keepassxc
-    - mpv
+    - vlc-qt
+    - vlc-codecs
+    - vlc-vdpau
     - youtube-dl
