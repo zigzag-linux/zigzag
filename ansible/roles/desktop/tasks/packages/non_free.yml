@@ -3,3 +3,5 @@
   zypper: name={{item}} state=present
   with_items:
     - chromium-plugin-widevinecdm
+    - vlc-codecs
+    - vlc-vdpau
