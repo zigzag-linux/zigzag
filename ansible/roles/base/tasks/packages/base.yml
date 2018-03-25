@@ -19,6 +19,7 @@
     - rng-tools
     - sudo
     - finger
+    - time
     - timezone
     - man
     - psmisc
