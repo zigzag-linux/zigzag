@@ -18,5 +18,10 @@
     - PackageKit-backend-zypp
     - PackageKit-gstreamer-plugin
     - udisks2
+
+- name: install missing codecs
+  zypper: name={{item}} state=present
+  with_items:
     - ffmpeg
     - libva-utils
+    - libva-glx2
