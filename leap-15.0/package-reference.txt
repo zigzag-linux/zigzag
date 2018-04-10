@@ -131,6 +131,7 @@ gpg2
 gpg-pubkey
 gpg-pubkey
 gpg-pubkey
+gptfdisk
 grep
 groff
 grub2
@@ -267,6 +268,8 @@ libblkid1
 libbluetooth3
 libbluray2
 libboost_python-py3-1_66_0
+libboost_system1_66_0
+libboost_thread1_66_0
 libbz2-1
 libcaca0
 libcairo2
@@ -619,7 +622,7 @@ libpulse-mainloop-glib0
 libpwquality1
 libpython2_7-1_0
 libpython3_6m1_0
-libqalculate13
+libqalculate14
 libqca-qt5
 libqrencode4
 libQt5Concurrent5
@@ -729,6 +732,7 @@ libtirpc-netconfig
 libts0
 libtwolame0
 libudev1
+libudisks2-0
 libunibilium0
 libunistring2
 libunwind
@@ -1063,6 +1067,7 @@ systemd-presets-branding-openSUSE
 systemd-presets-common-SUSE
 systemd-sysvinit
 system-group-hardware
+system-group-wheel
 systemsettings5
 system-user-lp
 system-user-man
@@ -1075,6 +1080,7 @@ terminfo-base
 thermald
 the_silver_searcher
 thin-provisioning-tools
+time
 timezone
 tlp
 tlp-rdw
@@ -1086,6 +1092,7 @@ typelib-1_0-NM-1_0
 ucode-amd
 ucode-intel
 udev
+udisks2
 unzip
 update-alternatives
 update-desktop-files
