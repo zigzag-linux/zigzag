@@ -1,5 +1,11 @@
 ---
 - hosts: all
+  pre_tasks:
+    - import_tasks: kiwi/pre_tasks.yml
+      when: is_kiwi
+  post_tasks:
+    - import_tasks: kiwi/post_tasks.yml
+      when: is_kiwi
   roles:
     - base
     - sudo

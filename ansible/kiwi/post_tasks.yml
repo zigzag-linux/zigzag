@@ -1,0 +1,14 @@
+---
+- name: remove temporary cachedir zypper option
+  ini_file:
+    path: /etc/zypp/zypp.conf
+    section: main
+    option: cachedir
+    state: absent
+
+- name: remove temporary excludedocs zypper option
+  ini_file:
+    path: /etc/zypp/zypp.conf
+    section: main
+    option: rpm.install.excludedocs
+    state: absent

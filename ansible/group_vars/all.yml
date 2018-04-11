@@ -10,3 +10,6 @@ testing_repo: false
 # Distinguish between base versions of the distro
 is_tumbleweed: ansible_distribution == 'openSUSE Tumbleweed'
 is_leap: ansible_distribution == 'openSUSE Leap'
+
+# Check if we're running within kiwi environment
+is_kiwi: lookup('env', 'kiwi_iname') == 'zigzag'

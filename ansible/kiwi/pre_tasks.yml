@@ -1,0 +1,24 @@
+---
+- name: point zypper cache at kiwi cache
+  ini_file:
+    path: /etc/zypp/zypp.conf
+    create: no
+    add_extra_spaces: yes
+    section: main
+    option: cachedir
+    value: /var/cache/kiwi
+
+- name: enable zypper excludedocs option to save space
+  ini_file:
+    path: /etc/zypp/zypp.conf
+    create: no
+    add_extra_spaces: yes
+    section: main
+    option: rpm.install.excludedocs
+    value: yes
+
+# this package will be re-added at the later stage, it needs to be
+# removed at the beginning so that it's dependencies are marked as
+# manually installed when we list them in the playbook
+- name: remove dracut-kiwi-live package
+  zypper: name=dracut-kiwi-live state=absent
