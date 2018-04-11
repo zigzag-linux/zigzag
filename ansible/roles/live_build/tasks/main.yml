@@ -1,0 +1,12 @@
+---
+- name: install live medium tools
+  zypper: name={{item}} state=present
+  with_items:
+    - calamares-branding-zigzag
+    - zigzag-live-service
+
+- name: enable zigzag-live service
+  systemd: name=zigzag-live enabled=yes
+
+- name: refresh repositories to gather appstream data
+  zypper_repository: name='*' runrefresh=yes

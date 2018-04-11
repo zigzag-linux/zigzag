@@ -12,3 +12,6 @@
     section: main
     option: rpm.install.excludedocs
     state: absent
+
+- name: re-add dracut-kiwi-live package
+  zypper: name=dracut-kiwi-live state=present

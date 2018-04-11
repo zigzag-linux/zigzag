@@ -14,3 +14,4 @@
     - desktop
     - polkit
     - fonts
+    - { role: live_build, when: is_kiwi }

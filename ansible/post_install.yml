@@ -1,3 +1,4 @@
+# This playbook is executed at the end of the install process
 ---
 - hosts: all
   tasks:
