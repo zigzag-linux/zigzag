@@ -39,7 +39,6 @@ if [[ $kiwi_profiles == *testing* ]]; then
 fi
 
 zigzag-write-configuration --force root
-zigzag-write-configuration --force live_create
 set +e
 
 #======================================
