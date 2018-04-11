@@ -12,4 +12,4 @@ is_tumbleweed: ansible_distribution == 'openSUSE Tumbleweed'
 is_leap: ansible_distribution == 'openSUSE Leap'
 
 # Check if we're running within kiwi environment
-is_kiwi: lookup('env', 'kiwi_iname') == 'zigzag'
+is_kiwi: lookup('env', 'IS_KIWI') == '1'

@@ -6,7 +6,7 @@
     add_extra_spaces: yes
     section: main
     option: cachedir
-    value: /var/cache/kiwi
+    value: /kiwi/out/cache
 
 - name: enable zypper excludedocs option to save space
   ini_file:
