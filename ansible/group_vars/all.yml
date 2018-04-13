@@ -1,15 +1,13 @@
 ---
 # Include non-free packages
-# valid options: true, false
-non_free: true
+non_free: not lookup('env', 'ZIGZAG_OSS_ONLY')
 
 # Enable testing repository
-# valid options: true, false
-testing_repo: false
+testing_repo: lookup('env', 'ZIGZAG_TESTING') | bool
+
+# Check if we're running within kiwi environment
+is_kiwi: lookup('env', 'ZIGZAG_KIWI') | bool
 
 # Distinguish between base versions of the distro
 is_tumbleweed: ansible_distribution == 'openSUSE Tumbleweed'
 is_leap: ansible_distribution == 'openSUSE Leap'
-
-# Check if we're running within kiwi environment
-is_kiwi: lookup('env', 'IS_KIWI') == '1'
