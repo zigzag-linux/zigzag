@@ -1,16 +1,14 @@
 ---
 - name: remove temporary cachedir zypper option
-  ini_file:
+  lineinfile:
     path: /etc/zypp/zypp.conf
-    section: main
-    option: cachedir
+    line: 'cachedir = /kiwi/out/cache'
     state: absent
 
 - name: remove temporary excludedocs zypper option
-  ini_file:
+  lineinfile:
     path: /etc/zypp/zypp.conf
-    section: main
-    option: rpm.install.excludedocs
+    line: 'rpm.install.excludedocs = yes'
     state: absent
 
 - name: re-add dracut-kiwi-live package

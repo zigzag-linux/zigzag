@@ -7,21 +7,17 @@
     - /usr/share/info/xorrecord.info.gz
     - /usr/share/info/xorriso.info.gz
 
-- name: point zypper cache at kiwi cache
-  ini_file:
+- name: temporary point zypper cache at kiwi cache
+  lineinfile:
     path: /etc/zypp/zypp.conf
+    line: 'cachedir = /kiwi/out/cache'
     create: no
-    section: main
-    option: cachedir
-    value: /kiwi/out/cache
 
-- name: enable zypper excludedocs option to save space
-  ini_file:
+- name: temporary enable zypper excludedocs
+  lineinfile:
     path: /etc/zypp/zypp.conf
+    line: 'rpm.install.excludedocs = yes'
     create: no
-    section: main
-    option: rpm.install.excludedocs
-    value: yes
 
 # this package will be re-added at the later stage, it needs to be
 # removed at the beginning so that it's dependencies are marked as
