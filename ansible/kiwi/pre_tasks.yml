@@ -1,4 +1,12 @@
 ---
+# quickfix for boo#1089175
+- name: touch missing files to remove xorriso
+  command: touch {{item}}
+  with_items:
+    - /usr/share/info/xorrisofs.info.gz
+    - /usr/share/info/xorrecord.info.gz
+    - /usr/share/info/xorriso.info.gz
+
 - name: point zypper cache at kiwi cache
   ini_file:
     path: /etc/zypp/zypp.conf
