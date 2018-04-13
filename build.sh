@@ -31,7 +31,7 @@ container_run()
 
 gekon_build()
 {
-    container_run "kiwi-ng ${ARGUMENT_ARRAY[0]} system build --description /kiwi/${ARGUMENT_ARRAY[1]} --target-dir /kiwi/out"
+    container_run "kiwi-ng --shared-cache-dir=/kiwi/out/cache ${ARGUMENT_ARRAY[0]} system build --description /kiwi/${ARGUMENT_ARRAY[1]} --target-dir /kiwi/out"
 }
 
 save_pkg_list()
