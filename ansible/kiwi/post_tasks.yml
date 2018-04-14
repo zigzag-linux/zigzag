@@ -1,10 +1,4 @@
 ---
-- name: remove temporary cachedir zypper option
-  lineinfile:
-    path: /etc/zypp/zypp.conf
-    line: 'cachedir = /kiwi/out/cache'
-    state: absent
-
 - name: remove temporary excludedocs zypper option
   lineinfile:
     path: /etc/zypp/zypp.conf

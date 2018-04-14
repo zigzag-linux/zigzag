@@ -7,12 +7,6 @@
     - /usr/share/info/xorrecord.info.gz
     - /usr/share/info/xorriso.info.gz
 
-- name: temporary point zypper cache at kiwi cache
-  lineinfile:
-    path: /etc/zypp/zypp.conf
-    line: 'cachedir = /kiwi/out/cache'
-    create: no
-
 - name: temporary enable zypper excludedocs
   lineinfile:
     path: /etc/zypp/zypp.conf

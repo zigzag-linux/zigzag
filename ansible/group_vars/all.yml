@@ -1,12 +1,12 @@
 ---
 # Include non-free packages
-non_free: not lookup('env', 'ZIGZAG_OSS_ONLY')
+non_free: "{{ not lookup('env', 'ZIGZAG_OSS_ONLY') }}"
 
 # Enable testing repository
-testing_repo: lookup('env', 'ZIGZAG_TESTING') | bool
+testing_repo: "{{ lookup('env', 'ZIGZAG_TESTING') | bool }}"
 
 # Check if we're running within kiwi environment
-is_kiwi: lookup('env', 'ZIGZAG_KIWI') | bool
+is_kiwi: "{{ lookup('env', 'ZIGZAG_KIWI') | bool }}"
 
 # Distinguish between base versions of the distro
 is_tumbleweed: ansible_distribution == 'openSUSE Tumbleweed'
