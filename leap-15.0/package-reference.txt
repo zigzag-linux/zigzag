@@ -270,6 +270,7 @@ libbluray2
 libboost_python-py3-1_66_0
 libboost_system1_66_0
 libboost_thread1_66_0
+libburn4
 libbz2-1
 libcaca0
 libcairo2
@@ -291,6 +292,7 @@ libcmrt1
 libcolord2
 libcom_err2
 libcrack2
+libcreaterepo_c0
 libcroco-0_6-3
 libcryptsetup12
 libcups2
@@ -416,10 +418,10 @@ libicu60_2
 libicu60_2-ledata
 libidn11
 libidn2-0
-libieee1284
 libIex-2_2-23
 libIlmImf-2_2-23
 libIlmThread-2_2-23
+libimagequant0
 libimobiledevice6
 libinput10
 libipset11
@@ -429,14 +431,17 @@ libisc166
 libisccc160
 libisccfg160
 libisl15
+libisoburn1
+libisofs6
 libjack0
 libjansson4
-libjasper1
+libjasper4
 libjbig2
 libjemalloc2
 libjpeg8
 libjson-c3
 libjson-glib-1_0-0
+libjte1
 libkate1
 libkdecorations2-5
 libkdecorations2private5
@@ -538,6 +543,7 @@ liblzma5
 liblzo2-2
 libmad0
 libmagic1
+libmarkdown2
 libmatroska6
 libmetalink3
 libminiupnpc16
@@ -648,6 +654,7 @@ libQt5Sql5
 libQt5Sql5-sqlite
 libQt5Svg5
 libQt5Test5
+libQt5TextToSpeech5
 libQt5WebChannel5
 libQt5WebKit5
 libQt5WebKitWidgets5
@@ -674,8 +681,6 @@ libsamdb0
 libsamplerate0
 libsasl2-3
 libsbc1
-libscg1_0
-libschily1_0
 libschroedinger-1_0-0
 libSDL-1_2-0
 libSDL2-2_0-0
@@ -702,6 +707,7 @@ libsolv-tools
 libsoup-2_4-1
 libsoxr0
 libspectre1
+libspeechd2
 libspeex1
 libspeexdsp1
 libsqlite3-0
@@ -733,7 +739,7 @@ libts0
 libtwolame0
 libudev1
 libudisks2-0
-libunibilium0
+libunibilium4
 libunistring2
 libunwind
 libupnp6
@@ -750,6 +756,7 @@ libv4l2-0
 libv4lconvert0
 libva2
 libva-drm2
+libva-glx2
 libva-utils
 libva-vdpau-driver
 libva-wayland2
@@ -873,7 +880,6 @@ metatheme-breeze-common
 milou5
 mkfontdir
 mkfontscale
-mkisofs
 mobipocket
 mozilla-nspr
 mozilla-nss
@@ -958,6 +964,7 @@ plasma-framework-components
 plasma-framework-private
 plasma-nm5
 plasma-nm5-openvpn
+pngquant
 polkit
 polkit-default-privs
 polkit-kde-agent-5
@@ -997,6 +1004,8 @@ python2-six
 python3
 python3-base
 python3-bind
+python3-cmdln
+python3-createrepo_c
 python3-curses
 python3-dbus-python
 python3-decorator
@@ -1076,12 +1085,14 @@ system-user-root
 sysuser-shadow
 sysvinit-tools
 tar
+tcl
 terminfo-base
 thermald
 the_silver_searcher
 thin-provisioning-tools
 time
 timezone
+tk
 tlp
 tlp-rdw
 transmission-common
@@ -1143,6 +1154,7 @@ xorg-x11-essentials
 xorg-x11-fonts
 xorg-x11-fonts-core
 xorg-x11-server
+xorriso
 xprop
 xrandr
 xrdb
@@ -1156,6 +1168,5 @@ zd1211-firmware
 zigzag-configuration
 zigzag-live-service
 zigzag-tools
-zisofs-tools
 zypper
 zypper-log
