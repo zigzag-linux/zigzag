@@ -12,7 +12,7 @@
     owner: root
     group: users
     state: directory
-    mode: 1770
+    mode: 01770
 
 - name: copy samba configuration
   copy:
