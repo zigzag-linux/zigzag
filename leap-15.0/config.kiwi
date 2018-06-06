@@ -34,6 +34,9 @@
     <repository type="rpm-md" alias="oss">
         <source path="obs://openSUSE:Leap:15.0/standard"/>
     </repository>
+    <repository type="rpm-md" alias="oss-update">
+        <source path="obs://openSUSE:Leap:15.0:Update/standard"/>
+    </repository>
     <repository type="rpm-md" alias="zigzag" priority="20">
         <source path="obs://home:mkrwc:zigzag/openSUSE_Leap_15.0"/>
     </repository>
