@@ -8,6 +8,8 @@
     - /usr/share/info/xorriso.info.gz
 
 - name: temporary enable zypper excludedocs
+  tags:
+    - never # disabled due to boo#1096305
   lineinfile:
     path: /etc/zypp/zypp.conf
     line: 'rpm.install.excludedocs = yes'
