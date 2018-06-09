@@ -25,7 +25,7 @@
         <bootloader-theme>openSUSE</bootloader-theme>
     </preferences>
     <profiles>
-        <profile name="testing" description="Run Test Branch"/>
+        <profile name="devel" description="Development build"/>
     </profiles>
     <users>
         <!-- password: linux -->
@@ -34,12 +34,8 @@
     <repository type="yast2" alias="oss">
         <source path="http://download.opensuse.org/tumbleweed/repo/oss"/>
     </repository>
-    <repository type="rpm-md" alias="zigzag" priority="20">
-        <source path="obs://home:mkrwc:zigzag/openSUSE_Tumbleweed"/>
-    </repository>
-    <!-- additional testing repo enabled only in testing profile -->
-    <repository type="rpm-md" alias="zigzag-testing" profiles="testing" priority="10">
-        <source path="obs://home:mkrwc:zigzag:testing/openSUSE_Tumbleweed"/>
+    <repository type="rpm-md" alias="zigzag-devel" priority="10">
+        <source path="obs://home:mkrwc:zigzag:devel/openSUSE_Tumbleweed"/>
     </repository>
     <packages type="image">
         <package name="zigzag-configuration"/>

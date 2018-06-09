@@ -10,15 +10,14 @@ Build runs inside of a Docker container, once done the output iso will be locate
 
 ## Variants
 
-By default the build command will pick up stable Leap, there is however an option to build against different base versions and enabling [testing repostory](https://build.opensuse.org/project/show/home:mkrwc:zigzag:testing).
+By default the build command will pick up stable Leap, there is however an option to build against different base versions and enabling [development repostory](https://build.opensuse.org/project/show/home:mkrwc:zigzag:devel).
 
-| Name               | openSUSE Version | Testing repo enabled |
+| Name               | openSUSE Version | Devel repo enabled   |
 |--------------------|------------------|----------------------|
 | leap-stable        | Leap             | No                   |
-| leap-testing       | Leap             | Yes                  |
-| tumbleweed-stable  | Tumbleweed       | No                   |
-| tumbleweed-testing | Tumbleweed       | Yes                  |
+| leap-devel         | Leap             | Yes                  |
+| tumbleweed-devel   | Tumbleweed       | Yes                  |
 
-To build Tumbleweed with testing repo:
+To build Tumbleweed with development repo:
 
-        $ ./build.sh tumbleweed-testing
+        $ ./build.sh tumbleweed-devel

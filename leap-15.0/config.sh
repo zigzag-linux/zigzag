@@ -36,8 +36,8 @@ suseConfig
 export ZIGZAG_KIWI=1
 
 set -e
-if [[ $kiwi_profiles == *testing* ]]; then
-    export ZIGZAG_TESTING=1
+if [[ $kiwi_profiles == *devel* ]]; then
+    export ZIGZAG_DEVEL=1
 fi
 
 zigzag-write-configuration --force root
