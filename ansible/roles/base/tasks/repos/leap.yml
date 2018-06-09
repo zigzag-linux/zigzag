@@ -25,16 +25,16 @@
 - name: enable 'zigzag' repo
   zypper_repository:
     name: zigzag
-    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag/openSUSE_Leap_15.0/'
+    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/15.0/standard'
     auto_import_keys: yes
     state: present
     priority: 20
 
-- name: enable 'zigzag-testing' repo
+- name: enable 'zigzag-devel' repo
   zypper_repository:
-    name: zigzag-testing
-    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/testing/openSUSE_Leap_15.0/'
+    name: zigzag-devel
+    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/devel/openSUSE_Leap_15.0/'
     auto_import_keys: yes
     state: present
     priority: 10
-  when: testing_repo == true
+  when: devel_repo == true

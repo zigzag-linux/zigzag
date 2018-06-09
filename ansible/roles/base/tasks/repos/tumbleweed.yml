@@ -22,19 +22,10 @@
     priority: 98
   when: non_free == true
 
-- name: enable 'zigzag' repo
+- name: enable 'zigzag-devel' repo
   zypper_repository:
-    name: zigzag
-    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag/openSUSE_Tumbleweed/'
+    name: zigzag-devel
+    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/devel/openSUSE_Tumbleweed/'
     auto_import_keys: yes
     state: present
     priority: 20
-
-- name: enable 'zigzag-testing' repo
-  zypper_repository:
-    name: zigzag-testing
-    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/testing/openSUSE_Tumbleweed/'
-    auto_import_keys: yes
-    state: present
-    priority: 10
-  when: testing_repo == true

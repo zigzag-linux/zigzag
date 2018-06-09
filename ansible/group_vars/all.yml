@@ -2,8 +2,8 @@
 # Include non-free packages
 non_free: "{{ not lookup('env', 'ZIGZAG_OSS_ONLY') }}"
 
-# Enable testing repository
-testing_repo: "{{ lookup('env', 'ZIGZAG_TESTING') | bool }}"
+# Enable development repository
+devel_repo: "{{ lookup('env', 'ZIGZAG_DEVEL') | bool }}"
 
 # Check if we're running within kiwi environment
 is_kiwi: "{{ lookup('env', 'ZIGZAG_KIWI') | bool }}"
