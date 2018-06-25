@@ -2,39 +2,35 @@
 - name: enable 'oss' repo
   zypper_repository:
     name: oss
-    repo: 'http://download.opensuse.org/distribution/leap/15.0/repo/oss/'
-    auto_import_keys: yes
-    state: present
+    repo: 'http://download.opensuse.org/distribution/leap/$releasever/repo/oss/'
 
 - name: enable 'oss-update' repo
   zypper_repository:
     name: oss-update
-    repo: 'http://download.opensuse.org/update/leap/15.0/oss/'
-    auto_import_keys: yes
-    state: present
+    repo: 'http://download.opensuse.org/update/leap/$releasever/oss/'
 
 - name: enable 'packman-essentials' repo
   zypper_repository:
     name: packman-essentials
-    repo: 'http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_15.0/Essentials/'
-    auto_import_keys: yes
-    state: present
+    repo: 'http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/Essentials/'
     priority: 98
   when: non_free == true
 
 - name: enable 'zigzag' repo
   zypper_repository:
     name: zigzag
-    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/15.0/standard'
-    auto_import_keys: yes
-    state: present
+    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/$releasever/standard'
     priority: 20
 
 - name: enable 'zigzag-devel' repo
   zypper_repository:
     name: zigzag-devel
-    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/devel/openSUSE_Leap_15.0/'
-    auto_import_keys: yes
-    state: present
+    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/devel/openSUSE_Leap_$releasever/'
     priority: 10
   when: devel_repo == true
+
+- name: refresh all repos and import keys
+  zypper_repository:
+    repo: '*'
+    runrefresh: yes
+    auto_import_keys: yes

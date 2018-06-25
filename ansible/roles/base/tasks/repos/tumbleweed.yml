@@ -3,22 +3,16 @@
   zypper_repository:
     name: oss
     repo: 'http://download.opensuse.org/tumbleweed/repo/oss/'
-    auto_import_keys: yes
-    state: present
 
 - name: enable 'oss-update' repo
   zypper_repository:
     name: oss-update
     repo: 'http://download.opensuse.org/update/tumbleweed'
-    auto_import_keys: yes
-    state: present
 
 - name: enable 'packman-essentials' repo
   zypper_repository:
     name: packman-essentials
     repo: 'http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Essentials/'
-    auto_import_keys: yes
-    state: present
     priority: 98
   when: non_free == true
 
@@ -26,6 +20,10 @@
   zypper_repository:
     name: zigzag-devel
     repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/devel/openSUSE_Tumbleweed/'
-    auto_import_keys: yes
-    state: present
     priority: 20
+
+- name: refresh all repos and import keys
+  zypper_repository:
+    repo: '*'
+    runrefresh: yes
+    auto_import_keys: yes
