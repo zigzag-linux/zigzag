@@ -8,6 +8,7 @@
         - calamares-branding-zigzag
         - dracut-kiwi-live
         - zigzag-live-service
+        - zigzag-configuration
 
     # fix locale settings after installation (opensuse quirk)
     # copy language from /etc/locale.conf to /etc/sysconfig/language
@@ -17,10 +18,6 @@
         regexp: '^RC_LANG'
         line: 'RC_LANG="{{ item }}"'
       with_items: "{{ lookup('ini', 'LANG type=properties file=/etc/locale.conf') }}"
-
-    - name: install translation packages
-      command: zigzag-languages -y
-      ignore_errors: yes
 
     - name: enable translation periodic check
       systemd: name=zigzag-languages.timer enabled=yes

@@ -1,10 +1,10 @@
 ---
 - hosts: all
   pre_tasks:
-    - import_tasks: kiwi/pre_tasks.yml
+    - import_role: name=kiwi_pre
       when: is_kiwi
   post_tasks:
-    - import_tasks: kiwi/post_tasks.yml
+    - import_role: name=kiwi_post
       when: is_kiwi
   roles:
     - base
@@ -14,4 +14,3 @@
     - desktop
     - polkit
     - fonts
-    - { role: live_build, when: is_kiwi }

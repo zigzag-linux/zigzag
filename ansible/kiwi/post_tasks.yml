@@ -1,9 +1,0 @@
----
-- name: remove temporary excludedocs zypper option
-  lineinfile:
-    path: /etc/zypp/zypp.conf
-    line: 'rpm.install.excludedocs = yes'
-    state: absent
-
-- name: re-add dracut-kiwi-live package
-  zypper: name=dracut-kiwi-live state=present
