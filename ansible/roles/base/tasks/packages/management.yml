@@ -5,7 +5,6 @@
     - deltarpm
     - rpmconf
     - zypper-log
-    - inxi
     - sensors
     - dmidecode
     - hddtemp

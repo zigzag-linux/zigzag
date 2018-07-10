@@ -9,7 +9,5 @@
     - xorg-x11-driver-video
     - xf86-input-libinput
     - xrandr
-    - xdpyinfo
-    - xhost
     - xclip
     - Mesa-demo-x
