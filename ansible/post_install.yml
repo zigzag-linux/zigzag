@@ -2,14 +2,6 @@
 ---
 - hosts: all
   tasks:
-    - name: remove live medium tools
-      zypper: name={{item}} state=absent
-      with_items:
-        - calamares-branding-zigzag
-        - dracut-kiwi-live
-        - zigzag-live-service
-        - zigzag-configuration
-
     # fix locale settings after installation (opensuse quirk)
     # copy language from /etc/locale.conf to /etc/sysconfig/language
     - name: set the language in /etc/sysconfig/language
@@ -21,3 +13,10 @@
 
     - name: enable translation periodic check
       systemd: name=zigzag-languages.timer enabled=yes
+
+    - name: remove live medium tools
+      zypper: name={{item}} state=absent
+      with_items:
+        - calamares
+        - zigzag-live-service
+        - dracut-kiwi-live
