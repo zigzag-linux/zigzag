@@ -112,7 +112,6 @@ elfutils-lang
 expat
 f2fs-tools
 fetchmsttfonts
-ffmpeg
 ffmpegthumbs
 file
 filelight
@@ -325,11 +324,13 @@ libavahi-common3
 libavahi-core7
 libavc1394-0
 libavcodec57
-libavdevice57
+libavcodec58
 libavfilter6
 libavformat57
+libavformat58
 libavresample3
 libavutil55
+libavutil56
 libb64-0
 libbind9-160
 libblkid1
@@ -350,9 +351,6 @@ libcares2
 libcdda_interface0
 libcdda_paranoia0
 libcddb2
-libcdio16
-libcdio_cdda2
-libcdio_paranoia2
 libcelt0-2
 libchm0
 libchromaprint1
@@ -504,7 +502,6 @@ libisccfg160
 libisl15
 libisoburn1
 libisofs6
-libjack0
 libjansson4
 libjasper4
 libjbig2
@@ -776,6 +773,7 @@ libreadline7
 libreiserfscore0
 librest-0_7-0
 librsvg-2-2
+librtmp1
 libsamba-credentials0
 libsamba-errors0
 libsamba-hostconfig0
@@ -788,7 +786,6 @@ libsasl2-3
 libsbc1
 libschroedinger-1_0-0
 libSDL-1_2-0
-libSDL2-2_0-0
 libSDL_image-1_2-0
 libseccomp2
 libsecret-1-0
@@ -823,6 +820,7 @@ libssh2-1
 libssh4
 libstdc++6
 libswresample2
+libswresample3
 libswscale4
 libsystemd0
 libtag1
@@ -966,6 +964,7 @@ libyaml-cpp0_6
 libykpers-1-1
 libyubikey0
 libz1
+libzimg2
 libzio1
 libzip5
 libzvbi0

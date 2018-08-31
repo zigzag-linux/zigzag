@@ -54,7 +54,6 @@ breeze5-wallpapers
 btrfsprogs
 btrfsprogs-udev-rules
 bubblewrap
-bzip2
 cabextract
 ca-certificates
 ca-certificates-mozilla
@@ -111,7 +110,6 @@ elfutils-lang
 expat
 f2fs-tools
 fetchmsttfonts
-ffmpeg-4
 ffmpegthumbs
 file
 filelight
@@ -150,6 +148,7 @@ glibc
 glibc-locale
 glib-networking
 glib-networking-lang
+gmenudbusmenuproxy
 google-noto-fonts-doc
 gpg2
 gpg2-lang
@@ -300,6 +299,7 @@ liba52-0
 libaa1
 libacl1
 libaio1
+libaom0
 libapparmor1
 libappstream4
 libappstream-builder8
@@ -326,7 +326,6 @@ libavahi-common3
 libavahi-core7
 libavc1394-0
 libavcodec58
-libavdevice58
 libavfilter7
 libavformat58
 libavresample4
@@ -362,16 +361,13 @@ libcares2
 libcdda_interface0
 libcdda_paranoia0
 libcddb2
-libcdio18
-libcdio_cdda2
-libcdio_paranoia2
 libcelt0-2
+libcfitsio6
 libchm0
 libchromaprint1
 libcmrt1
-libcodec2-0_6
+libcodec2-0_8
 libcolord2
-libcolorhug2
 libcom_err2
 libcrack2
 libcreaterepo_c0
@@ -438,7 +434,6 @@ libfreetype6
 libfribidi0
 libftgl2
 libfuse2
-libfwup1
 libfwupd2
 libgbm1
 libgc1
@@ -502,8 +497,8 @@ libhyphen0
 libibus-1_0-5
 libical3
 libICE6
-libicu61_1-ledata
-libicu-suse61_1
+libicu62_1-ledata
+libicu-suse62_1
 libidn12
 libidn2-0
 libidn2-lang
@@ -520,7 +515,6 @@ libisccfg160
 libisl19
 libisoburn1
 libisofs6
-libjack0
 libjansson4
 libjasper4
 libjbig2
@@ -706,7 +700,7 @@ libnm0
 libnotify4
 libnpth0
 libnsl2
-libntfs-3g87
+libntfs-3g88
 libnuma1
 libobjc4
 libogg0
@@ -730,6 +724,7 @@ libpci3
 libpciaccess0
 libpcre1
 libpcre2-16-0
+libpcre2-8-0
 libpgm-5_2-0
 libphonon4qt5
 libpipeline1
@@ -812,7 +807,6 @@ libsasl2-3
 libsbc1
 libschroedinger-1_0-0
 libSDL-1_2-0
-libSDL2-2_0-0
 libSDL_image-1_2-0
 libseccomp2
 libsecret-1-0
@@ -935,7 +929,7 @@ libX11-data
 libX11-xcb1
 libx264-152
 libx265-151
-libx86emu1
+libx86emu2
 libXau6
 libXaw7
 libxcb1
@@ -1180,6 +1174,7 @@ rgb
 rng-tools
 rpm
 rpmconf
+rpm-config-SUSE
 rsync
 rtkit
 samba
@@ -1285,6 +1280,7 @@ xdg-user-dirs
 xdg-user-dirs-lang
 xdg-utils
 xdm
+xembedsniproxy
 xf86-input-libinput
 xf86-video-amdgpu
 xf86-video-ati
