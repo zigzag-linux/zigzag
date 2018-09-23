@@ -54,7 +54,6 @@ breeze5-wallpapers
 btrfsprogs
 btrfsprogs-udev-rules
 bubblewrap
-bzip2
 cabextract
 ca-certificates
 ca-certificates-mozilla
@@ -85,7 +84,6 @@ dbus-1-glib
 dconf
 dejavu-fonts
 deltarpm
-desktop-file-utils
 device-mapper
 dhcp
 dhcp-client
@@ -967,6 +965,7 @@ libz1
 libzimg2
 libzio1
 libzip5
+libzstd1
 libzvbi0
 libzypp
 libzypp-plugin-appdata
@@ -1227,7 +1226,6 @@ udisks2-lang
 unar
 unzip
 update-alternatives
-update-desktop-files
 upower
 usbutils
 util-linux
