@@ -9,8 +9,8 @@ Source0:        %{name}-%{version}.tar
 BuildArch:      noarch
 
 BuildRequires:  make
-BuildRequires:  ansible
-Requires:       ansible
+BuildRequires:  ansible >= 2.6
+Requires:       ansible >= 2.6
 
 %description
 Configuration files (Ansible Playbooks) preserving default configuration of Zigzag Linux images.
