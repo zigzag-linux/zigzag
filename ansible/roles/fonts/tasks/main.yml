@@ -1,15 +1,16 @@
 ---
 - name: install font packages
-  zypper: name={{item}} state=present
-  with_items:
-    - fonts-config
-    - liberation-fonts
-    - dejavu-fonts
-    - iosevka-fonts
-    - noto-sans-fonts
-    - noto-sans-sc-fonts
-    - noto-sans-jp-fonts
-    - noto-coloremoji-fonts
+  zypper:
+    name:
+      - fonts-config
+      - liberation-fonts
+      - dejavu-fonts
+      - iosevka-fonts
+      - noto-sans-fonts
+      - noto-sans-sc-fonts
+      - noto-sans-jp-fonts
+      - noto-coloremoji-fonts
+    state: present
 
 - name: install microsoft fonts
   zypper: name=fetchmsttfonts state=present

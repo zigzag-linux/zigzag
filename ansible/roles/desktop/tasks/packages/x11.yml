@@ -1,13 +1,14 @@
 ---
 - name: install x.org and utils
-  zypper: name={{item}} state=present
-  with_items:
-    - patterns-zigzag-xfirmware
-    - xorg-x11-essentials
-    - xorg-x11-server
-    - xorg-x11-fonts
-    - xorg-x11-driver-video
-    - xf86-input-libinput
-    - xrandr
-    - xclip
-    - Mesa-demo-x
+  zypper:
+    name:
+      - patterns-zigzag-xfirmware
+      - xorg-x11-essentials
+      - xorg-x11-server
+      - xorg-x11-fonts
+      - xorg-x11-driver-video
+      - xf86-input-libinput
+      - xrandr
+      - xclip
+      - Mesa-demo-x
+    state: present

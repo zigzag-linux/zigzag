@@ -1,24 +1,25 @@
 ---
 - name: install desktop apps
-  zypper: name={{item}} state=present
-  with_items:
-    - chromium
-    - dolphin
-    - konsole
-    - kwrite
-    - kcalc
-    - partitionmanager
-    - kolourpaint
-    - kcolorchooser
-    - okular
-    - ark
-    - gwenview
-    - transmission-qt
-    - ksysguard5
-    - discover
-    - kwalletmanager5
-    - spectacle
-    - filelight
-    - keepassxc
-    - vlc-qt
-    - youtube-dl
+  zypper:
+    name:
+      - chromium
+      - dolphin
+      - konsole
+      - kwrite
+      - kcalc
+      - partitionmanager
+      - kolourpaint
+      - kcolorchooser
+      - okular
+      - ark
+      - gwenview
+      - transmission-qt
+      - ksysguard5
+      - discover
+      - kwalletmanager5
+      - spectacle
+      - filelight
+      - keepassxc
+      - vlc-qt
+      - youtube-dl
+    state: present

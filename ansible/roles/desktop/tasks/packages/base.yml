@@ -1,27 +1,29 @@
 ---
 - name: install general desktop base
-  zypper: name={{item}} state=present
-  with_items:
-    - zigzag-wallpapers
-    - xdg-user-dirs
-    - xdg-utils
-    - gsettings-backend-dconf
-    - alsa-firmware
-    - alsa-utils
-    - alsa-plugins-pulse
-    - pulseaudio
-    - pulseaudio-module-bluetooth
-    - pulseaudio-module-zeroconf
-    - pulseaudio-module-x11
-    - bluez-firmware
-    - NetworkManager
-    - NetworkManager-openvpn
-    - PackageKit-backend-zypp
-    - PackageKit-gstreamer-plugin
-    - udisks2
+  zypper:
+    name:
+      - zigzag-wallpapers
+      - xdg-user-dirs
+      - xdg-utils
+      - gsettings-backend-dconf
+      - alsa-firmware
+      - alsa-utils
+      - alsa-plugins-pulse
+      - pulseaudio
+      - pulseaudio-module-bluetooth
+      - pulseaudio-module-zeroconf
+      - pulseaudio-module-x11
+      - bluez-firmware
+      - NetworkManager
+      - NetworkManager-openvpn
+      - PackageKit-backend-zypp
+      - PackageKit-gstreamer-plugin
+      - udisks2
+    state: present
 
 - name: install libva
-  zypper: name={{item}} state=present
-  with_items:
-    - libva-utils
-    - libva-glx2
+  zypper:
+    name:
+      - libva-utils
+      - libva-glx2
+    state: present

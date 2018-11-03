@@ -15,8 +15,9 @@
       systemd: name=zigzag-languages.timer enabled=yes
 
     - name: remove live medium tools
-      zypper: name={{item}} state=absent
-      with_items:
-        - calamares
-        - zigzag-live-service
-        - dracut-kiwi-live
+      zypper:
+        name:
+          - calamares
+          - zigzag-live-service
+          - dracut-kiwi-live
+        state: absent

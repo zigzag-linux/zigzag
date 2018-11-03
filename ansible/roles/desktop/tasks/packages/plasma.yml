@@ -1,25 +1,26 @@
 ---
 - name: install plasma desktop
-  zypper: name={{item}} state=present
-  with_items:
-    - sddm
-    - plasma5-session
-    - plasma5-defaults-zigzag
-    - plasma5-pa
-    - plasma-nm5-openvpn
-    - bluedevil5
-    - ksshaskpass5
-    - pinentry-qt5
-    - kgamma5
-    - kde-gtk-config5-gtk2
-    - kde-gtk-config5-gtk3
-    - gtk2-metatheme-breeze
-    - gtk3-metatheme-breeze
-    - kio-extras5
-    - pam_kwallet
-    - xdg-desktop-portal-kde
-    - kdenetwork4-filesharing
-    - kdeconnect-kde
-    - phonon4qt5-backend-vlc
-    - ffmpegthumbs
-    - kdegraphics-thumbnailers
+  zypper:
+    name:
+      - sddm
+      - plasma5-session
+      - plasma5-defaults-zigzag
+      - plasma5-pa
+      - plasma-nm5-openvpn
+      - bluedevil5
+      - ksshaskpass5
+      - pinentry-qt5
+      - kgamma5
+      - kde-gtk-config5-gtk2
+      - kde-gtk-config5-gtk3
+      - gtk2-metatheme-breeze
+      - gtk3-metatheme-breeze
+      - kio-extras5
+      - pam_kwallet
+      - xdg-desktop-portal-kde
+      - kdenetwork4-filesharing
+      - kdeconnect-kde
+      - phonon4qt5-backend-vlc
+      - ffmpegthumbs
+      - kdegraphics-thumbnailers
+    state: present

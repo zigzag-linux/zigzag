@@ -1,10 +1,11 @@
 ---
 - name: install samba packages
-  zypper: name={{item}} state=present
-  with_items:
-    - samba
-    - samba-client
-    - cifs-utils
+  zypper:
+    name:
+      - samba
+      - samba-client
+      - cifs-utils
+    state: present
 
 - name: setup usershares directory
   file:

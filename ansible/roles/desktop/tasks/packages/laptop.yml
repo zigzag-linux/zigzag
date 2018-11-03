@@ -1,8 +1,9 @@
 ---
 - name: install laptop utils
-  zypper: name={{item}} state=present
-  with_items:
-    - thermald
-    - tlp
-    - tlp-rdw
-    - powertop
+  zypper:
+    name:
+      - thermald
+      - tlp
+      - tlp-rdw
+      - powertop
+    state: present

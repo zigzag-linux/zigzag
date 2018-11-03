@@ -1,7 +1,8 @@
 ---
 - name: install non-free packages for desktop
-  zypper: name={{item}} state=present
-  with_items:
-    - chromium-plugin-widevinecdm
-    - vlc-codecs
-    - vlc-vdpau
+  zypper:
+    name:
+      - chromium-plugin-widevinecdm
+      - vlc-codecs
+      - vlc-vdpau
+    state: present

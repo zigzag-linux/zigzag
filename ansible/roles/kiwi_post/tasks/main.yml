@@ -3,11 +3,12 @@
   command: zigzag-languages -y
 
 - name: install live medium tools
-  zypper: name={{item}} state=present
-  with_items:
-    - calamares-branding-zigzag
-    - zigzag-live-service
-    - dracut-kiwi-live
+  zypper:
+    name:
+      - calamares-branding-zigzag
+      - zigzag-live-service
+      - dracut-kiwi-live
+    state: present
 
 - name: enable zigzag-live service
   systemd: name=zigzag-live enabled=yes
