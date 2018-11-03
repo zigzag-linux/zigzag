@@ -10,6 +10,3 @@
 
 - name: enable avahi service
   systemd: name=avahi-daemon enabled=yes
-
-- name: disable firewalld service
-  systemd: name=firewalld enabled=no
