@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<image schemaversion="6.8" name="zigzag">
+<image schemaversion="6.9" name="zigzag">
     <description type="system">
         <author>Zigzag Linux</author>
         <contact>example@example.com</contact>
@@ -10,11 +10,10 @@
             image="iso"
             primary="true"
             flags="overlay"
-            hybrid="true"
             firmware="uefi"
             kernelcmdline="quiet"
             hybridpersistent="false"/>
-        <version>0.0.1</version>
+        <version>rolling</version>
         <packagemanager>zypper</packagemanager>
         <locale>en_US</locale>
         <keytable>us</keytable>
