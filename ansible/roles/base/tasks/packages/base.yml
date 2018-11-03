@@ -30,5 +30,6 @@
       - apparmor-profiles
       - apparmor-parser
       - avahi
+      - libzypp-plugin-appdata
       - zigzag-tools
     state: present
