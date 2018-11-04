@@ -23,3 +23,13 @@
       - vlc-qt
       - youtube-dl
     state: present
+
+# Since plasma 5.14 discover package does not include backends
+- name: install additional discover backends
+  zypper:
+    name:
+      - discover-backend-packagekit
+      - discover-backend-flatpak
+      - discover-backend-fwupd
+    state: present
+  when: is_tumbleweed
