@@ -84,6 +84,7 @@ dbus-1-glib
 dconf
 dejavu-fonts
 deltarpm
+desktop-file-utils
 device-mapper
 dhcp
 dhcp-client
@@ -150,6 +151,7 @@ glib-networking
 glib-networking-lang
 gmenudbusmenuproxy
 google-noto-fonts-doc
+gperf
 gpg2
 gpg2-lang
 gpg-pubkey
@@ -347,6 +349,7 @@ libbluray2
 libboost_python-py3-1_68_0
 libboost_system1_68_0
 libboost_thread1_68_0
+libbreezecommon5-5
 libburn4
 libbytesize1
 libbytesize-lang
@@ -474,7 +477,6 @@ libgsm1
 libgstallocators-1_0-0
 libgstapp-1_0-0
 libgstaudio-1_0-0
-libgstfft-1_0-0
 libgstgl-1_0-0
 libgstpbutils-1_0-0
 libgstphotography-1_0-0
@@ -493,12 +495,11 @@ libharfbuzz0
 libhogweed4
 libhttp_parser2_7_1
 libhunspell-1_6-0
-libhyphen0
 libibus-1_0-5
 libical3
 libICE6
-libicu62_1-ledata
-libicu-suse62_1
+libicu63_1-ledata
+libicu-suse63_1
 libidn12
 libidn2-0
 libidn2-lang
@@ -728,7 +729,7 @@ libpcre2-8-0
 libpgm-5_2-0
 libphonon4qt5
 libpipeline1
-libpipewire-0_1-0
+libpipewire-0_2-1
 libpixman-1-0
 libpkcs11-helper1
 libplist3
@@ -741,7 +742,7 @@ libpopt0
 libpostproc55
 libprocps7
 libprojectM-qt5-2
-libprotobuf-lite15
+libprotobuf-lite17
 libproxy1
 libpsl5
 libpulse0
@@ -779,8 +780,6 @@ libQt5Svg5
 libQt5Test5
 libQt5TextToSpeech5
 libQt5WebChannel5
-libQt5WebKit5
-libQt5WebKitWidgets5
 libQt5Widgets5
 libQt5X11Extras5
 libQt5Xml5
@@ -836,7 +835,7 @@ libsord-0-0
 libsoup-2_4-1
 libsoup-lang
 libsoxr0
-libspa-lib0
+libspa-lib1
 libspectre1
 libspeechd2
 libspeex1
@@ -928,7 +927,7 @@ libX11-6
 libX11-data
 libX11-xcb1
 libx264-152
-libx265-151
+libx265-165
 libx86emu2
 libXau6
 libXaw7
@@ -1164,6 +1163,7 @@ python3-rpmconf
 python3-setuptools
 python3-six
 python3-solv
+python3-talloc
 python-base
 python-rpm-macros
 python-talloc
