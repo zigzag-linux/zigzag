@@ -5,7 +5,7 @@
 # Usage: ./build.sh
 #
 
-declare -r DOCKER_TAG=zigzag:0.7
+declare -r DOCKER_TAG=zigzag:0.8
 declare -a ARGUMENT_ARRAY
 
 case $1 in
@@ -24,23 +24,8 @@ container_build()
 
 container_run()
 {
-    local command=$1; shift
-    docker run --privileged --rm -v $(pwd):/kiwi -it $DOCKER_TAG $command
-}
-
-gekon_build()
-{
-    container_run "kiwi-ng --shared-cache-dir=/kiwi/out/cache ${ARGUMENT_ARRAY[0]} system build --description /kiwi/${ARGUMENT_ARRAY[1]} --target-dir /kiwi/out"
-}
-
-save_pkg_list()
-{
-    # store the package list inside the repo for reference of what has changed
-    if [ $? == 0 ]; then
-        cat out/*.packages | cut -d '|' -f1 | sort > ${ARGUMENT_ARRAY[1]}/package-reference.txt
-    fi
+    docker run --privileged --rm -v $(pwd):/kiwi -it $DOCKER_TAG "$@"
 }
 
 container_build
-gekon_build
-save_pkg_list
+container_run mkiso "${ARGUMENT_ARRAY[0]}" "${ARGUMENT_ARRAY[1]}"
