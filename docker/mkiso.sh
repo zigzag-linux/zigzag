@@ -21,4 +21,5 @@ kiwi \
 mv $BUILD_DIR/*.iso $RESULTS_DIR
 
 # store reference packages
-cat $BUILD_DIR/*.packages | cut -d '|' -f1 | sort > $DESC_DIR/package-reference.txt
+cat $BUILD_DIR/*.packages | cut -d '|' -f1 \
+    | LC_COLLATE=en_US.utf8 sort > $DESC_DIR/package-reference.txt
