@@ -36,6 +36,7 @@ bash-completion
 bash-lang
 bcm20702a1-firmware
 bind-utils
+binutils
 blog
 bluedevil5
 bluedevil5-lang
@@ -74,8 +75,6 @@ cpp8
 cracklib
 cracklib-dict-full
 crda
-cron
-cronie
 cryptsetup
 cups-config
 curl
@@ -93,6 +92,9 @@ dialog-lang
 diffutils
 diffutils-lang
 discover
+discover-backend-flatpak
+discover-backend-fwupd
+discover-backend-packagekit
 discover-lang
 dmidecode
 dolphin
@@ -365,7 +367,7 @@ libcdda_interface0
 libcdda_paranoia0
 libcddb2
 libcelt0-2
-libcfitsio6
+libcfitsio7
 libchm0
 libchromaprint1
 libcmrt1
@@ -417,11 +419,10 @@ libepub0
 liberation-fonts
 libevdev2
 libevent-2_1-8
-libexif12
 libexiv2-26
 libexpat1
 libext2fs2
-libf2fs4
+libf2fs6
 libfaad2
 libfakekey0
 libfam0-gamin
@@ -443,7 +444,6 @@ libgc1
 libgcab-1_0-0
 libgcc_s1
 libgcrypt20
-libgd3
 libgdbm5
 libgdbm_compat4
 libgdk_pixbuf-2_0-0
@@ -467,10 +467,8 @@ libgomp1
 libgpg-error0
 libgpgme11
 libgpgmepp6
-libgphoto2-6
-libgphoto2-6-lang
 libgpm2
-libgps23
+libgps24
 libgraphene-1_0-0
 libgraphite2-3
 libgsm1
@@ -490,11 +488,11 @@ libgtk-3-0
 libgudev-1_0-0
 libgusb2
 libgypsy0
-libHalf23
+libHalf24
 libharfbuzz0
 libhogweed4
 libhttp_parser2_7_1
-libhunspell-1_6-0
+libhunspell-1_7-0
 libibus-1_0-5
 libical3
 libICE6
@@ -503,9 +501,9 @@ libicu-suse63_1
 libidn12
 libidn2-0
 libidn2-lang
-libIex-2_2-23
-libIlmImf-2_2-23
-libIlmThread-2_2-23
+libIex-2_3-24
+libIlmImf-2_3-24
+libIlmThread-2_3-24
 libimagequant0
 libimobiledevice6
 libinput10
@@ -516,6 +514,7 @@ libisccfg160
 libisl19
 libisoburn1
 libisofs6
+libixml10
 libjansson4
 libjasper4
 libjbig2
@@ -653,7 +652,6 @@ liblilv-0-0
 liblirc_client0
 libLLVM6
 liblmdb-0_9_22
-liblockdev1
 libltdl7
 liblua5_3-5
 libluajit-5_1-2
@@ -717,7 +715,7 @@ libostree
 libostree-1-1
 libp11-kit0
 libpackagekit-glib2-18
-libpackagekitqt5-0
+libpackagekitqt5-1
 libpango-1_0-0
 libparted0
 libpcap1
@@ -751,7 +749,7 @@ libpwquality1
 libpwquality-lang
 libpython2_7-1_0
 libpython3_6m1_0
-libqalculate19
+libqalculate20
 libqca-qt5
 libqrencode4
 libQt5Concurrent5
@@ -783,7 +781,6 @@ libQt5WebChannel5
 libQt5Widgets5
 libQt5X11Extras5
 libQt5Xml5
-libQt5XmlPatterns5
 libQtQuick5
 libquadmath0
 libraw1394-11
@@ -874,12 +871,11 @@ libudisks2-0
 libunibilium4
 libunistring2
 libunwind
-libupnp6
+libupnp13
 libupower-glib3
 liburcu6
 libusb-1_0-0
 libusbmuxd4
-libustr-1_0-1
 libutempter0
 libuuid1
 libuv1
@@ -953,6 +949,7 @@ libxcb-sync1
 libxcb-util1
 libxcb-xfixes0
 libxcb-xinerama0
+libxcb-xinput0
 libxcb-xkb1
 libxcb-xv0
 libXcomposite1
@@ -999,10 +996,8 @@ libzstd1
 libzvbi0
 libzypp
 libzypp-plugin-appdata
-lockdev
 logrotate
 lsof
-mailx
 man
 mdadm
 Mesa
