@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<image schemaversion="6.9" name="zigzag">
+    <description type="system">
+        <author>Zigzag Linux</author>
+        <contact>example@example.com</contact>
+        <specification>Zigzag Linux</specification>
+    </description>
+    <preferences>
+        <type
+            image="iso"
+            primary="true"
+            flags="overlay"
+            firmware="uefi"
+            kernelcmdline="quiet"
+            hybridpersistent="false"/>
+        <version>15.1</version>
+        <packagemanager>zypper</packagemanager>
+        <locale>en_US</locale>
+        <keytable>us</keytable>
+        <timezone>Etc/UTC</timezone>
+        <rpm-excludedocs>true</rpm-excludedocs>
+        <rpm-check-signatures>false</rpm-check-signatures>
+        <bootsplash-theme>openSUSE</bootsplash-theme>
+        <bootloader-theme>openSUSE</bootloader-theme>
+    </preferences>
+    <profiles>
+        <profile name="devel" description="Development build"/>
+    </profiles>
+    <users>
+        <!-- password: linux -->
+        <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
+    </users>
+    <repository type="rpm-md" alias="oss">
+        <source path="obs://openSUSE:Leap:15.1/standard"/>
+    </repository>
+    <repository type="rpm-md" alias="oss-update">
+        <source path="obs://openSUSE:Leap:15.1:Update/standard"/>
+    </repository>
+    <repository type="rpm-md" alias="zigzag" priority="20">
+        <source path="obs://home:mkrwc:zigzag:15.1/standard"/>
+    </repository>
+    <!-- additional development repo enabled only in devel profile -->
+    <repository type="rpm-md" alias="zigzag-devel" profiles="devel" priority="10">
+        <source path="obs://home:mkrwc:zigzag:devel/openSUSE_Leap_15.1"/>
+    </repository>
+    <packages type="image">
+        <package name="zigzag-configuration"/>
+    </packages>
+    <packages type="iso">
+        <package name="dracut-kiwi-live"/>
+    </packages>
+    <packages type="bootstrap">
+        <package name="udev"/>
+        <package name="filesystem"/>
+        <package name="glibc-locale"/>
+        <package name="cracklib-dict-full"/>
+        <package name="ca-certificates"/>
+        <package name="systemd-presets-branding-openSUSE"/>
+        <package name="openSUSE-release"/>
+    </packages>
+</image>

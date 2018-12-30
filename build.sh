@@ -11,6 +11,7 @@ declare -a ARGUMENT_ARRAY
 case $1 in
     leap-stable|'') ARGUMENT_ARRAY=('' 'leap-15.0') ;;
     leap-devel) ARGUMENT_ARRAY=('--profile=devel' 'leap-15.0') ;;
+    leap-next) ARGUMENT_ARRAY=('--profile=devel' 'leap-15.1') ;;
     tumbleweed-devel) ARGUMENT_ARRAY=('--profile=devel' 'tumbleweed') ;;
     *) echo 'invalid variant'; exit 1 ;;
 esac

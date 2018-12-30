@@ -16,6 +16,7 @@ By default the build command will pick up stable Leap, there is however an optio
 |--------------------|------------------|----------------------|
 | leap-stable        | Leap             | No                   |
 | leap-devel         | Leap             | Yes                  |
+| leap-next          | Leap Next        | Yes                  |
 | tumbleweed-devel   | Tumbleweed       | Yes                  |
 
 To build Tumbleweed with development repo:
