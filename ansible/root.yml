@@ -2,10 +2,10 @@
 - hosts: all
   pre_tasks:
     - import_role: name=kiwi_pre
-      when: is_kiwi
+      when: is_kiwi == true
   post_tasks:
     - import_role: name=kiwi_post
-      when: is_kiwi
+      when: is_kiwi == true
   roles:
     - base
     - sudo

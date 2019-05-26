@@ -1,17 +1,17 @@
 ---
 # Include non-free packages
-non_free: not lookup('env', 'ZIGZAG_OSS_ONLY')
+non_free: "{{ not lookup('env', 'ZIGZAG_OSS_ONLY') }}"
 
 # Enable development repository
-devel_repo: lookup('env', 'ZIGZAG_DEVEL') | bool
+devel_repo: "{{ lookup('env', 'ZIGZAG_DEVEL') | bool }}"
 
 # Check if we're running within kiwi environment
-is_kiwi: lookup('env', 'ZIGZAG_KIWI') | bool
+is_kiwi: "{{ lookup('env', 'ZIGZAG_KIWI') | bool }}"
 
 # Distribution checks
-is_tumbleweed: ansible_distribution == 'openSUSE Tumbleweed'
-is_leap: ansible_distribution == 'openSUSE Leap'
+is_tumbleweed: "{{ ansible_distribution == 'openSUSE Tumbleweed' }}"
+is_leap: "{{ ansible_distribution == 'openSUSE Leap' }}"
 
 # Version checks
-is_version_gte_150: (is_leap and ansible_distribution_version | float >= 15.0) or is_tumbleweed
-is_version_gte_151: (is_leap and ansible_distribution_version | float >= 15.1) or is_tumbleweed
+is_version_gte_150: "{{ (is_leap and ansible_distribution_version | float >= 15.0) or is_tumbleweed }}"
+is_version_gte_151: "{{ (is_leap and ansible_distribution_version | float >= 15.1) or is_tumbleweed }}"
