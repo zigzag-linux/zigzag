@@ -5,13 +5,14 @@
 # Usage: ./build.sh
 #
 
-declare -r DOCKER_TAG=zigzag:0.8
+declare -r DOCKER_TAG=zigzag:1
 declare -a ARGUMENT_ARRAY
 
 case $1 in
-    leap-stable|'') ARGUMENT_ARRAY=('' 'leap-15.0') ;;
-    leap-devel) ARGUMENT_ARRAY=('--profile=devel' 'leap-15.0') ;;
-    leap-next) ARGUMENT_ARRAY=('--profile=devel' 'leap-15.1') ;;
+    leap-stable|'') ARGUMENT_ARRAY=('' 'leap-15.1') ;;
+    leap-devel) ARGUMENT_ARRAY=('--profile=devel' 'leap-15.1') ;;
+    leap-next) ARGUMENT_ARRAY=('--profile=devel' 'leap-15.2') ;;
+    leap-old) ARGUMENT_ARRAY=('' 'leap-15.0') ;;
     tumbleweed-devel) ARGUMENT_ARRAY=('--profile=devel' 'tumbleweed') ;;
     *) echo 'invalid variant'; exit 1 ;;
 esac
