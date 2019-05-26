@@ -24,7 +24,7 @@
       - youtube-dl
     state: present
 
-# Starting from Leap 15.1 discover backends are splited
+# Starting from Leap 15.1 discover backends have been split
 - name: install additional discover backends
   zypper:
     name:
