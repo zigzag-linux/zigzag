@@ -36,7 +36,6 @@ bash-completion
 bash-lang
 bcm20702a1-firmware
 bind-utils
-binutils
 blog
 bluedevil5
 bluedevil5-lang
@@ -92,6 +91,8 @@ dialog-lang
 diffutils
 diffutils-lang
 discover
+discover-backend-flatpak
+discover-backend-packagekit
 discover-lang
 dmidecode
 dolphin
@@ -111,6 +112,7 @@ expat
 f2fs-tools
 fetchmsttfonts
 ffmpegthumbs
+ffmpegthumbs-lang
 file
 filelight
 filelight-lang
@@ -141,7 +143,6 @@ gdk-pixbuf-loader-rsvg
 gdk-pixbuf-query-loaders
 GeoIP-data
 gettext-runtime
-ghostscript
 gio-branding-openSUSE
 girepository-1_0
 glib2-lang
@@ -194,6 +195,7 @@ hwinfo
 iceauth
 info
 intel-hybrid-driver
+intel-media-driver
 intel-vaapi-driver
 iosevka-fonts
 iotop
@@ -299,6 +301,7 @@ liba52-0
 libaa1
 libacl1
 libaio1
+libaom0
 libapparmor1
 libappstream4
 libappstream-builder8
@@ -352,6 +355,7 @@ libcdda_interface0
 libcdda_paranoia0
 libcddb2
 libcelt0-2
+libcfitsio6
 libchm0
 libchromaprint1
 libcmrt1
@@ -362,7 +366,6 @@ libcreaterepo_c0
 libcroco-0_6-3
 libcryptsetup12
 libcups2
-libcupsimage2
 libcurl4
 libdaemon0
 libdatrie1
@@ -411,7 +414,6 @@ libfaad2
 libfakekey0
 libfam0-gamin
 libfdisk1
-libfdk-aac1
 libffi7
 libfftw3-3
 libFLAC8
@@ -431,6 +433,7 @@ libgcc_s1
 libgck-1-0
 libgcr-3-1
 libgcrypt20
+libgcrypt20-hmac
 libgd3
 libgdbm4
 libgdk_pixbuf-2_0-0
@@ -487,6 +490,7 @@ libicu60_2-ledata
 libidn11
 libidn2-0
 libIex-2_2-23
+libigdgmm1
 libIlmImf-2_2-23
 libIlmThread-2_2-23
 libimagequant0
@@ -502,7 +506,6 @@ libisofs6
 libjansson4
 libjasper4
 libjbig2
-libjemalloc2
 libjpeg8
 libjson-c3
 libjson-glib-1_0-0
@@ -510,7 +513,7 @@ libjte1
 libkate1
 libkdecorations2-5
 libkdecorations2private5
-libkerfuffle17
+libkerfuffle18
 libkeyutils1
 libKF5Activities5
 libKF5ActivitiesStats1
@@ -549,6 +552,7 @@ libKF5GlobalAccel5-lang
 libKF5GlobalAccelPrivate5
 libKF5GuiAddons5
 libKF5Holidays5
+libKF5Holidays5-lang
 libKF5I18n5
 libKF5I18n5-lang
 libKF5IconThemes5
@@ -583,6 +587,7 @@ libKF5NotifyConfig5
 libKF5NotifyConfig5-lang
 libKF5Parts5
 libKF5Parts5-lang
+libKF5Plasma5
 libKF5Prison5
 libKF5Pty5
 libKF5Pty5-lang
@@ -672,6 +677,7 @@ libndr-standard0
 libnetapi0
 libnettle6
 libnewt0_52
+libnfs8
 libnghttp2-14
 libnl3-200
 libnl-config
@@ -679,6 +685,7 @@ libnm0
 libnma0
 libnotify4
 libnpth0
+libnscd1
 libnsl2
 libntfs-3g87
 libnuma1
@@ -697,7 +704,7 @@ libostree
 libostree-1-1
 libp11-kit0
 libpackagekit-glib2-18
-libpackagekitqt5-0
+libpackagekitqt5-1
 libpango-1_0-0
 libparted0
 libpcap1
@@ -761,6 +768,7 @@ libQt5Xml5
 libQt5XmlPatterns5
 libQtQuick5
 libquadmath0
+libquazip5-1
 libraw1394-11
 libraw16
 libre2-0
@@ -805,8 +813,6 @@ libsolv-tools
 libsoup-2_4-1
 libsoup-lang
 libsoxr0
-libspectre1
-libspeechd2
 libspeex1
 libspeexdsp1
 libsqlite3-0
@@ -892,9 +898,9 @@ libwrap0
 libX11-6
 libX11-data
 libX11-xcb1
-libx264-152
-libx265-165
-libx86emu1
+libx264-155
+libx265-169
+libx86emu2
 libXau6
 libXaw7
 libxcb1
@@ -957,6 +963,7 @@ libyaml-cpp0_6
 libykpers-1-1
 libyubikey0
 libz1
+libzck1
 libzimg2
 libzio1
 libzip5
@@ -1032,6 +1039,8 @@ pam
 pam-config
 pam_kwallet
 pam_kwallet-common
+parted
+parted-lang
 partitionmanager
 partitionmanager-lang
 patch
@@ -1073,7 +1082,6 @@ plasma5-workspace-libs
 plasma-framework
 plasma-framework-components
 plasma-framework-lang
-plasma-framework-private
 plasma-nm5
 plasma-nm5-lang
 plasma-nm5-openvpn
@@ -1210,6 +1218,7 @@ udisks2-lang
 unar
 unzip
 update-alternatives
+update-desktop-files
 upower
 usbutils
 util-linux
