@@ -24,12 +24,16 @@
       - youtube-dl
     state: present
 
-# Since plasma 5.14 discover package does not include backends
+# Starting from Leap 15.1 discover backends are splited
 - name: install additional discover backends
   zypper:
     name:
       - discover-backend-packagekit
       - discover-backend-flatpak
-      - discover-backend-fwupd
     state: present
+  when: is_version_gte_151
+
+# Only Tumbleweed has fwupd backend
+- name: install additional discover backends
+  zypper: name=discover-backend-fwupd state=present
   when: is_tumbleweed
