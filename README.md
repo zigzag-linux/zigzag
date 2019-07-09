@@ -16,6 +16,7 @@ By default the build command will pick up stable Leap, there is however an optio
 |--------------------|------------------|----------------------|
 | leap-stable        | Leap 15.1        | No                   |
 | leap-devel         | Leap 15.1        | Yes                  |
+| leap-plasma		 | Leap 15.1		| Yes				   |
 | leap-old           | Leap 15.0        | No                   |
 | leap-next          | Leap 15.2        | Yes                  |
 | tumbleweed-devel   | Tumbleweed       | Yes                  |
