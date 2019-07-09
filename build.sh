@@ -13,6 +13,7 @@ case $1 in
     leap-devel) ARGUMENT_ARRAY=('--profile=devel' 'leap-15.1') ;;
     leap-next) ARGUMENT_ARRAY=('--profile=devel' 'leap-15.2') ;;
     leap-old) ARGUMENT_ARRAY=('' 'leap-15.0') ;;
+    leap-plasma) ARGUMENT_ARRAY=('--profile=devel' 'leap-plasma');;
     tumbleweed-devel) ARGUMENT_ARRAY=('--profile=devel' 'tumbleweed') ;;
     *) echo 'invalid variant'; exit 1 ;;
 esac
