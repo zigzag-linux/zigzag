@@ -36,9 +36,9 @@
     <repository type="rpm-md" alias="oss-update">
         <source path="obs://openSUSE:Leap:15.2:Update/standard"/>
     </repository>
-    <!-- <repository type="rpm-md" alias="zigzag" priority="20"> -->
-    <!--     <source path="obs://home:mkrwc:zigzag:15.2/standard"/> -->
-    <!-- </repository> -->
+    <repository type="rpm-md" alias="zigzag" priority="20">
+        <source path="obs://home:mkrwc:zigzag:15.2/standard"/>
+    </repository>
     <!-- additional development repo enabled only in devel profile -->
     <repository type="rpm-md" alias="zigzag-devel" profiles="devel" priority="10">
         <source path="obs://home:mkrwc:zigzag:devel/openSUSE_Leap_15.2"/>
