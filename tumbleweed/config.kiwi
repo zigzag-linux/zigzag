@@ -23,9 +23,6 @@
         <bootsplash-theme>openSUSE</bootsplash-theme>
         <bootloader-theme>openSUSE</bootloader-theme>
     </preferences>
-    <profiles>
-        <profile name="devel" description="Development build"/>
-    </profiles>
     <users>
         <!-- password: linux -->
         <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
