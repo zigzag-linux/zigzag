@@ -16,6 +16,8 @@
       - transmission-qt
       - ksysguard5
       - discover
+      - discover-backend-packagekit
+      - discover-backend-flatpak
       - kwalletmanager5
       - spectacle
       - filelight
@@ -24,16 +26,7 @@
       - youtube-dl
     state: present
 
-# Starting from Leap 15.1 discover backends have been split
-- name: install additional discover backends
-  zypper:
-    name:
-      - discover-backend-packagekit
-      - discover-backend-flatpak
-    state: present
-  when: is_version_gte_151 == true
-
 # Only Tumbleweed has fwupd backend
 - name: install additional discover backends
   zypper: name=discover-backend-fwupd state=present
-  when: is_tumbleweed == true
+  when: is_version_gte_152 == true
