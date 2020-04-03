@@ -2,7 +2,9 @@
 - name: install x.org and utils
   zypper:
     name:
-      - patterns-zigzag-xfirmware
+      - patterns-zigzag-xfirmware-intel
+      - patterns-zigzag-xfirmware-radeon
+      - patterns-zigzag-xfirmware-nouveau
       - xorg-x11-essentials
       - xorg-x11-server
       - xorg-x11-fonts

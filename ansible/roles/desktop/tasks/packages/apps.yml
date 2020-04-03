@@ -26,7 +26,6 @@
       - youtube-dl
     state: present
 
-# Only Tumbleweed has fwupd backend
-- name: install additional discover backends
+- name: install fwupd backend for Discover
   zypper: name=discover-backend-fwupd state=present
   when: is_version_gte_152 == true

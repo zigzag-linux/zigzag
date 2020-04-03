@@ -21,6 +21,7 @@
       - curl
       - less
       - tar
+      - openssh
       - iproute2
       - iputils
       - ca-certificates-mozilla
