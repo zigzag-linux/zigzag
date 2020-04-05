@@ -24,7 +24,3 @@
       - ffmpegthumbs
       - kdegraphics-thumbnailers
     state: present
-
-- name: install emoji picker
-  zypper: name=plasma5-desktop-emojier state=present
-  when: is_version_gte_152 == true

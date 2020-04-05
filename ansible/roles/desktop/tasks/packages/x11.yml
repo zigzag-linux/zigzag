@@ -14,3 +14,7 @@
       - xclip
       - Mesa-demo-x
     state: present
+
+- name: install vulkan tools
+  zypper: name=vulkan-tools state=present
+  when: is_version_gte_152 == true
