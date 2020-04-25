@@ -23,4 +23,5 @@
       - phonon4qt5-backend-vlc
       - ffmpegthumbs
       - kdegraphics-thumbnailers
+      - colord-kde
     state: present
