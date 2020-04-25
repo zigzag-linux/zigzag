@@ -25,3 +25,7 @@
       - kdegraphics-thumbnailers
       - colord-kde
     state: present
+
+- name: install plasma5-thunderbolt
+  zypper: name=plasma5-thunderbolt state=present
+  when: is_tumbleweed == true
