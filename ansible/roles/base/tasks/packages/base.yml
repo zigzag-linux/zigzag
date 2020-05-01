@@ -31,5 +31,5 @@
       - apparmor-profiles
       - apparmor-parser
       - avahi
-      - zigzag-tools
+      - zigzag-languages
     state: present

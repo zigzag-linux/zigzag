@@ -1,6 +1,6 @@
 ---
 - name: install translation packages
-  command: zigzag-languages -y
+  command: zigzag-languages
 
 - name: install live medium tools
   zypper:
