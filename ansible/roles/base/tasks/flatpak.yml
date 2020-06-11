@@ -2,6 +2,12 @@
 - name: install flatpak package
   zypper: name=flatpak state=present
 
+- name: delete flatpak repo directory - workaround boo#1172316
+  file:
+    path: /var/lib/flatpak/repo
+    state: absent
+  when: is_version_gte_152 == true
+
 - name: add 'flathub' remote
   flatpak_remote:
     name: flathub

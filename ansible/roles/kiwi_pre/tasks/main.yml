@@ -1,6 +1,5 @@
 ---
-# quickfix for boo#1089175
-- name: touch missing files to remove xorriso
+- name: touch missing files to remove xorriso - workaround boo#1089175
   command: touch {{item}}
   with_items:
     - /usr/share/info/xorrisofs.info.gz
