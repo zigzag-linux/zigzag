@@ -15,6 +15,7 @@ AppStream
 appstream-glib
 appstream-glib-lang
 AppStream-lang
+argyllcms
 ark
 ark-lang
 atk-lang
@@ -63,7 +64,12 @@ calamares-module-zigzag
 chromium
 chromium-plugin-widevinecdm
 cifs-utils
+colord
+colord-color-profiles
 colordiff
+colord-kde
+colord-kde-lang
+colord-lang
 command-not-found
 coreutils
 coreutils-lang
@@ -152,7 +158,6 @@ glibc-locale-base
 glib-networking
 glib-networking-lang
 gmenudbusmenuproxy
-google-noto-fonts-doc
 gperf
 gpg2
 gpg2-lang
@@ -191,6 +196,7 @@ hddtemp
 hdparm
 hicolor-icon-theme
 hostname
+hwdata
 hwinfo
 iceauth
 info
@@ -382,6 +388,7 @@ libchm0
 libchromaprint1
 libcmrt1
 libcolord2
+libcolorhug2
 libcom_err2
 libcrack2
 libcreaterepo_c0
@@ -428,7 +435,6 @@ libepub0
 liberation-fonts
 libevdev2
 libevent-2_1-8
-libexif12
 libexiv2-26
 libexpat1
 libext2fs2
@@ -445,7 +451,6 @@ libfontenc1
 libfreebl3
 libfreetype6
 libfribidi0
-libftgl2
 libfuse2
 libfwupd2
 libgbm1
@@ -453,17 +458,13 @@ libgc1
 libgcab-1_0-0
 libgcc_s1
 libgcrypt20
-libgcrypt20-hmac
-libgd3
 libgdbm4
 libgdk_pixbuf-2_0-0
 libGeoIP1
-libgfortran4
 libgif7
 libgio-2_0-0
 libgirepository-1_0-1
 libgit2-28
-libGLEW2_1
 libglib-2_0-0
 libGLU1
 libglvnd
@@ -477,8 +478,6 @@ libgomp1
 libgpg-error0
 libgpgme11
 libgpgmepp6
-libgphoto2-6
-libgphoto2-6-lang
 libgpm2
 libgps23
 libgraphene-1_0-0
@@ -538,7 +537,8 @@ libkate1
 libkdecorations2-5
 libkdecorations2-5-lang
 libkdecorations2private7
-libkerfuffle19
+libkdsoap1_9_0
+libkerfuffle20
 libkeyutils1
 libKF5Activities5
 libKF5ActivitiesStats1
@@ -661,9 +661,8 @@ libldap-2_4-2
 libldap-data
 libldb2
 liblirc_client0
-libLLVM7
+libLLVM9
 liblmdb-0_9_17
-liblockdev1
 libltdl7
 liblua5_3-5
 libluajit-5_1-2
@@ -681,7 +680,6 @@ libminizip1
 libmm-glib0
 libmnl0
 libmodman1
-libmodplug1
 libmodulemd2
 libmount1
 libmozjs-60
@@ -718,8 +716,6 @@ libnuma1
 libobjc4
 libogg0
 libopenal1
-libopenblas_pthreads0
-libopencv3_3
 libopenjp2-7
 libopenjpeg1
 libopenmpt0
@@ -741,7 +737,7 @@ libpcre2-16-0
 libpcre2-8-0
 libphonon4qt5
 libpipeline1
-libpipewire-0_2-1
+libpipewire-0_3-0
 libpixman-1-0
 libpkcs11-helper1
 libplist3
@@ -753,7 +749,7 @@ libpoppler-qt5-1
 libpopt0
 libpostproc54
 libprocps7
-libprojectM-qt5-2
+libprojectM3
 libprotobuf-lite20
 libproxy1
 libpsl5
@@ -794,11 +790,10 @@ libQt5Widgets5
 libQt5X11Extras5
 libQt5Xml5
 libQtQuick5
-libquadmath0
 libquazip5-1
 libraw1394-11
 libraw16
-libre2-0
+libre2-6
 libreadline7
 libreiserfscore0
 librest-0_7-0
@@ -815,9 +810,7 @@ libsamplerate0
 libsasl2-3
 libsbc1
 libschroedinger-1_0-0
-libSDL-1_2-0
 libSDL2-2_0-0
-libSDL_image-1_2-0
 libseccomp2
 libsecret-1-0
 libsecret-lang
@@ -858,7 +851,6 @@ libtag1
 libtalloc2
 libtasn1
 libtasn1-6
-libtbb2
 libtdb1
 libteamdctl0
 libtermkey1
@@ -935,7 +927,7 @@ libX11-6
 libX11-data
 libX11-xcb1
 libx264-155
-libx265-188
+libx265-192
 libx86emu3
 libXau6
 libXaw7
@@ -1010,9 +1002,11 @@ libzstd1
 libzvbi0
 libzypp
 libzypp-plugin-appdata
-lockdev
 logrotate
 lsof
+lua51
+lua51-bit32
+lua51-luv
 man
 mdadm
 Mesa
@@ -1089,7 +1083,6 @@ patterns-zigzag-xfirmware-intel
 patterns-zigzag-xfirmware-nouveau
 patterns-zigzag-xfirmware-radeon
 pciutils
-pciutils-ids
 perl
 perl-base
 perl-Bootloader
@@ -1113,7 +1106,6 @@ pkcs11-helper
 pkg-config
 plasma5-defaults-zigzag
 plasma5-desktop
-plasma5-desktop-emojier
 plasma5-desktop-lang
 plasma5-integration-plugin
 plasma5-integration-plugin-lang
@@ -1163,10 +1155,12 @@ python3-coverage
 python3-createrepo_c
 python3-cryptography
 python3-curses
-python3-idna
+python3-greenlet
 python3-Jinja2
 python3-jmespath
 python3-MarkupSafe
+python3-msgpack
+python3-neovim
 python3-packaging
 python3-paramiko
 python3-passlib
@@ -1280,9 +1274,11 @@ vlc-lang
 vlc-noX
 vlc-qt
 vlc-vdpau
+vulkan-tools
 w3m
 wallpaper-branding-openSUSE
 wget
+wget-lang
 which
 wicked
 wicked-service
@@ -1307,7 +1303,6 @@ xf86-video-amdgpu
 xf86-video-ati
 xf86-video-fbdev
 xf86-video-nouveau
-xf86-video-vesa
 xfsprogs
 xhost
 xinit
@@ -1335,8 +1330,8 @@ xz-lang
 youtube-dl
 zd1211-firmware
 zigzag-configuration
+zigzag-languages
 zigzag-live-service
-zigzag-tools
 zigzag-wallpapers
 zypper
 zypper-log
