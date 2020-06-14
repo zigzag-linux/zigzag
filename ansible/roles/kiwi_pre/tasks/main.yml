@@ -6,14 +6,6 @@
     - /usr/share/info/xorrecord.info.gz
     - /usr/share/info/xorriso.info.gz
 
-- name: temporary enable zypper excludedocs
-  tags:
-    - never # disabled due to boo#1096305
-  lineinfile:
-    path: /etc/zypp/zypp.conf
-    line: 'rpm.install.excludedocs = yes'
-    create: no
-
 # ensure that the rpm database type is not influenced by kiwi host
 # system, resolves the following warning:
 # > Found NDB Packages.db database while attempting bdb backend:

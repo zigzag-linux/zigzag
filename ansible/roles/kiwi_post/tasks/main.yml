@@ -17,9 +17,3 @@
 - name: install virtualbox module on leap
   zypper: name=virtualbox-guest-kmp-default state=present
   when: is_version_gte_152 == false
-
-- name: remove temporary excludedocs zypper option
-  lineinfile:
-    path: /etc/zypp/zypp.conf
-    line: 'rpm.install.excludedocs = yes'
-    state: absent
