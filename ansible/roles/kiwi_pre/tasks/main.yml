@@ -14,6 +14,13 @@
     line: 'rpm.install.excludedocs = yes'
     create: no
 
+# ensure that the rpm database type is not influenced by kiwi host
+# system, resolves the following warning:
+# > Found NDB Packages.db database while attempting bdb backend:
+# > using ndb backend
+- name: rebuild rpm pacage database
+  command: rpm --rebuilddb
+
 # this package will be re-added at the later stage, it needs to be
 # removed at the beginning so that it's dependencies are marked as
 # manually installed when we list them in the playbook
