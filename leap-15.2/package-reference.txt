@@ -346,6 +346,7 @@ libavresample3
 libavutil55
 libavutil56
 libb64-0
+libBasicUsageEnvironment1
 libbd_crypto2
 libbd_fs2
 libbd_loop2
@@ -482,6 +483,7 @@ libgpm2
 libgps23
 libgraphene-1_0-0
 libgraphite2-3
+libgroupsock8
 libgsm1
 libgstallocators-1_0-0
 libgstapp-1_0-0
@@ -500,6 +502,7 @@ libgudev-1_0-0
 libgusb2
 libHalf23
 libharfbuzz0
+libharfbuzz-subset0
 libhogweed4
 libhttp_parser2_7_1
 libhunspell-1_6-0
@@ -661,6 +664,7 @@ libldap-2_4-2
 libldap-data
 libldb2
 liblirc_client0
+libliveMedia66
 libLLVM9
 liblmdb-0_9_17
 libltdl7
@@ -874,6 +878,7 @@ libunwind
 libupnp6
 libupower-glib3
 liburcu6
+libUsageEnvironment3
 libusb-1_0-0
 libusbmuxd4
 libutempter0
@@ -926,7 +931,7 @@ libwrap0
 libX11-6
 libX11-data
 libX11-xcb1
-libx264-155
+libx264-160
 libx265-192
 libx86emu3
 libXau6
@@ -1102,6 +1107,11 @@ phonon4qt5-lang
 pigz
 pinentry
 pinentry-qt5
+pipewire
+pipewire-modules
+pipewire-spa-plugins-0_2
+pipewire-spa-tools
+pipewire-tools
 pkcs11-helper
 pkg-config
 plasma5-defaults-zigzag
