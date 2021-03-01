@@ -118,7 +118,7 @@ elfutils-lang
 expat
 f2fs-tools
 fetchmsttfonts
-ffmpeg-3
+ffmpeg-4
 ffmpegthumbs
 ffmpegthumbs-lang
 file
@@ -146,7 +146,6 @@ gconf2-lang
 gdk-pixbuf-lang
 gdk-pixbuf-loader-rsvg
 gdk-pixbuf-query-loaders
-GeoIP-data
 gettext-runtime
 gio-branding-openSUSE
 girepository-1_0
@@ -338,11 +337,13 @@ libavahi-core7
 libavc1394-0
 libavcodec57
 libavcodec58
-libavdevice57
+libavdevice58
 libavfilter6
+libavfilter7
 libavformat57
 libavformat58
 libavresample3
+libavresample4
 libavutil55
 libavutil56
 libb64-0
@@ -354,7 +355,7 @@ libbd_mdraid2
 libbd_part2
 libbd_swap2
 libbd_utils2
-libbind9-160
+libbind9-1600
 libblkid1
 libblockdev
 libblockdev2
@@ -366,6 +367,7 @@ libboost_thread1_66_0
 libbreezecommon5-5
 libbrotlicommon1
 libbrotlidec1
+libbs2b0
 libburn4
 libbytesize1
 libbytesize-lang
@@ -412,7 +414,7 @@ libdevmapper-event1_03
 libdialog14
 libdjvulibre21
 libdmtx0
-libdns169
+libdns1605
 libdolphinvcs5
 libdouble-conversion3
 libdrm2
@@ -461,7 +463,6 @@ libgcc_s1
 libgcrypt20
 libgdbm4
 libgdk_pixbuf-2_0-0
-libGeoIP1
 libgif7
 libgio-2_0-0
 libgirepository-1_0-1
@@ -521,10 +522,10 @@ libIlmThread-2_2-23
 libimagequant0
 libimobiledevice6
 libinput10
-libirs160
-libisc166
-libisccc160
-libisccfg160
+libirs1601
+libisc1606
+libisccc1600
+libisccfg1600
 libisl15
 libisoburn1
 libisofs6
@@ -670,7 +671,6 @@ liblmdb-0_9_17
 libltdl7
 liblua5_3-5
 libluajit-5_1-2
-liblwres160
 liblz4-1
 liblzma5
 liblzo2-2
@@ -713,6 +713,7 @@ libnl-config
 libnm0
 libnotify4
 libnpth0
+libns1604
 libnscd1
 libnsl2
 libntfs-3g87
@@ -720,8 +721,9 @@ libnuma1
 libobjc4
 libogg0
 libopenal1
+libopencore-amrnb0
+libopencore-amrwb0
 libopenjp2-7
-libopenjpeg1
 libopenmpt0
 libopenssl1_1
 libopus0
@@ -749,9 +751,11 @@ libpng16-16
 libpolkit0
 libpolkit-qt5-1-1
 libpoppler89
+libpoppler-glib8
 libpoppler-qt5-1
 libpopt0
 libpostproc54
+libpostproc55
 libprocps7
 libprojectM3
 libprotobuf-lite20
@@ -850,6 +854,7 @@ libstdc++6
 libswresample2
 libswresample3
 libswscale4
+libswscale5
 libsystemd0
 libtag1
 libtalloc2
@@ -931,7 +936,7 @@ libwrap0
 libX11-6
 libX11-data
 libX11-xcb1
-libx264-160
+libx264-161
 libx265-192
 libx86emu3
 libXau6
