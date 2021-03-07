@@ -13,7 +13,7 @@
             firmware="uefi"
             kernelcmdline="quiet"
             hybridpersistent="false"/>
-        <version>rolling</version>
+        <version>15.3</version>
         <packagemanager>zypper</packagemanager>
         <locale>en_US</locale>
         <keytable>us</keytable>
@@ -23,15 +23,25 @@
         <bootsplash-theme>openSUSE</bootsplash-theme>
         <bootloader-theme>openSUSE</bootloader-theme>
     </preferences>
+    <profiles>
+        <profile name="devel" description="Development build"/>
+    </profiles>
     <users>
         <!-- password: linux -->
         <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
     </users>
-    <repository type="yast2" alias="oss">
-        <source path="http://download.opensuse.org/tumbleweed/repo/oss"/>
+    <repository type="rpm-md" alias="oss">
+        <source path="obs://openSUSE:Leap:15.3/standard"/>
     </repository>
-    <repository type="rpm-md" alias="zigzag-devel" priority="10">
-        <source path="obs://home:mkrwc:zigzag:devel/openSUSE_Tumbleweed"/>
+    <repository type="rpm-md" alias="oss-update">
+        <source path="obs://openSUSE:Leap:15.3:Update/standard"/>
+    </repository>
+    <repository type="rpm-md" alias="zigzag" priority="20">
+        <source path="obs://home:mkrwc:zigzag:15.3/standard"/>
+    </repository>
+    <!-- additional development repo enabled only in devel profile -->
+    <repository type="rpm-md" alias="zigzag-devel" profiles="devel" priority="10">
+        <source path="obs://home:mkrwc:zigzag:devel/openSUSE_Leap_15.3"/>
     </repository>
     <packages type="image">
         <package name="zigzag-configuration"/>
@@ -47,10 +57,5 @@
         <package name="ca-certificates"/>
         <package name="systemd-presets-branding-openSUSE"/>
         <package name="openSUSE-release"/>
-        <!-- replace busybox-{grep,gawk,xz,gzip} packages !-->
-        <package name="grep"/>
-        <package name="gawk"/>
-        <package name="xz"/>
-        <package name="gzip"/>
     </packages>
 </image>
