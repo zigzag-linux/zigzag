@@ -12,8 +12,3 @@
 
 - name: enable zigzag-live service
   systemd: name=zigzag-live enabled=yes
-
-# VirtualBox (kernel < 4.13 does not ship with vboxvideo module)
-- name: install virtualbox module on leap
-  zypper: name=virtualbox-guest-kmp-default state=present
-  when: is_version_gte_152 == false

@@ -18,6 +18,7 @@
       - discover
       - discover-backend-packagekit
       - discover-backend-flatpak
+      - discover-backend-fwupd
       - kwalletmanager5
       - spectacle
       - filelight
@@ -25,7 +26,3 @@
       - vlc-qt
       - youtube-dl
     state: present
-
-- name: install fwupd backend for Discover
-  zypper: name=discover-backend-fwupd state=present
-  when: is_version_gte_152 == true

@@ -13,4 +13,4 @@ is_tumbleweed: "{{ ansible_distribution == 'openSUSE Tumbleweed' }}"
 is_leap: "{{ ansible_distribution == 'openSUSE Leap' }}"
 
 # Version checks
-is_version_gte_152: "{{ (is_leap and ansible_distribution_version | float >= 15.2) or is_tumbleweed }}"
+is_version_gte_153: "{{ (is_leap and ansible_distribution_version | float >= 15.3) or is_tumbleweed }}"
