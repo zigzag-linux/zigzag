@@ -33,3 +33,10 @@
       - avahi
       - zigzag-languages
     state: present
+
+- name: install snapper
+  zypper:
+    name:
+      - snapper
+      - snapper-zypp-plugin
+      - grub2-snapper-plugin

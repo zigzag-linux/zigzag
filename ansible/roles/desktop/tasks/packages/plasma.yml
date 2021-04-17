@@ -19,13 +19,16 @@
       - pam_kwallet
       - xdg-desktop-portal-kde
       - kdenetwork4-filesharing
-      - kdeconnect-kde
       - phonon4qt5-backend-vlc
       - ffmpegthumbs
       - kdegraphics-thumbnailers
       - colord-kde
+      - kcm_tablet
     state: present
 
-- name: install plasma5-thunderbolt
-  zypper: name=plasma5-thunderbolt state=present
+- name: install new plasma modules
+  zypper:
+    name:
+      - plasma5-thunderbolt
+      - plasma5-firewall
   when: is_tumbleweed == true

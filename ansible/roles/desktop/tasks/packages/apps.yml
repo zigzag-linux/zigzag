@@ -8,12 +8,10 @@
       - kwrite
       - kcalc
       - partitionmanager
-      - kolourpaint
       - kcolorchooser
       - okular
       - ark
       - gwenview
-      - transmission-qt
       - ksysguard5
       - discover
       - discover-backend-packagekit
@@ -21,8 +19,5 @@
       - discover-backend-fwupd
       - kwalletmanager5
       - spectacle
-      - filelight
-      - keepassxc
       - vlc-qt
-      - youtube-dl
     state: present
