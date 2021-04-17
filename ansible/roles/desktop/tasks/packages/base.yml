@@ -8,11 +8,6 @@
       - gsettings-backend-dconf
       - alsa-firmware
       - alsa-utils
-      - alsa-plugins-pulse
-      - pulseaudio
-      - pulseaudio-module-bluetooth
-      - pulseaudio-module-zeroconf
-      - pulseaudio-module-x11
       - bluez-firmware
       - NetworkManager
       - NetworkManager-openvpn
@@ -21,9 +16,23 @@
       - udisks2
     state: present
 
-- name: install libva
+- name: install pulseaudio
   zypper:
     name:
-      - libva-utils
-      - libva-glx2
+      - pulseaudio
+      - pulseaudio-module-bluetooth
+      - pulseaudio-module-zeroconf
+      - pulseaudio-module-x11
+      - alsa-plugins-pulse
     state: present
+  when: is_leap == true
+
+- name: install pipewire
+  zypper:
+    name:
+    - pipewire
+    - pipewire-modules
+    - pipewire-alsa
+    - pipewire-pulseaudio
+    state: present
+  when: is_tumbleweed == true

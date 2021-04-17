@@ -3,7 +3,6 @@
   zypper:
     name:
       - sddm
-      - plasma5-session
       - plasma5-defaults-zigzag
       - plasma5-pa
       - plasma-nm5-openvpn
