@@ -1,0 +1,17 @@
+---
+- name: install NetworkManager
+  zypper:
+    name:
+      - NetworkManager
+      - NetworkManager-openvpn
+    state: present
+
+- name: disable wicked service
+  systemd: name=wicked enabled=no
+
+- name: enable NetworkManager service
+  systemd: name=NetworkManager enabled=yes
+
+- import_tasks: firewall.yml
+- import_tasks: dns.yml
+  when: is_version_gte_153 == true

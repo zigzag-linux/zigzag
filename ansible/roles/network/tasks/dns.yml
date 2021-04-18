@@ -1,0 +1,23 @@
+---
+- name: install systemd-resolved
+  zypper: name=systemd-network state=present
+
+- name: disable netconfig dns resolution
+  lineinfile:
+    path: /etc/sysconfig/network/config
+    regexp: '^NETCONFIG_DNS_POLICY="auto"'
+    line: 'NETCONFIG_DNS_POLICY=""'
+
+- name: ensure stub-resolv.conf is present
+  ansible.builtin.file:
+    path: /run/systemd/resolve/stub-resolv.conf
+    state: touch
+
+- name: symlink resolv.conf to resolved stub
+  file:
+    src: /run/systemd/resolve/stub-resolv.conf
+    dest: /etc/resolv.conf
+    state: link
+
+- name: enable systemd-resolved
+  systemd: name=systemd-resolved enabled=yes

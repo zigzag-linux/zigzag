@@ -9,8 +9,6 @@
       - alsa-firmware
       - alsa-utils
       - bluez-firmware
-      - NetworkManager
-      - NetworkManager-openvpn
       - PackageKit-backend-zypp
       - PackageKit-gstreamer-plugin
       - udisks2
@@ -25,7 +23,7 @@
       - pulseaudio-module-x11
       - alsa-plugins-pulse
     state: present
-  when: is_leap == true
+  when: is_version_gte_153 == false
 
 - name: install pipewire
   zypper:
@@ -35,4 +33,4 @@
     - pipewire-alsa
     - pipewire-pulseaudio
     state: present
-  when: is_tumbleweed == true
+  when: is_version_gte_153 == true

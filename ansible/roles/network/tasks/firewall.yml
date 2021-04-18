@@ -1,0 +1,6 @@
+---
+- name: install firewalld
+  zypper: name=firewalld state=present
+
+- name: enable firewalld service
+  systemd: name=firewalld enabled=yes

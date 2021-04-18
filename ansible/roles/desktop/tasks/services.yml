@@ -2,12 +2,6 @@
 - name: sets graphical target
   command: systemctl set-default graphical.target
 
-- name: disable wicked service
-  systemd: name=wicked enabled=no
-
-- name: enable NetworkManager service
-  systemd: name=NetworkManager enabled=yes
-
 - name: enable laptop services
   systemd: name={{item}} enabled=yes
   with_items:

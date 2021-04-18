@@ -14,6 +14,7 @@
       - gwenview
       - ksysguard5
       - discover
+      - discover-notifier
       - discover-backend-packagekit
       - discover-backend-flatpak
       - discover-backend-fwupd
