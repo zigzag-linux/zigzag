@@ -31,9 +31,8 @@
       - plasma5-disks
   when: is_tumbleweed == true
 
-- name: install plasma gtk themes for flatpak
-  flatpak:
-    name:
-      - org.gtk.Gtk3theme.Breeze
-      - org.gtk.Gtk3theme.Breeze-Dark
-    state: present
+- name: install breeze gtk for flatpak
+  flatpak: name=org.gtk.Gtk3theme.Breeze state=present
+
+- name: install breeze-dark gtk for flatpak
+  flatpak: name=org.gtk.Gtk3theme.Breeze-Dark state=present
