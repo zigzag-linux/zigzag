@@ -9,14 +9,18 @@
     line: 'NETCONFIG_DNS_POLICY=""'
 
 - name: create resolve directory
-  ansible.builtin.file:
+  file:
     path: /run/systemd/resolve
     state: directory
 
-- name: ensure stub-resolv.conf is present
-  ansible.builtin.file:
-    path: /run/systemd/resolve/stub-resolv.conf
-    state: touch
+- name: populate service facts
+  service_facts:
+
+- name: trasition to use stub-resolv.conf
+  copy:
+    src: /var/run/netconfig/resolv.conf
+    dest: /run/systemd/resolve/stub-resolv.conf
+  when: ansible_facts.services['systemd-resolved.service'].state == 'inactive'
 
 - name: symlink resolv.conf to resolved stub
   file:
