@@ -8,6 +8,11 @@
     regexp: '^NETCONFIG_DNS_POLICY="auto"'
     line: 'NETCONFIG_DNS_POLICY=""'
 
+- name: create resolve directory
+  ansible.builtin.file:
+    path: /run/systemd/resolve
+    state: directory
+
 - name: ensure stub-resolv.conf is present
   ansible.builtin.file:
     path: /run/systemd/resolve/stub-resolv.conf
