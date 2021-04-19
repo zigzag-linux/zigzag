@@ -8,25 +8,11 @@
     regexp: '^NETCONFIG_DNS_POLICY="auto"'
     line: 'NETCONFIG_DNS_POLICY=""'
 
-- name: create resolve directory
-  file:
-    path: /run/systemd/resolve
-    state: directory
-
-- name: populate service facts
-  service_facts:
-
-- name: trasition to use stub-resolv.conf
-  copy:
-    src: /var/run/netconfig/resolv.conf
-    dest: /run/systemd/resolve/stub-resolv.conf
-  when: ansible_facts.services['systemd-resolved.service'].state == 'inactive'
-
-- name: symlink resolv.conf to resolved stub
-  file:
-    src: /run/systemd/resolve/stub-resolv.conf
-    dest: /etc/resolv.conf
-    state: link
+- name: add resolve to hosts in nsswitch.conf
+  lineinfile:
+    path: /etc/nsswitch.conf
+    regexp: '^hosts:'
+    line: 'hosts:  	files mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns'
 
 - name: enable systemd-resolved
   systemd: name=systemd-resolved enabled=yes

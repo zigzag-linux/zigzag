@@ -21,3 +21,7 @@
           - zigzag-live-service
           - dracut-kiwi-live
         state: absent
+  roles:
+    - role: network
+      vars:
+        role_mode: 'resolv_symlink'

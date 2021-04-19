@@ -1,17 +1,11 @@
 ---
-- name: install NetworkManager
-  zypper:
-    name:
-      - NetworkManager
-      - NetworkManager-openvpn
-    state: present
+- name: setup network
+  block:
+    - import_tasks: networkmanager.yml
+    - import_tasks: firewall.yml
+    - import_tasks: dns.yml
+      when: is_version_gte_153 == true
+  when: role_mode == 'setup'
 
-- name: disable wicked service
-  systemd: name=wicked enabled=no
-
-- name: enable NetworkManager service
-  systemd: name=NetworkManager enabled=yes
-
-- import_tasks: firewall.yml
-- import_tasks: dns.yml
-  when: is_version_gte_153 == true
+- import_tasks: dns_symlink.yml
+  when: role_mode == 'resolv_symlink' and is_version_gte_153 == true

@@ -1,0 +1,13 @@
+---
+- name: install NetworkManager
+  zypper:
+    name:
+      - NetworkManager
+      - NetworkManager-openvpn
+    state: present
+
+- name: disable wicked service
+  systemd: name=wicked enabled=no
+
+- name: enable NetworkManager service
+  systemd: name=NetworkManager enabled=yes

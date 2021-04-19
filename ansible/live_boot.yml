@@ -3,3 +3,6 @@
 - hosts: all
   roles:
     - live_boot
+    - role: network
+      vars:
+        role_mode: 'resolv_symlink'

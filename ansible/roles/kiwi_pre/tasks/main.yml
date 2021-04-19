@@ -10,7 +10,7 @@
 # system, resolves the following warning:
 # > Found NDB Packages.db database while attempting bdb backend:
 # > using ndb backend
-- name: rebuild rpm pacage database
+- name: rebuild rpm package database
   command: rpm --rebuilddb
 
 # this package will be re-added at the later stage, it needs to be
