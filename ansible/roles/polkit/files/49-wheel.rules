@@ -1,6 +1,6 @@
 /**
  * Ask wheel user's password instead of root's
  */
-polkit.addAdminRule(function(action, subject) {
-    return ["unix-group:wheel"];
+polkit.addAdminRule(function (action, subject) {
+  return ['unix-group:wheel'];
 });

@@ -8,6 +8,6 @@
     - thermald
     - tlp
 
-- name: enable tlp-sleep if service exists
+- name: enable tlp-sleep
   systemd: name=tlp-sleep enabled=yes
-  ignore_errors: yes # for tlp 1.3+ service no longer exists
+  when: is_version_gte_153 == false

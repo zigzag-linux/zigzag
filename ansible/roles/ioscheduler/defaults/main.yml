@@ -1,3 +1,0 @@
----
-ssd_scheduler: 'deadline'
-hdd_scheduler: 'deadline'

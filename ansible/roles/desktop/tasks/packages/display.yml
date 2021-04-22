@@ -23,12 +23,3 @@
       - xclip
       - plasma5-session
     state: present
-  when: is_leap == true
-
-- name: install wayland
-  zypper:
-    name:
-      - plasma5-session-wayland
-      - wl-clipboard
-    state: present
-  when: is_tumbleweed == true

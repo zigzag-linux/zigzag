@@ -1,7 +1,0 @@
----
-- name: copy ioscheduler udev rule
-  template:
-    src: udev_rules.j2
-    dest: /etc/udev/rules.d/60-io_schedulers.rules
-    owner: root
-    group: root
