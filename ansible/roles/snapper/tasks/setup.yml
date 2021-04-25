@@ -1,0 +1,13 @@
+---
+- name: install snapper
+  zypper:
+    name:
+      - snapper
+      - snapper-zypp-plugin
+      - grub2-snapper-plugin
+
+- name: enable booting from snapshots
+  lineinfile:
+    path: /etc/default/grub
+    regexp: '^SUSE_BTRFS_SNAPSHOT_BOOTING'
+    line: 'SUSE_BTRFS_SNAPSHOT_BOOTING="true"'

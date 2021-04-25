@@ -1,0 +1,15 @@
+---
+- name: copy first snapshot metadata
+  copy:
+    src: files/info.xml
+    dest: /.snapshots/1/info.xml
+
+- name: init snapper config
+  copy:
+    src: /etc/snapper/config-templates/default
+    dest: /etc/snapper/configs/root
+
+- name: disable copy on write on /var
+  file:
+    path: /var
+    attributes: +C

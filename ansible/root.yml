@@ -10,6 +10,7 @@
     - base
     - sudo
     - network
+    - snapper
     - samba
     - desktop
     - polkit
