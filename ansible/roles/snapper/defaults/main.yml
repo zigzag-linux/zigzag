@@ -1,2 +1,3 @@
 ---
 role_mode: 'setup'
+snapshot_mount_present: "{{ '/.snapshots' in (ansible_mounts | map(attribute = 'mount')) }}"

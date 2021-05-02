@@ -2,23 +2,18 @@
 - name: install desktop apps
   zypper:
     name:
-      - chromium
       - dolphin
       - konsole
       - kwrite
       - kcalc
       - partitionmanager
       - kcolorchooser
-      - okular
       - ark
-      - gwenview
       - ksysguard5
       - discover
       - discover-notifier
-      - discover-backend-packagekit
       - discover-backend-flatpak
       - discover-backend-fwupd
       - kwalletmanager5
       - spectacle
-      - vlc-qt
     state: present

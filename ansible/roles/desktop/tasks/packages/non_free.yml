@@ -1,8 +1,0 @@
----
-- name: install non-free packages for desktop
-  zypper:
-    name:
-      - chromium-plugin-widevinecdm
-      - vlc-codecs
-      - vlc-vdpau
-    state: present

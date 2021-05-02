@@ -4,7 +4,4 @@
 - import_tasks: packages/plasma.yml
 - import_tasks: packages/apps.yml
 - import_tasks: packages/laptop.yml
-- import_tasks: packages/non_free.yml
-  when: non_free == true
-
 - import_tasks: services.yml

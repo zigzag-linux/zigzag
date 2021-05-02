@@ -25,3 +25,6 @@
     - role: network
       vars:
         role_mode: 'resolv_symlink'
+    - role: snapper
+      vars:
+        role_mode: 'enable'

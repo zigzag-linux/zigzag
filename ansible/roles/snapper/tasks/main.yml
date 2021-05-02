@@ -3,4 +3,4 @@
   when: role_mode == 'setup'
 
 - import_tasks: enable.yml
-  when: role_mode == 'enable'
+  when: role_mode == 'enable' and snapshot_mount_present == true

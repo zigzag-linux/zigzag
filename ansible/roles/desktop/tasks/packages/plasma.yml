@@ -16,7 +16,7 @@
       - pam_kwallet
       - xdg-desktop-portal-kde
       - kdenetwork4-filesharing
-      - phonon4qt5-backend-vlc
+      - phonon4qt5-backend-gstreamer
       - ffmpegthumbs
       - kdegraphics-thumbnailers
       - colord-kde

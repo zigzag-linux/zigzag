@@ -13,3 +13,9 @@
   file:
     path: /var
     attributes: +C
+
+- name: enable booting from snapshots
+  lineinfile:
+    path: /etc/default/grub
+    regexp: '^SUSE_BTRFS_SNAPSHOT_BOOTING'
+    line: 'SUSE_BTRFS_SNAPSHOT_BOOTING=true'

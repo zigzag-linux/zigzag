@@ -32,5 +32,6 @@
     - pipewire-modules
     - pipewire-alsa
     - pipewire-pulseaudio
+    - gstreamer-plugin-pipewire
     state: present
   when: is_version_gte_153 == true
