@@ -27,7 +27,7 @@
         <!-- password: linux -->
         <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
     </users>
-    <repository type="yast2" alias="oss">
+    <repository type="rpm-md" alias="oss">
         <source path="http://download.opensuse.org/tumbleweed/repo/oss"/>
     </repository>
     <repository type="rpm-md" alias="zigzag-devel" priority="10">

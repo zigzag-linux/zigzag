@@ -6,6 +6,7 @@
 #
 
 declare -r DOCKER_TAG=zigzag:latest
+declare -r DOCKER_RUNTIME=docker
 declare -a ARGUMENT_ARRAY
 
 case $1 in
@@ -18,14 +19,14 @@ esac
 
 container_build()
 {
-    if [[ "$(docker images -q $DOCKER_TAG 2> /dev/null)" == "" ]]; then
-        docker build -t $DOCKER_TAG docker/
+    if [[ "$($DOCKER_RUNTIME images -q $DOCKER_TAG 2> /dev/null)" == "" ]]; then
+        $DOCKER_RUNTIME build -t $DOCKER_TAG docker/
     fi
 }
 
 container_run()
 {
-    docker run --privileged --rm -v $(pwd):/kiwi -it $DOCKER_TAG "$@"
+    $DOCKER_RUNTIME run --privileged --rm -v zigzag-build:/tmp/kiwi-build -v $(pwd):/kiwi -it $DOCKER_TAG "$@"
 }
 
 container_build
