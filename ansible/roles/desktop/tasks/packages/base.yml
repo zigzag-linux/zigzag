@@ -9,8 +9,6 @@
       - alsa-firmware
       - alsa-utils
       - bluez-firmware
-      - PackageKit-backend-zypp
-      - PackageKit-gstreamer-plugin
       - udisks2
     state: present
 
