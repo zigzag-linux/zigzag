@@ -33,3 +33,7 @@
       - avahi
       - zigzag-languages
     state: present
+
+- name: install KMP signing certificate
+  zypper: name=openSUSE-signkey-cert state=present
+  when: is_version_gte_153 == true
