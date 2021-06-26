@@ -5,7 +5,6 @@
       - rpmconf
       - sensors
       - dmidecode
-      - hddtemp
       - hdparm
       - sysfsutils
       - schedtool
