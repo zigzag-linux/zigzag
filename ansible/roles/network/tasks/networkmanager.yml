@@ -6,8 +6,13 @@
       - NetworkManager-openvpn
     state: present
 
+- name: check if wicked installed
+  package_facts:
+    manager: auto
+
 - name: disable wicked service
   systemd: name=wicked enabled=no
+  when: "'wicked-service' in ansible_facts.packages"
 
 - name: enable NetworkManager service
   systemd: name=NetworkManager enabled=yes
