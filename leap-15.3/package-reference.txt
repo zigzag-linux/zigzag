@@ -158,6 +158,7 @@ gpg2-lang
 gpg-pubkey
 gpg-pubkey
 gpg-pubkey
+gpg-pubkey
 gptfdisk
 grep
 grep-lang
@@ -182,7 +183,6 @@ gtk3-schema
 gtk3-tools
 gzip
 hack-fonts
-hddtemp
 hdparm
 hicolor-icon-theme
 hostname
@@ -439,7 +439,7 @@ libevent-2_1-8
 libexiv2-26
 libexpat1
 libext2fs2
-libf2fs1
+libf2fs8
 libfam0-gamin
 libfdisk1
 libffi7
@@ -496,6 +496,7 @@ libgudev-1_0-0
 libgusb2
 libHalf23
 libharfbuzz0
+libharfbuzz-subset0
 libhogweed4
 libhttp_parser2_7_1
 libhunspell-1_6-0
@@ -715,7 +716,6 @@ liborc-0_4-0
 libostree
 libostree-1-1
 libp11-kit0
-libpackagekit-glib2-18
 libpackagekitqt5-1
 libpango-1_0-0
 libparted0
@@ -906,7 +906,7 @@ libX11-6
 libX11-data
 libX11-xcb1
 libx264-161
-libx265-192
+libx265-199
 libx86emu3
 libXau6
 libXaw7
@@ -999,6 +999,7 @@ milou5
 milou5-lang
 mkfontdir
 mkfontscale
+mokutil
 mozilla-nspr
 mozilla-nss
 mozilla-nss-certs
@@ -1030,19 +1031,16 @@ openssh
 openssh-clients
 openssh-common
 openssh-server
+openssl
 openssl-1_1
 openSUSE-build-key
 openSUSE-release
-openSUSE-release-ftp
+openSUSE-release-appliance-custom
+openSUSE-signkey-cert
 openvpn
 p11-kit
 p11-kit-tools
 p7zip
-PackageKit
-PackageKit-backend-zypp
-PackageKit-branding-openSUSE
-PackageKit-gstreamer-plugin
-PackageKit-lang
 pam
 pam-config
 pam_kwallet
@@ -1233,7 +1231,6 @@ tk
 tlp
 tlp-rdw
 tree
-typelib-1_0-Flatpak-1_0
 typelib-1_0-Fwupd-2_0
 typelib-1_0-NM-1_0
 ucode-amd

@@ -10,8 +10,8 @@ declare -r DOCKER_RUNTIME=docker
 declare -a ARGUMENT_ARRAY
 
 case $1 in
-    leap-stable|'') ARGUMENT_ARRAY=('' 'leap-15.2') ;;
-    leap-devel) ARGUMENT_ARRAY=('--profile=devel' 'leap-15.2') ;;
+    leap-stable|'') ARGUMENT_ARRAY=('' 'leap-15.3') ;;
+    leap-devel) ARGUMENT_ARRAY=('--profile=devel' 'leap-15.3') ;;
     leap-next) ARGUMENT_ARRAY=('--profile=devel' 'leap-15.3') ;;
     tumbleweed-devel) ARGUMENT_ARRAY=('' 'tumbleweed') ;;
     *) echo 'invalid variant'; exit 1 ;;
