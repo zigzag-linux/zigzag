@@ -14,9 +14,9 @@ By default the build command will pick up stable Leap, there is however an optio
 
 | Name               | openSUSE Version | Devel repo enabled   |
 |--------------------|------------------|----------------------|
-| leap-stable        | Leap 15.2        | No                   |
-| leap-devel         | Leap 15.2        | Yes                  |
-| leap-next          | Leap 15.2        | Yes                  |
+| leap-stable        | Leap 15.3        | No                   |
+| leap-devel         | Leap 15.3        | Yes                  |
+| leap-next          | Leap 15.3        | Yes                  |
 | tumbleweed-devel   | Tumbleweed       | Yes                  |
 
 To build Tumbleweed with development repo:

@@ -16,11 +16,6 @@ echo "Configure image: [$kiwi_iname]..."
 suseSetupProduct
 
 #======================================
-# Add missing gpg keys to rpm
-#--------------------------------------
-suseImportBuildKey
-
-#======================================
 # Configure Zigzag
 #--------------------------------------
 export ZIGZAG_KIWI=1
@@ -32,8 +27,3 @@ fi
 
 zigzag-write-configuration --force root
 set +e
-
-#======================================
-# Remove yast if not in use
-#--------------------------------------
-suseRemoveYaST
