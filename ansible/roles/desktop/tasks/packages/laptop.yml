@@ -1,9 +1,0 @@
----
-- name: install laptop utils
-  zypper:
-    name:
-      - thermald
-      - tlp
-      - tlp-rdw
-      - powertop
-    state: present

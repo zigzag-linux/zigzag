@@ -23,10 +23,30 @@
       - kcm_tablet
     state: present
 
+- name: install desktop apps
+  zypper:
+    name:
+      - dolphin
+      - konsole
+      - kwrite
+      - kcalc
+      - partitionmanager
+      - kcolorchooser
+      - ark
+      - ksysguard5
+      - discover
+      - discover-notifier
+      - discover-backend-flatpak
+      - discover-backend-fwupd
+      - kwalletmanager5
+      - spectacle
+    state: present
+
 - name: install new plasma modules
   zypper:
     name:
       - plasma5-thunderbolt
+      - plasma5-systemmonitor
       - plasma5-firewall
       - plasma5-disks
   when: is_tumbleweed == true

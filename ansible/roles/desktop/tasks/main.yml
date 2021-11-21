@@ -1,7 +1,8 @@
 ---
-- import_tasks: packages/base.yml
-- import_tasks: packages/display.yml
-- import_tasks: packages/plasma.yml
-- import_tasks: packages/apps.yml
-- import_tasks: packages/laptop.yml
-- import_tasks: services.yml
+- import_tasks: base.yml
+- import_tasks: x11.yml
+- import_tasks: plasma.yml
+- import_tasks: laptop.yml
+  when: is_tumbleweed == true
+- import_tasks: laptop_legacy.yml
+  when: is_leap == true

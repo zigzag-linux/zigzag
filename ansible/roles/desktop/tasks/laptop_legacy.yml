@@ -1,0 +1,15 @@
+---
+- name: install legacy laptop utils
+  zypper:
+    name:
+      - powertop
+      - thermald
+      - tlp
+      - tlp-rdw
+    state: present
+
+- name: enable legacy laptop services
+  systemd: name={{item}} enabled=yes
+  with_items:
+    - thermald
+    - tlp
