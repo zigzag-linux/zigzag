@@ -33,7 +33,6 @@
       - partitionmanager
       - kcolorchooser
       - ark
-      - ksysguard5
       - discover
       - discover-notifier
       - discover-backend-flatpak
@@ -50,6 +49,10 @@
       - plasma5-firewall
       - plasma5-disks
   when: is_tumbleweed == true
+
+- name: install ksysguard5 (legacy)
+  zypper: name=ksysguard5 state=present
+  when: is_leap == true
 
 - name: install breeze gtk for flatpak
   flatpak: name=org.gtk.Gtk3theme.Breeze state=present

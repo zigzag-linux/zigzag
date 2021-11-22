@@ -6,8 +6,16 @@
 
 - name: init snapper config
   copy:
+    src: /usr/share/snapper/config-templates/default
+    dest: /etc/snapper/configs/root
+  when: is_version_gte_154 == true
+
+# Legacy file location (snapper <= 0.8)
+- name: init snapper config (legacy)
+  copy:
     src: /etc/snapper/config-templates/default
     dest: /etc/snapper/configs/root
+  when: is_version_gte_154 == false
 
 - name: disable copy on write on /var
   file:

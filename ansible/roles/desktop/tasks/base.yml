@@ -33,6 +33,7 @@
       - xf86-input-libinput
       - libva-utils
       - libva-glx2
+      - xf86-video-vmware
     state: present
 
 - name: sets graphical target

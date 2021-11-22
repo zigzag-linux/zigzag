@@ -4,8 +4,7 @@
     - import_tasks: networkmanager.yml
     - import_tasks: firewall.yml
     - import_tasks: dns.yml
-      when: is_version_gte_153 == true
   when: role_mode == 'setup'
 
 - import_tasks: dns_symlink.yml
-  when: role_mode == 'resolv_symlink' and is_version_gte_153 == true
+  when: role_mode == 'resolv_symlink'

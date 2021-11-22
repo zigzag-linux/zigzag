@@ -3,6 +3,7 @@
   zypper:
     name:
       - rpmconf
+      - deltarpm
       - sensors
       - dmidecode
       - hdparm
@@ -22,7 +23,3 @@
       - dosfstools
       - f2fs-tools
     state: present
-
-- name: install deltarpm
-  zypper: name=deltarpm state=present
-  when: is_leap == true

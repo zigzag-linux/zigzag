@@ -9,13 +9,6 @@
     name: oss-update
     repo: 'http://download.opensuse.org/update/leap/$releasever/oss/'
 
-- name: enable 'packman-essentials' repo
-  zypper_repository:
-    name: packman-essentials
-    repo: 'http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/Essentials/'
-    priority: 98
-  when: non_free == true
-
 - name: enable 'zigzag' repo
   zypper_repository:
     name: zigzag
