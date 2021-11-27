@@ -45,7 +45,6 @@
     name:
       - plasma5-thunderbolt
       - plasma5-systemmonitor
-      - plasma5-firewall
       - plasma5-disks
   when: is_tumbleweed == true
 

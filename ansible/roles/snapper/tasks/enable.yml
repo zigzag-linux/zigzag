@@ -4,6 +4,11 @@
     src: files/info.xml
     dest: /.snapshots/1/info.xml
 
+- name: disable copy on write on /var
+  file:
+    path: /var
+    attributes: +C
+
 - name: init snapper config
   copy:
     src: /usr/share/snapper/config-templates/default
@@ -17,10 +22,11 @@
     dest: /etc/snapper/configs/root
   when: is_version_gte_154 == false
 
-- name: disable copy on write on /var
-  file:
-    path: /var
-    attributes: +C
+- name: enable root snapper configuration
+  lineinfile:
+    path: /etc/sysconfig/snapper
+    regexp: '^SNAPPER_CONFIGS='
+    line: 'SNAPPER_CONFIGS="root"'
 
 - name: enable booting from snapshots
   lineinfile:

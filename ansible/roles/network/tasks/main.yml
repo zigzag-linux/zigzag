@@ -2,7 +2,6 @@
 - name: setup network
   block:
     - import_tasks: networkmanager.yml
-    - import_tasks: firewall.yml
     - import_tasks: dns.yml
   when: role_mode == 'setup'
 
