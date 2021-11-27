@@ -9,6 +9,7 @@
   roles:
     - base
     - sudo
+    - memory
     - network
     - snapper
     - samba
