@@ -159,6 +159,7 @@ gpg-pubkey
 gpg-pubkey
 gpg-pubkey
 gpg-pubkey
+gpg-pubkey
 gptfdisk
 grep
 grep-lang
@@ -298,7 +299,6 @@ kpartx
 kpeople5
 kpeople5-lang
 kpmcore
-kpmcore-lang
 kquickcharts
 krb5
 kscreen5
@@ -638,7 +638,7 @@ libKF5XmlGui5-lang
 libkioarchive5
 libkipi-data
 libkmod2
-libkpmcore7
+libkpmcore9
 libksba8
 libkscreen2-plugin
 libKScreenLocker5
@@ -702,13 +702,11 @@ libns1604
 libnscd1
 libnsl2
 libntfs-3g87
-libnuma1
 libobjc4
 libogg0
 libopenal1
-libopencore-amrnb0
-libopencore-amrwb0
 libopenjp2-7
+libopenjpeg1
 libopenmpt0
 libopenssl1_1
 libopus0
@@ -786,7 +784,6 @@ libreiserfscore0
 librest-0_7-0
 librsvg-2-2
 librsvg-lang
-librtmp1
 libsamba-credentials0
 libsamba-errors0
 libsamba-hostconfig0
@@ -878,10 +875,8 @@ libvdpau_r600
 libvdpau_radeonsi
 libvdpau_va_gl1
 libverto1
-libvidstab1_1
 libvisual
 libvmaf1
-libvo-amrwbenc0
 libvorbis0
 libvorbisenc2
 libvorbisfile3
@@ -905,9 +900,8 @@ libwrap0
 libX11-6
 libX11-data
 libX11-xcb1
-libx264-161
-libx265-199
 libx86emu3
+libxatracker2
 libXau6
 libXaw7
 libxcb1
@@ -965,7 +959,6 @@ libXt6
 libxtables12
 libXtst6
 libXv1
-libxvidcore4
 libXxf86misc1
 libXxf86vm1
 libyaml-0-2
@@ -975,7 +968,6 @@ libzimg2
 libzio1
 libzip5
 libzstd1
-libzvbi0
 libzypp
 login_defs
 logrotate
@@ -1047,8 +1039,6 @@ pam_kwallet
 pam_kwallet-common
 parted
 parted-lang
-partitionmanager
-partitionmanager-lang
 patch
 patterns-base-minimal_base
 patterns-zigzag-firmware
@@ -1276,6 +1266,7 @@ xf86-video-amdgpu
 xf86-video-ati
 xf86-video-fbdev
 xf86-video-nouveau
+xf86-video-vmware
 xfsprogs
 xhost
 xinit

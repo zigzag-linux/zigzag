@@ -47,6 +47,7 @@
         <package name="ca-certificates"/>
         <package name="systemd-presets-branding-openSUSE"/>
         <package name="openSUSE-release"/>
+        <package name="timezone"/>
         <!-- replace busybox-{grep,gawk,xz,gzip} packages !-->
         <package name="grep"/>
         <package name="gawk"/>
