@@ -13,7 +13,7 @@
             firmware="uefi"
             kernelcmdline="quiet"
             hybridpersistent="false"/>
-        <version>15.3</version>
+        <version>15.4</version>
         <packagemanager>zypper</packagemanager>
         <locale>en_US</locale>
         <keytable>us</keytable>
@@ -31,17 +31,17 @@
         <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
     </users>
     <repository type="rpm-md" alias="oss">
-        <source path="obs://openSUSE:Leap:15.3/standard"/>
+        <source path="obs://openSUSE:Leap:15.4/standard"/>
     </repository>
     <repository type="rpm-md" alias="oss-update">
-        <source path="obs://openSUSE:Leap:15.3:Update/standard"/>
+        <source path="obs://openSUSE:Leap:15.4:Update/standard"/>
     </repository>
     <repository type="rpm-md" alias="zigzag" priority="20">
-        <source path="obs://home:mkrwc:zigzag:15.3/standard"/>
+        <source path="obs://home:mkrwc:zigzag:15.4/standard"/>
     </repository>
     <!-- additional development repo enabled only in devel profile -->
     <repository type="rpm-md" alias="zigzag-devel" profiles="devel" priority="10">
-        <source path="obs://home:mkrwc:zigzag:devel/openSUSE_Leap_15.3"/>
+        <source path="obs://home:mkrwc:zigzag:devel/openSUSE_Leap_15.4"/>
     </repository>
     <packages type="image">
         <package name="zigzag-configuration"/>
