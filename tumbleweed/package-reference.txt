@@ -29,6 +29,7 @@ baloo5-widgets-lang
 bash
 bash-completion
 bash-lang
+bash-sh
 bcm20702a1-firmware
 blog
 bluedevil5
@@ -107,7 +108,7 @@ dracut-mkinitrd-deprecated
 drkonqi5
 drkonqi5-lang
 e2fsprogs
-ebtables
+earlyoom
 efibootmgr
 elfutils
 elfutils-lang
@@ -123,8 +124,6 @@ fillup
 findutils
 findutils-lang
 finger
-firewalld
-firewalld-lang
 flatpak
 fontconfig
 fontconfig-lang
@@ -192,8 +191,6 @@ intel-vaapi-driver
 iosevka-fonts
 iotop
 iproute2
-ipset
-iptables
 iputils
 ipw-firmware
 iso-codes
@@ -359,6 +356,7 @@ libavutil56_70
 libbd_crypto2
 libbd_fs2
 libbd_loop2
+libbd_lvm2
 libbd_mdraid2
 libbd_part2
 libbd_swap2
@@ -421,7 +419,6 @@ libdrm_intel1
 libdrm_nouveau2
 libdrm_radeon1
 libdw1
-libebtc0
 libeconf0
 libedit0
 libeditorconfig0
@@ -497,8 +494,8 @@ libharfbuzz-subset0
 libhidapi-hidraw0
 libhogweed6
 libhunspell-1_7-0
+libibmtss1
 libibus-1_0-5
-libical3
 libICE6
 libicu70
 libicu70-ledata
@@ -511,8 +508,6 @@ libimobiledevice-1_0-6
 libinih0
 libinput10
 libip4tc2
-libip6tc2
-libipset13
 libisl23
 libisoburn1
 libisofs6
@@ -655,6 +650,7 @@ liblua5_1-5
 liblua5_4-5
 libluajit-5_1-2
 libluv1
+liblvm2cmd2_03
 liblz4-1
 liblzma5
 liblzo2-2
@@ -686,12 +682,8 @@ libndr-krb5pac0
 libndr-nbt0
 libndr-standard0
 libnetapi0
-libnetfilter_conntrack3
 libnettle8
 libnewt0_52
-libnfnetlink0
-libnftables1
-libnftnl11
 libnghttp2-14
 libnl3-200
 libnl-config
@@ -1001,6 +993,7 @@ lsof
 lua51
 lua51-bit32
 lua51-luv
+lvm2
 man
 mdadm
 Mesa
@@ -1031,7 +1024,6 @@ NetworkManager-branding-openSUSE
 NetworkManager-lang
 NetworkManager-openvpn
 NetworkManager-openvpn-lang
-nftables
 noto-coloremoji-fonts
 noto-sans-fonts
 noto-sans-jp-bold-fonts
@@ -1123,8 +1115,6 @@ plasma5-desktop
 plasma5-desktop-lang
 plasma5-disks
 plasma5-disks-lang
-plasma5-firewall
-plasma5-firewall-lang
 plasma5-integration-plugin
 plasma5-integration-plugin-lang
 plasma5-pa
@@ -1165,9 +1155,6 @@ python38-bcrypt
 python38-cffi
 python38-cryptography
 python38-curses
-python38-dbus-python
-python38-decorator
-python38-gobject
 python38-greenlet
 python38-Jinja2
 python38-jmespath
@@ -1188,10 +1175,6 @@ python38-rpm
 python38-setuptools
 python38-simplejson
 python38-six
-python38-slip
-python38-slip-dbus
-python3-firewall
-python3-nftables
 python3-rpmconf
 python3-solv
 qca-qt5
@@ -1276,7 +1259,6 @@ timezone
 tree
 typelib-1_0-Fwupd-2_0
 typelib-1_0-Json-1_0
-typelib-1_0-NM-1_0
 ucode-amd
 ucode-intel
 udev
@@ -1340,7 +1322,6 @@ xrdb
 xset
 xsetroot
 xsettingsd
-xtables-plugins
 xterm-bin
 xz
 xz-lang
@@ -1349,4 +1330,6 @@ zigzag-configuration
 zigzag-languages
 zigzag-live-service
 zigzag-wallpapers
+zram-generator
+zstd
 zypper
