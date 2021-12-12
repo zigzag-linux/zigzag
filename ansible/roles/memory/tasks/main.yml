@@ -1,4 +1,3 @@
 ---
 - import_tasks: oom.yml
 - import_tasks: zram.yml
-  when: is_version_gte_154 == true
