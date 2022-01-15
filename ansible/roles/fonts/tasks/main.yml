@@ -3,8 +3,6 @@
   zypper:
     name:
       - fonts-config
-      - liberation-fonts
-      - dejavu-fonts
       - iosevka-fonts
       - noto-sans-fonts
       - noto-sans-sc-fonts

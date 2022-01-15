@@ -8,7 +8,6 @@
       - dmidecode
       - hdparm
       - sysfsutils
-      - schedtool
       - pciutils
       - usbutils
       - fwupd
@@ -17,8 +16,8 @@
       - iotop
       - xfsprogs
       - btrfsprogs
+      - btrfsmaintenance
       - e2fsprogs
-      - ntfs-3g
       - ntfsprogs
       - dosfstools
       - f2fs-tools

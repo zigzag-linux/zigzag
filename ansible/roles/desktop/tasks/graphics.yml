@@ -1,0 +1,29 @@
+---
+- name: sets graphical target
+  command: systemctl set-default graphical.target
+
+- name: install graphics stack and drivers
+  zypper:
+    name:
+      - patterns-zigzag-xfirmware-intel
+      - patterns-zigzag-xfirmware-radeon
+      - patterns-zigzag-xfirmware-nouveau
+      - Mesa-demo-x
+      - vulkan-tools
+      - libva-utils
+      - libva-glx2
+      - xf86-input-libinput
+      - xf86-video-vmware
+    state: present
+
+- name: install xorg
+  zypper:
+    name:
+      - xorg-x11-essentials
+      - xorg-x11-server
+      - xorg-x11-fonts
+      - xorg-x11-driver-video
+      - xrandr
+      - xclip
+      - plasma5-session
+    state: present

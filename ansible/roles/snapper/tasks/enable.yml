@@ -1,27 +1,22 @@
 ---
 - name: copy first snapshot metadata
-  copy:
-    src: files/info.xml
+  template:
+    src: files/info.xml.j2
     dest: /.snapshots/1/info.xml
+    mode: '0600'
+  vars:
+    date_utc: "{{ now(utc=True, fmt='%Y-%m-%d %H:%M:%S') }}"
 
 - name: disable copy on write on /var
   file:
     path: /var
     attributes: +C
+  register: chattr_cow
+  failed_when: "chattr_cow.failed and 'not supported' not in chattr_cow.details"
 
-- name: init snapper config
-  copy:
-    src: /etc/snapper/config-templates/default
-    dest: /etc/snapper/configs/root
-
-- name: enable root snapper configuration
-  lineinfile:
-    path: /etc/sysconfig/snapper
-    regexp: '^SNAPPER_CONFIGS='
-    line: 'SNAPPER_CONFIGS="root"'
-
-- name: enable booting from snapshots
-  lineinfile:
-    path: /etc/default/grub
-    regexp: '^SUSE_BTRFS_SNAPSHOT_BOOTING'
-    line: 'SUSE_BTRFS_SNAPSHOT_BOOTING=true'
+- name: ensure correct permissions on /.snapshots
+  file:
+    path: /.snapshots
+    owner: root
+    group: root
+    mode: '0600'

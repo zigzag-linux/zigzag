@@ -1,7 +1,7 @@
 ---
-- import_tasks: base.yml
-- import_tasks: x11.yml
-- import_tasks: plasma.yml
+- import_tasks: graphics.yml
+- import_tasks: audio.yml
+- import_tasks: kde.yml
 - import_tasks: laptop.yml
   when: is_tumbleweed == true
 - import_tasks: laptop_legacy.yml

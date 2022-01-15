@@ -1,7 +1,20 @@
 ---
+- name: install general desktop
+  zypper:
+    name:
+      - zigzag-wallpapers
+      - xdg-user-dirs
+      - xdg-utils
+      - gsettings-backend-dconf
+      - bluez-firmware
+      - udisks2
+    state: present
+
 - name: install plasma desktop
   zypper:
     name:
+      - plasma5-session-wayland
+      - plasma5-session
       - sddm
       - plasma5-defaults-zigzag
       - plasma5-pa
@@ -15,7 +28,7 @@
       - kio-extras5
       - pam_kwallet
       - xdg-desktop-portal-kde
-      - kdenetwork4-filesharing
+      - kdenetwork-filesharing
       - phonon4qt5-backend-gstreamer
       - ffmpegthumbs
       - kdegraphics-thumbnailers
@@ -28,13 +41,12 @@
     name:
       - dolphin
       - konsole
-      - kwrite
-      - kcalc
-      - kcolorchooser
       - ark
+      - kcolorchooser
       - discover
       - discover-notifier
       - discover-backend-flatpak
+      - discover-backend-packagekit
       - discover-backend-fwupd
       - kwalletmanager5
       - spectacle

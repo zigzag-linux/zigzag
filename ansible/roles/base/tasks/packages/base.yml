@@ -24,6 +24,7 @@
       - openssh
       - iproute2
       - iputils
+      - iw
       - ca-certificates-mozilla
       - mozilla-nss-certs
       - openSUSE-signkey-cert
