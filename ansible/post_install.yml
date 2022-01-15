@@ -28,3 +28,6 @@
     - role: snapper
       vars:
         role_mode: 'enable'
+    - role: immutable
+      vars:
+        role_mode: 'enable'

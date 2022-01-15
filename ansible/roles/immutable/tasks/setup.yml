@@ -1,0 +1,37 @@
+---
+# by creating this file, ensure that setup-fstab-for-overlayfs
+# won't setup overlay fstab entries, we will set it up in 'enable' phase
+- name: touch /etc/fstab.sys
+  file:
+    path: /etc/fstab.sys
+    state: touch
+
+- name: install immutable pattern
+  zypper: name=patterns-zigzag-immutable state=present
+
+- name: disable timeline snapshots
+  lineinfile:
+    path: /etc/snapper/configs/root
+    regexp: '^TIMELINE_CREATE='
+    line: 'TIMELINE_CREATE="no"'
+
+- name: reduce number of snapshots
+  lineinfile:
+    path: /etc/snapper/configs/root
+    regexp: '^NUMBER_LIMIT='
+    line: 'NUMBER_LIMIT="2-10"'
+
+- name: reduce number of important snapshots
+  lineinfile:
+    path: /etc/snapper/configs/root
+    regexp: '^NUMBER_LIMIT_IMPORTANT='
+    line: 'NUMBER_LIMIT_IMPORTANT="4-10"'
+
+- name: set 'install_weak_deps=False' dnf option
+  ini_file:
+    path: /etc/dnf/dnf.conf
+    no_extra_spaces: yes
+    create: no
+    section: main
+    option: install_weak_deps
+    value: 'False'

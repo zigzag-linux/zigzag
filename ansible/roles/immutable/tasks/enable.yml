@@ -1,0 +1,8 @@
+---
+- name: remove /etc/fstab.sys
+  file:
+    path: /etc/fstab.sys
+    state: absent
+
+- name: setup fstab for overlayfs
+  command: setup-fstab-for-overlayfs
