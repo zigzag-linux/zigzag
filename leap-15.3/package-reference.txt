@@ -1276,4 +1276,5 @@ zigzag-configuration
 zigzag-languages
 zigzag-live-service
 zigzag-wallpapers
+zram-generator
 zypper
