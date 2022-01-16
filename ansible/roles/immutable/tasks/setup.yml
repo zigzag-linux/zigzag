@@ -9,6 +9,9 @@
 - name: install immutable pattern
   zypper: name=patterns-zigzag-immutable state=present
 
+- name: remove snapper-zypp integration
+  zypper: name=snapper-zypp-plugin state=absent
+
 - name: disable timeline snapshots
   lineinfile:
     path: /etc/snapper/configs/root
