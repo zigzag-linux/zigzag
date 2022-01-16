@@ -11,6 +11,10 @@ apparmor-abstractions
 apparmor-parser
 apparmor-parser-lang
 apparmor-profiles
+AppStream
+appstream-glib
+appstream-glib-lang
+AppStream-lang
 argyllcms
 ark
 ark-lang
@@ -47,6 +51,7 @@ breeze5-decoration
 breeze5-icons
 breeze5-style
 breeze5-style-lang
+btrfsmaintenance
 btrfsprogs
 btrfsprogs-udev-rules
 bubblewrap
@@ -56,8 +61,11 @@ ca-certificates-mozilla
 calamares
 calamares-branding-zigzag
 calamares-module-zigzag
+catatonit
 chkstat
 cifs-utils
+cni
+cni-plugins
 colord
 colord-color-profiles
 colordiff
@@ -65,6 +73,7 @@ colord-kde
 colord-kde-lang
 colord-lang
 compat-usrmerge-tools
+conmon
 coreutils
 coreutils-lang
 cpio
@@ -81,7 +90,6 @@ cups-config
 curl
 dbus-1
 dconf
-dejavu-fonts
 deltarpm
 desktop-file-utils
 device-mapper
@@ -94,17 +102,19 @@ diffutils-lang
 discover
 discover-backend-flatpak
 discover-backend-fwupd
+discover-backend-packagekit
 discover-lang
 discover-notifier
 dmidecode
+dnf-data
 dolphin
 dolphin-part
 dolphin-part-lang
-dos2unix
 dosfstools
 dracut
 dracut-kiwi-live
 dracut-mkinitrd-deprecated
+dracut-transactional-update
 drkonqi5
 drkonqi5-lang
 e2fsprogs
@@ -129,10 +139,13 @@ fontconfig-lang
 fonts-config
 frameworkintegration-plugin
 fuse
+fuse-overlayfs
 fwupd
 fwupd-efi
 fwupd-lang
 gawk
+gcab
+gcab-lang
 gdk-pixbuf-loader-rsvg
 gdk-pixbuf-query-loaders
 gettext-runtime
@@ -177,6 +190,8 @@ gtk3-tools
 gzip
 hack-fonts
 hdparm
+health-checker
+health-checker-plugins-MicroOS
 hicolor-icon-theme
 hostname
 hwdata
@@ -190,18 +205,17 @@ intel-vaapi-driver
 iosevka-fonts
 iotop
 iproute2
+iptables
 iputils
 ipw-firmware
 iso-codes
 iso-codes-lang
+iw
 kactivities5-imports
 kactivitymanagerd
 kactivitymanagerd-lang
-kate-plugins
 kbd
 kbd-legacy
-kcalc
-kcalc-lang
 kcm_tablet
 kcm_tablet-lang
 kcolorchooser
@@ -312,9 +326,9 @@ kwalletd5-lang
 kwalletmanager5
 kwalletmanager5-lang
 kwayland
+kwayland-integration
 kwin5
 kwin5-lang
-kwrite
 layer-shell-qt5
 less
 libaccounts-glib0
@@ -372,6 +386,7 @@ libbreezecommon5-5
 libbrotlicommon1
 libbrotlidec1
 libbs2b0
+libbsd0
 libbtrfs0
 libburn4
 libbytesize1
@@ -392,7 +407,9 @@ libcodec2-1_0
 libcolord2
 libcolorhug2
 libcom_err2
+libcontainers-common
 libcrack2
+libcreaterepo_c0
 libcrypt1
 libcryptsetup12
 libcups2
@@ -410,6 +427,9 @@ libdevmapper1_03
 libdevmapper-event1_03
 libdialog15
 libdmtx0
+libdnf2
+libdnf-plugin-txnupd
+libdnf-repo-config-zypp
 libdolphinvcs5
 libdouble-conversion3
 libdrm2
@@ -426,7 +446,6 @@ libelf1
 libell0
 libepoxy0
 libepub0
-liberation-fonts
 libevdev2
 libevent-2_1-7
 libexiv2-27
@@ -447,6 +466,7 @@ libfreebl3
 libfreetype6
 libfribidi0
 libfuse2
+libfuse3-3
 libfwupd2
 libfwupdplugin5
 libgbm1
@@ -502,11 +522,13 @@ libidn2-0
 libIex-3_1-30
 libigdgmm11
 libIlmThread-3_1-30
+libimagequant0
 libImath-3_1-29
 libimobiledevice-1_0-6
 libinih0
 libinput10
 libip4tc2
+libip6tc2
 libisl23
 libisoburn1
 libisofs6
@@ -609,6 +631,7 @@ libKF5SonnetUi5
 libKF5Style5
 libKF5Su5
 libKF5Su5-lang
+libKF5Syndication5
 libKF5SyntaxHighlighting5
 libKF5SyntaxHighlighting5-lang
 libKF5TextWidgets5
@@ -660,6 +683,7 @@ libmfx1
 libminizip1
 libmm-glib0
 libmnl0
+libmodulemd2
 libmount1
 libmozjs-78-0
 libmp3lame0
@@ -681,8 +705,11 @@ libndr-krb5pac0
 libndr-nbt0
 libndr-standard0
 libnetapi0
+libnetfilter_conntrack3
 libnettle8
 libnewt0_52
+libnfnetlink0
+libnftnl11
 libnghttp2-14
 libnl3-200
 libnl-config
@@ -706,6 +733,7 @@ libostree
 libostree-1-1
 libp11-3
 libp11-kit0
+libpackagekit-glib2-18
 libpackagekitqt5-1
 libpango-1_0-0
 libparted2
@@ -729,7 +757,7 @@ libpng16-16
 libpolkit-agent-1-0
 libpolkit-gobject-1-0
 libpolkit-qt5-1-1
-libpoppler116
+libpoppler117
 libpoppler-qt5-1
 libpopt0
 libportaudio2
@@ -762,6 +790,7 @@ libqt5-qtpaths
 libqt5-qtquickcontrols
 libqt5-qtquickcontrols2
 libqt5-qtvirtualkeyboard
+libqt5-qtwayland
 libqt5-qtwebengine
 libQt5QuickControls2-5
 libQt5QuickTemplates2-5
@@ -773,6 +802,7 @@ libQt5Test5
 libQt5TextToSpeech5
 libQt5VirtualKeyboard5
 libQt5WaylandClient5
+libQt5WaylandCompositor5
 libQt5WebChannel5
 libQt5WebChannel5-imports
 libQt5Widgets5
@@ -785,6 +815,7 @@ libraw20
 libre2-9
 libreadline8
 libreiserfscore0
+librepo0
 librpmbuild9
 librsvg-2-2
 librubberband2
@@ -809,6 +840,7 @@ libsgutils2-1_47-2
 libsigc-2_0-0
 libsignon-qt5-1
 libslang2
+libslirp0
 libslp1
 libSM6
 libsmartcols1
@@ -858,6 +890,7 @@ libts0
 libtss2-esys0
 libtss2-mu0
 libtss2-sys1
+libtukit0
 libtwolame0
 libudev1
 libudisks2-0
@@ -987,6 +1020,7 @@ libz-ng-compat1
 libzstd1
 libZXing1
 libzypp
+libzypp-plugin-appdata
 login_defs
 logrotate
 lsof
@@ -1006,6 +1040,7 @@ Mesa-libGL1
 Mesa-libglapi0
 Mesa-libva
 metatheme-breeze-common
+microos-tools
 milou5
 milou5-lang
 mkfontscale
@@ -1033,7 +1068,6 @@ noto-sans-sc-bold-fonts
 noto-sans-sc-fonts
 noto-sans-sc-regular-fonts
 nss-mdns
-ntfs-3g
 ntfsprogs
 opensc
 openssh
@@ -1050,6 +1084,10 @@ openvpn
 p11-kit
 p11-kit-tools
 p7zip
+PackageKit
+PackageKit-backend-dnf
+PackageKit-branding-openSUSE
+PackageKit-lang
 pam
 pam-config
 pam_kwallet
@@ -1060,6 +1098,7 @@ parted-lang
 patch
 patterns-base-minimal_base
 patterns-zigzag-firmware
+patterns-zigzag-immutable
 patterns-zigzag-xfirmware-intel
 patterns-zigzag-xfirmware-nouveau
 patterns-zigzag-xfirmware-radeon
@@ -1118,6 +1157,7 @@ plasma5-integration-plugin-lang
 plasma5-pa
 plasma5-pa-lang
 plasma5-session
+plasma5-session-wayland
 plasma5-systemmonitor
 plasma5-systemmonitor-lang
 plasma5-thunderbolt
@@ -1131,6 +1171,8 @@ plasma-framework-lang
 plasma-nm5
 plasma-nm5-lang
 plasma-nm5-openvpn
+pngquant
+podman
 polkit
 polkit-default-privs
 polkit-kde-agent-5
@@ -1152,6 +1194,7 @@ python38-appdirs
 python38-base
 python38-bcrypt
 python38-cffi
+python38-cmdln
 python38-cryptography
 python38-curses
 python38-greenlet
@@ -1174,21 +1217,23 @@ python38-rpm
 python38-setuptools
 python38-simplejson
 python38-six
+python3-createrepo_c
 python3-rpmconf
 python3-solv
 qca-qt5
 qqc2-desktop-style
 qtdeclarative-imports-provides-qt5
+read-only-root-fs
 rgb
 rng-tools
 rpm
 rpmconf
 rpm-config-SUSE
 rsync
+runc
 samba
 samba-client
 samba-libs
-schedtool
 scout
 scout-command-not-found
 sddm
@@ -1209,6 +1254,7 @@ signond-libs
 signon-plugin-oauth2
 signon-plugins
 signon-ui
+slirp4netns
 smartmontools
 snapper
 snapper-zypp-plugin
@@ -1255,7 +1301,9 @@ terminfo-base
 thin-provisioning-tools
 time
 timezone
+toolbox
 tree
+tukit
 typelib-1_0-Fwupd-2_0
 typelib-1_0-Json-1_0
 ucode-amd
@@ -1323,8 +1371,10 @@ xrdb
 xset
 xsetroot
 xsettingsd
+xtables-plugins
 xterm-bin
 xterm-resize
+xwayland
 xz
 xz-lang
 zd1211-firmware
