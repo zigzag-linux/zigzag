@@ -10,5 +10,5 @@
       - bash-completion
       - command-not-found
       - unar
-      - p7zip
+      - 7zip
     state: present

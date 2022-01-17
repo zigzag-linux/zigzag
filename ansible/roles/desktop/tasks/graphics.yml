@@ -25,5 +25,4 @@
       - xorg-x11-driver-video
       - xrandr
       - xclip
-      - plasma5-session
     state: present

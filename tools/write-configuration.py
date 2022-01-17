@@ -40,7 +40,7 @@ if os.geteuid() != 0:
     exit("You need to have root privileges to apply the configuration.")
 
 preset_path = "{}/{}.yml".format(ROOT_PATH, args.preset)
-ansible_env = env = dict(os.environ, ANSIBLE_LOG_PATH=LOG_PATH)
+ansible_env = env = dict(os.environ, ANSIBLE_LOG_PATH=LOG_PATH, LC_ALL="C")
 subprocess.run(
     ["ansible-playbook", "-i", "localhost,", "-c", "local", preset_path],
     check=True,
