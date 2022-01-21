@@ -12,3 +12,6 @@
     path: /etc/fstab
     regexp: 'subvol=/@/.snapshots/1/snapshot'
     replace: 'ro'
+
+- name: mark root as read-only subvolume
+  command: btrfs property set -t subvol / ro true
