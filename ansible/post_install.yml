@@ -1,7 +1,7 @@
 # This playbook is executed at the end of the install process
 ---
 - hosts: all
-  tasks:
+  pre_tasks:
     # fix locale settings after installation (opensuse quirk)
     # copy language from /etc/locale.conf to /etc/sysconfig/language
     - name: set the language in /etc/sysconfig/language
