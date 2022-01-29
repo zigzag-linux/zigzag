@@ -14,9 +14,3 @@
     name: zigzag-devel
     repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/devel/openSUSE_Tumbleweed/'
     priority: 20
-
-- name: refresh all repos and import keys
-  zypper_repository:
-    repo: '*'
-    runrefresh: yes
-    auto_import_keys: yes

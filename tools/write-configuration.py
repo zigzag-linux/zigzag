@@ -13,7 +13,7 @@ parser = argparse.ArgumentParser(
 )
 parser.add_argument(
     "preset",
-    default="root",
+    default="image_setup",
     type=str,
     nargs="?",
     help="name of the configuration preset",

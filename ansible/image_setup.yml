@@ -1,5 +1,7 @@
 ---
 - hosts: all
+  vars:
+    conf_stage: image_setup
   pre_tasks:
     - import_role: name=kiwi_pre
       when: is_kiwi == true
@@ -7,6 +9,7 @@
     - import_role: name=kiwi_post
       when: is_kiwi == true
   roles:
+    - zypper
     - base
     - sudo
     - memory

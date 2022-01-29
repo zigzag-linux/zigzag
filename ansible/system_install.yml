@@ -1,6 +1,9 @@
-# This playbook is executed at the end of the install process
+# This playbook is executed in the installation process
+# after system is copied but before initrd and grub configuration
 ---
 - hosts: all
+  vars:
+    conf_stage: system_install
   pre_tasks:
     # fix locale settings after installation (opensuse quirk)
     # copy language from /etc/locale.conf to /etc/sysconfig/language
@@ -11,9 +14,6 @@
         line: 'RC_LANG="{{ item }}"'
       with_items: "{{ lookup('ini', 'LANG type=properties file=/etc/locale.conf') }}"
 
-    - name: enable translation periodic check
-      systemd: name=zigzag-languages.timer enabled=yes
-
     - name: remove live medium tools
       zypper:
         name:
@@ -22,12 +22,6 @@
           - dracut-kiwi-live
         state: absent
   roles:
-    - role: network
-      vars:
-        role_mode: 'resolv_symlink'
-    - role: snapper
-      vars:
-        role_mode: 'enable'
-    - role: immutable
-      vars:
-        role_mode: 'enable'
+    - network
+    - snapper
+    - immutable

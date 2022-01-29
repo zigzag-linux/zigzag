@@ -3,7 +3,7 @@
   block:
     - import_tasks: networkmanager.yml
     - import_tasks: dns.yml
-  when: role_mode == 'setup'
+  when: conf_stage == 'image_setup'
 
 - import_tasks: dns_symlink.yml
-  when: role_mode == 'resolv_symlink'
+  when: conf_stage in ('image_boot', 'system_install')

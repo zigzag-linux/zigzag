@@ -21,9 +21,3 @@
     repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/devel/openSUSE_Leap_$releasever/'
     priority: 10
   when: devel_repo == true
-
-- name: refresh all repos and import keys
-  zypper_repository:
-    repo: '*'
-    runrefresh: yes
-    auto_import_keys: yes

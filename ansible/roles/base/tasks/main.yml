@@ -1,12 +1,4 @@
 ---
-- import_tasks: zypp.yml
-
-# Repositories
-- import_tasks: repos/tumbleweed.yml
-  when: is_tumbleweed == true
-- import_tasks: repos/leap.yml
-  when: is_leap == true
-
 # Packages
 - import_tasks: packages/base.yml
 - import_tasks: packages/management.yml

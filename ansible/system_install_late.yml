@@ -1,0 +1,7 @@
+# This playbook is executed at the very end of the installation process
+---
+- hosts: all
+  vars:
+    conf_stage: system_install_late
+  roles:
+    - immutable

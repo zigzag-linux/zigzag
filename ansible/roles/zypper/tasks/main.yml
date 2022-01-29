@@ -1,0 +1,33 @@
+---
+- name: fail if distribution type not recognized
+  fail:
+    msg: The system needs to be either openSUSE Leap or Tumbleweed
+  when: not is_leap and not is_tumbleweed
+
+- name: set 'solver.onlyRequires = true'
+  ini_file:
+    path: /etc/zypp/zypp.conf
+    create: no
+    section: main
+    option: solver.onlyRequires
+    value: 'true'
+
+- name: set 'solver.cleandepsOnRemove = true'
+  ini_file:
+    path: /etc/zypp/zypp.conf
+    create: no
+    section: main
+    option: solver.cleandepsOnRemove
+    value: 'true'
+
+- import_tasks: repos-tumbleweed.yml
+  when: is_tumbleweed == true
+
+- import_tasks: repos-leap.yml
+  when: is_leap == true
+
+- name: refresh all repos and import keys
+  zypper_repository:
+    repo: '*'
+    runrefresh: yes
+    auto_import_keys: yes
