@@ -1,6 +1,6 @@
 ---
 - name: install NetworkManager
-  zypper:
+  package:
     name:
       - NetworkManager
       - NetworkManager-openvpn

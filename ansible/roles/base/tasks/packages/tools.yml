@@ -1,6 +1,6 @@
 ---
 - name: install additional cli tools
-  zypper:
+  package:
     name:
       - tree
       - patch

@@ -1,6 +1,6 @@
 ---
 - name: install audio stack
-  zypper:
+  package:
     name:
       - alsa-firmware
       - alsa-utils

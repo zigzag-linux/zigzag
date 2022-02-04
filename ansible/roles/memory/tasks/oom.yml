@@ -1,6 +1,6 @@
 ---
 - name: install earlyoom
-  zypper: name=earlyoom state=present
+  package: name=earlyoom state=present
 
 - name: enable earlyoom
   systemd: name=earlyoom enabled=yes

@@ -3,7 +3,7 @@
   command: systemctl set-default graphical.target
 
 - name: install graphics stack and drivers
-  zypper:
+  package:
     name:
       - patterns-zigzag-xfirmware-intel
       - patterns-zigzag-xfirmware-radeon
@@ -17,7 +17,7 @@
     state: present
 
 - name: install xorg
-  zypper:
+  package:
     name:
       - xorg-x11-essentials
       - xorg-x11-server

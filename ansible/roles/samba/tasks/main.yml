@@ -1,6 +1,6 @@
 ---
 - name: install samba packages
-  zypper:
+  package:
     name:
       - samba
       - samba-client

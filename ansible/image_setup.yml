@@ -12,6 +12,7 @@
     - zypper
     - base
     - sudo
+    - apparmor
     - memory
     - network
     - snapper

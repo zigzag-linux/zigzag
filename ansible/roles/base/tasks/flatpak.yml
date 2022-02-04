@@ -1,6 +1,6 @@
 ---
 - name: install flatpak package
-  zypper: name=flatpak state=present
+  package: name=flatpak state=present
 
 - name: add 'flathub' remote
   flatpak_remote:

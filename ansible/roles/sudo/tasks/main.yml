@@ -1,9 +1,9 @@
 ---
 - name: install sudo
-  zypper: name=sudo state=present
+  package: name=sudo state=present
 
 - name: install wheel group provider
-  zypper: name=system-group-wheel state=present
+  package: name=system-group-wheel state=present
 
 - name: copy sudoers config
   copy:

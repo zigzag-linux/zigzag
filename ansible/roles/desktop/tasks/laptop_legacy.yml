@@ -1,6 +1,6 @@
 ---
 - name: install legacy laptop utils
-  zypper:
+  package:
     name:
       - powertop
       - thermald

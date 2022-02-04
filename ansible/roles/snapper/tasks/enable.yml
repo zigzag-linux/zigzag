@@ -21,8 +21,5 @@
     group: root
     mode: '0750'
 
-- name: enable btrfs quota support
-  command: btrfs quota enable /
-
-- name: create qgroup for cleanup algorithms
-  command: btrfs qgroup create 1/0 /
+- name: setup snapper quota
+  command: snapper setup-quota

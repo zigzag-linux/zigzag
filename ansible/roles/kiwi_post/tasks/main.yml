@@ -3,7 +3,7 @@
   command: zigzag-languages
 
 - name: install live medium tools
-  zypper:
+  package:
     name:
       - calamares-branding-zigzag
       - zigzag-live-service

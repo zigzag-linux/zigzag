@@ -2,9 +2,6 @@
 - name: enable time synchronization service
   systemd: name=systemd-timesyncd enabled=yes
 
-- name: enable apparmor service
-  systemd: name=apparmor enabled=yes
-
 - name: enable rng-tools service
   systemd: name=rng-tools enabled=yes
 

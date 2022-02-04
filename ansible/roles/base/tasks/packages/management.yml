@@ -1,6 +1,6 @@
 ---
 - name: install management and info tools
-  zypper:
+  package:
     name:
       - rpmconf
       - deltarpm

@@ -1,6 +1,6 @@
 ---
 - name: install general desktop
-  zypper:
+  package:
     name:
       - zigzag-wallpapers
       - xdg-user-dirs
@@ -11,7 +11,7 @@
     state: present
 
 - name: install plasma desktop
-  zypper:
+  package:
     name:
       - plasma5-session-wayland
       - plasma5-session
@@ -37,7 +37,7 @@
     state: present
 
 - name: install desktop apps
-  zypper:
+  package:
     name:
       - dolphin
       - konsole
@@ -53,7 +53,7 @@
     state: present
 
 - name: install new plasma modules
-  zypper:
+  package:
     name:
       - plasma5-thunderbolt
       - plasma5-systemmonitor
@@ -61,7 +61,7 @@
   when: is_tumbleweed == true
 
 - name: install ksysguard5 (legacy)
-  zypper: name=ksysguard5 state=present
+  package: name=ksysguard5 state=present
   when: is_leap == true
 
 - name: install breeze gtk for flatpak

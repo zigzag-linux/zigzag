@@ -1,6 +1,6 @@
 ---
 - name: install font packages
-  zypper:
+  package:
     name:
       - fonts-config
       - iosevka-fonts
@@ -11,7 +11,7 @@
     state: present
 
 - name: install microsoft fonts
-  zypper: name=fetchmsttfonts state=present
+  package: name=fetchmsttfonts state=present
   when: non_free == true
 
 - name: copy font config

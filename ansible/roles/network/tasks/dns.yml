@@ -1,6 +1,6 @@
 ---
 - name: install systemd-resolved
-  zypper: name=systemd-network state=present
+  package: name=systemd-network state=present
 
 - name: disable netconfig dns resolution
   lineinfile:

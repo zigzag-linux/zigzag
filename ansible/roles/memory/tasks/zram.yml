@@ -1,6 +1,6 @@
 ---
 - name: install zram-generator
-  zypper: name=zram-generator state=present
+  package: name=zram-generator state=present
 
 - name: copy zram-generator configuration
   copy:
