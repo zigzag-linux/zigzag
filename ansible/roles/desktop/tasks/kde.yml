@@ -13,27 +13,30 @@
 - name: install plasma desktop
   package:
     name:
-      - plasma5-session-wayland
-      - plasma5-session
-      - sddm
-      - plasma5-defaults-zigzag
-      - plasma5-pa
-      - plasma-nm5-openvpn
       - bluedevil5
-      - ksshaskpass5
-      - pinentry-qt5
-      - kgamma5
-      - kde-gtk-config5-gtk3
-      - gtk3-metatheme-breeze
-      - kio-extras5
-      - pam_kwallet
-      - xdg-desktop-portal-kde
-      - kdenetwork-filesharing
-      - phonon4qt5-backend-gstreamer
-      - ffmpegthumbs
-      - kdegraphics-thumbnailers
       - colord-kde
+      - ffmpegthumbs
+      - gtk3-metatheme-breeze
       - kcm_tablet
+      - kde-gtk-config5-gtk3
+      - kdegraphics-thumbnailers
+      - kdenetwork-filesharing
+      - kgamma5
+      - kio-extras5
+      - ksshaskpass5
+      - pam_kwallet
+      - phonon4qt5-backend-gstreamer
+      - pinentry-qt5
+      - plasma-nm5-openvpn
+      - plasma5-defaults-zigzag
+      - plasma5-disks
+      - plasma5-pa
+      - plasma5-session
+      - plasma5-session-wayland
+      - plasma5-systemmonitor
+      - plasma5-thunderbolt
+      - sddm
+      - xdg-desktop-portal-kde
     state: present
 
 - name: install desktop apps
@@ -51,18 +54,6 @@
       - kwalletmanager5
       - spectacle
     state: present
-
-- name: install new plasma modules
-  package:
-    name:
-      - plasma5-thunderbolt
-      - plasma5-systemmonitor
-      - plasma5-disks
-  when: is_tumbleweed == true
-
-- name: install ksysguard5 (legacy)
-  package: name=ksysguard5 state=present
-  when: is_leap == true
 
 - name: install breeze gtk for flatpak
   flatpak: name=org.gtk.Gtk3theme.Breeze state=present

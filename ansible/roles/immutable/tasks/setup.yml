@@ -6,6 +6,10 @@
     path: /etc/fstab.sys
     state: touch
 
+# install this prior to immutable pattern as toolbox could choose docker instead
+- name: install container runtime for toolbox
+  package: name=podman state=present
+
 - name: install immutable pattern
   package: name=patterns-zigzag-immutable state=present
 

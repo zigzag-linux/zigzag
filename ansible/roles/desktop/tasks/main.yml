@@ -3,6 +3,3 @@
 - import_tasks: audio.yml
 - import_tasks: kde.yml
 - import_tasks: laptop.yml
-  when: is_tumbleweed == true
-- import_tasks: laptop_legacy.yml
-  when: is_leap == true
