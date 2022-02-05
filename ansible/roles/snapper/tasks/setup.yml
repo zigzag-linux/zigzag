@@ -12,6 +12,12 @@
     src: /usr/share/snapper/config-templates/default
     dest: /etc/snapper/configs/root
 
+- name: set qgroup for snapper cleanup algorithms
+  lineinfile:
+    path: /etc/snapper/configs/root
+    regexp: '^QGROUP='
+    line: 'QGROUP="1/0"'
+
 - name: enable root snapper configuration
   lineinfile:
     path: /etc/sysconfig/snapper
