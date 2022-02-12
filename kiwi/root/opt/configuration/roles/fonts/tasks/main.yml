@@ -3,7 +3,7 @@
   package:
     name:
       - fonts-config
-      - iosevka-fonts
+      - iosevka-fonts-mini
       - noto-sans-fonts
       - noto-sans-sc-fonts
       - noto-sans-jp-fonts

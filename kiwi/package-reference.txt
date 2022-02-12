@@ -63,7 +63,6 @@ ca-certificates-mozilla
 calamares
 calamares-branding-zigzag
 calamares-lang
-calamares-module-zigzag
 catatonit
 cifs-utils
 cni
@@ -201,7 +200,7 @@ insserv-compat
 intel-hybrid-driver
 intel-media-driver
 intel-vaapi-driver
-iosevka-fonts
+iosevka-fonts-mini
 iotop
 iproute2
 iptables
