@@ -27,13 +27,19 @@
         <!-- password: linux -->
         <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
     </users>
-    <repository type="rpm-md" alias="oss">
-        <source path="obs://openSUSE:Leap:15.3/standard"/>
+    <repository alias="repo-oss" imageinclude="true">
+        <source path="http://download.opensuse.org/distribution/leap/15.3/repo/oss/"/>
     </repository>
-    <repository type="rpm-md" alias="oss-update">
-        <source path="obs://openSUSE:Leap:15.3:Update/standard"/>
+    <repository alias="repo-oss-update" imageinclude="true">
+        <source path="http://download.opensuse.org/update/leap/15.3/oss/"/>
     </repository>
-    <repository type="rpm-md" alias="zigzag" priority="20">
+    <repository alias="repo-backports-update">
+        <source path="http://download.opensuse.org/update/leap/15.3/backports/"/>
+    </repository>
+    <repository alias="repo-sle-update">
+        <source path="http://download.opensuse.org/update/leap/15.3/sle/"/>
+    </repository>
+    <repository alias="repo-zigzag" priority="20" imageinclude="true">
         <source path="obs://home:mkrwc:zigzag:15.3/standard"/>
     </repository>
     <packages type="image">
@@ -43,13 +49,13 @@
         <package name="dracut-kiwi-live"/>
     </packages>
     <packages type="bootstrap">
-        <package name="udev"/>
         <package name="filesystem"/>
         <package name="glibc-locale"/>
-        <package name="cracklib-dict-full"/>
-        <package name="ca-certificates"/>
         <package name="ca-certificates-mozilla"/>
+        <!-- Listed here so that correct variant is choosen: -->
         <package name="openSUSE-release"/>
         <package name="systemd-presets-branding-openSUSE"/>
+        <package name="systemd-default-settings-branding-openSUSE"/>
+        <package name="cracklib-dict-full"/>
     </packages>
 </image>

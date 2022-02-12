@@ -15,4 +15,30 @@
     option: solver.cleandepsOnRemove
     value: 'true'
 
-- import_tasks: repos.yml
+# this ensures no cached data is left on the image
+- name: make tempfs mount on zypp cache
+  mount:
+    path: /var/cache/zypp
+    src: 'tmpfs'
+    fstype: tmpfs
+    state: mounted
+    fstab: /tmp/tmp.fstab
+
+- name: find all zypp repo files
+  find:
+    paths: /etc/zypp/repos.d/
+    patterns: "*.repo"
+  register: zypp_repos
+
+- name: ensure no hardcoded repo versions present
+  replace:
+    path: "{{ item.path }}"
+    regexp: "{{ ansible_distribution_version }}"
+    replace: '$releasever'
+  with_items: "{{ zypp_repos.files }}"
+
+- name: refresh all repos and import keys
+  zypper_repository:
+    repo: '*'
+    runrefresh: yes
+    auto_import_keys: yes

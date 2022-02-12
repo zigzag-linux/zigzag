@@ -1,6 +1,3 @@
 ---
-# Enable development repository
-devel_repo: false
-
 # Include non-free packages
 non_free: true

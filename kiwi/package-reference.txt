@@ -732,6 +732,7 @@ libpoppler-qt5-1
 libpopt0
 libpostproc55_9
 libprocps7
+libprotobuf-lite20
 libproxy1
 libpsl5
 libpulse0
@@ -1120,7 +1121,6 @@ python3-setuptools
 python3-simplejson
 python3-six
 python3-solv
-python-rpm-macros
 rgb
 rng-tools
 rpm
@@ -1165,7 +1165,7 @@ sysfsutils
 syslinux
 systemd
 systemd-default-settings
-systemd-default-settings-branding-SLE
+systemd-default-settings-branding-openSUSE
 systemd-lang
 systemd-network
 systemd-presets-branding-openSUSE

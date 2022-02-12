@@ -35,3 +35,19 @@
     src: /usr/share/applications/calamares.desktop
     dest: /home/liveuser/Desktop/
     mode: 0755
+
+- name: disable autolock in live mode
+  ini_file:
+    path: /home/liveuser/.config/kscreenlockerrc
+    section: Daemon
+    option: Autolock
+    no_extra_spaces: yes
+    value: 'false'
+
+- name: disable lock on resume in live mode
+  ini_file:
+    path: /home/liveuser/.config/kscreenlockerrc
+    section: Daemon
+    option: LockOnResume
+    no_extra_spaces: yes
+    value: 'false'
