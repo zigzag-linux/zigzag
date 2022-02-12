@@ -1,0 +1,12 @@
+---
+argument_specs:
+  main:
+    short_description: Configuration stage
+    options:
+      conf_stage:
+        required: true
+        choices:
+          - image_setup
+          - system_install
+          - system_boot
+        description: "The stage at which the role is being run"

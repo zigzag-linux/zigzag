@@ -1,0 +1,9 @@
+---
+- import_tasks: setup.yml
+  when: conf_stage == 'image_setup'
+
+- import_tasks: enable.yml
+  when: conf_stage == 'image_boot'
+
+- import_tasks: cleanup.yml
+  when: conf_stage == 'system_install'

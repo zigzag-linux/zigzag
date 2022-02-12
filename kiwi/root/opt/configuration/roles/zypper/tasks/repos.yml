@@ -1,0 +1,29 @@
+---
+- name: enable 'oss' repo
+  zypper_repository:
+    name: oss
+    repo: 'http://download.opensuse.org/distribution/leap/$releasever/repo/oss/'
+
+- name: enable 'oss-update' repo
+  zypper_repository:
+    name: oss-update
+    repo: 'http://download.opensuse.org/update/leap/$releasever/oss/'
+
+- name: enable 'zigzag' repo
+  zypper_repository:
+    name: zigzag
+    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/$releasever/standard'
+    priority: 20
+
+- name: enable 'zigzag-devel' repo
+  zypper_repository:
+    name: zigzag-devel
+    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/devel/openSUSE_Leap_$releasever/'
+    priority: 10
+  when: devel_repo == true
+
+- name: refresh all repos and import keys
+  zypper_repository:
+    repo: '*'
+    runrefresh: yes
+    auto_import_keys: yes

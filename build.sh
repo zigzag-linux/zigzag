@@ -6,16 +6,7 @@
 #
 
 declare -r DOCKER_TAG=zigzag:latest
-declare -r DOCKER_RUNTIME=docker
-declare -a ARGUMENT_ARRAY
-
-case $1 in
-    leap-stable|'') ARGUMENT_ARRAY=('' 'leap-15.3') ;;
-    leap-devel) ARGUMENT_ARRAY=('--profile=devel' 'leap-15.3') ;;
-    leap-next) ARGUMENT_ARRAY=('--profile=devel' 'leap-15.4') ;;
-    tumbleweed-devel) ARGUMENT_ARRAY=('' 'tumbleweed') ;;
-    *) echo 'invalid variant'; exit 1 ;;
-esac
+declare -r DOCKER_RUNTIME='sudo podman'
 
 container_build()
 {
@@ -30,4 +21,4 @@ container_run()
 }
 
 container_build
-container_run mkiso "${ARGUMENT_ARRAY[0]}" "${ARGUMENT_ARRAY[1]}"
+container_run mkiso '' kiwi

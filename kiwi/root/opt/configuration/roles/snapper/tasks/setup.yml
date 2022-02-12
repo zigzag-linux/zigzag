@@ -1,0 +1,31 @@
+---
+- name: install snapper
+  package:
+    name:
+      - snapper
+      - snapper-zypp-plugin
+      - grub2-snapper-plugin
+    state: present
+
+- name: init snapper config
+  copy:
+    src: /etc/snapper/config-templates/default
+    dest: /etc/snapper/configs/root
+
+- name: set qgroup for snapper cleanup algorithms
+  lineinfile:
+    path: /etc/snapper/configs/root
+    regexp: '^QGROUP='
+    line: 'QGROUP="1/0"'
+
+- name: enable root snapper configuration
+  lineinfile:
+    path: /etc/sysconfig/snapper
+    regexp: '^SNAPPER_CONFIGS='
+    line: 'SNAPPER_CONFIGS="root"'
+
+- name: enable booting from snapshots
+  lineinfile:
+    path: /etc/default/grub
+    regexp: '^SUSE_BTRFS_SNAPSHOT_BOOTING'
+    line: 'SUSE_BTRFS_SNAPSHOT_BOOTING=true'

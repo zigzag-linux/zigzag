@@ -1,0 +1,15 @@
+---
+- name: disable live service
+  systemd: name=zigzag-live enabled=no
+
+- name: remove live service unit
+  file:
+    path: /etc/systemd/system/zigzag-live.service
+    state: absent
+
+- name: remove live medium tools
+  package:
+    name:
+      - calamares
+      - dracut-kiwi-live
+    state: absent

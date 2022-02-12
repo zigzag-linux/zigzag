@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<image schemaversion="7.4" name="zigzag">
+    <description type="system">
+        <author>Zigzag Linux</author>
+        <contact>example@example.com</contact>
+        <specification>Zigzag Linux</specification>
+    </description>
+    <preferences>
+        <type
+            image="iso"
+            primary="true"
+            flags="overlay"
+            firmware="uefi"
+            kernelcmdline="quiet"
+            hybridpersistent="false"/>
+        <version>15.3</version>
+        <packagemanager>zypper</packagemanager>
+        <locale>en_US</locale>
+        <keytable>us</keytable>
+        <timezone>Etc/UTC</timezone>
+        <rpm-excludedocs>true</rpm-excludedocs>
+        <rpm-check-signatures>false</rpm-check-signatures>
+        <bootsplash-theme>openSUSE</bootsplash-theme>
+        <bootloader-theme>openSUSE</bootloader-theme>
+    </preferences>
+    <users>
+        <!-- password: linux -->
+        <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
+    </users>
+    <repository type="rpm-md" alias="oss">
+        <source path="obs://openSUSE:Leap:15.3/standard"/>
+    </repository>
+    <repository type="rpm-md" alias="oss-update">
+        <source path="obs://openSUSE:Leap:15.3:Update/standard"/>
+    </repository>
+    <repository type="rpm-md" alias="zigzag" priority="20">
+        <source path="obs://home:mkrwc:zigzag:15.3/standard"/>
+    </repository>
+    <packages type="image">
+        <package name="ansible"/>
+    </packages>
+    <packages type="iso">
+        <package name="dracut-kiwi-live"/>
+    </packages>
+    <packages type="bootstrap">
+        <package name="udev"/>
+        <package name="filesystem"/>
+        <package name="glibc-locale"/>
+        <package name="cracklib-dict-full"/>
+        <package name="ca-certificates"/>
+        <package name="ca-certificates-mozilla"/>
+        <package name="openSUSE-release"/>
+        <package name="systemd-presets-branding-openSUSE"/>
+    </packages>
+</image>

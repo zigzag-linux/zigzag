@@ -1,3 +1,0 @@
----
-- name: mark root as read-only subvolume
-  command: btrfs property set -t subvol / ro true

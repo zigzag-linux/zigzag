@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+export LC_ALL=C
+
+ansible-playbook --inventory "localhost," --connection "local" "$(dirname "$0")/${1}.yml"

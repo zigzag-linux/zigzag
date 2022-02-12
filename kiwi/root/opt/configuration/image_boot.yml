@@ -1,0 +1,8 @@
+# This playbook is executed upon booting the live image
+---
+- hosts: all
+  vars:
+    conf_stage: image_boot
+  roles:
+    - live
+    - network
