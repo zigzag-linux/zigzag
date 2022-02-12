@@ -1,0 +1,19 @@
+---
+# Include non-free packages
+non_free: "{{ not lookup('env', 'ZIGZAG_OSS_ONLY') }}"
+
+# Enable development repository
+devel_repo: "{{ lookup('env', 'ZIGZAG_DEVEL') | bool }}"
+
+# Check if we're running within kiwi environment
+is_kiwi: "{{ lookup('env', 'ZIGZAG_KIWI') | bool }}"
+
+# System subvolume should be mounted as read-only
+is_immutable: "{{ ansible_distribution == 'openSUSE MicroOS' }}"
+
+# Distribution checks
+is_tumbleweed: "{{ ansible_distribution in ('openSUSE Tumbleweed', 'openSUSE MicroOS') }}"
+is_leap: "{{ ansible_distribution == 'openSUSE Leap' }}"
+
+# Version checks
+is_version_gte_154: "{{ (is_leap and ansible_distribution_version | float >= 15.4) or is_tumbleweed }}"

@@ -1,0 +1,10 @@
+---
+- name: install apparmor
+  package:
+    name:
+      - apparmor-profiles
+      - apparmor-parser
+    state: present
+
+- name: enable apparmor service
+  systemd: name=apparmor enabled=yes

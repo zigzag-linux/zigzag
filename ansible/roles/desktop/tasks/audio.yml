@@ -1,0 +1,12 @@
+---
+- name: install audio stack
+  package:
+    name:
+      - alsa-firmware
+      - alsa-utils
+      - pipewire
+      - pipewire-modules
+      - pipewire-alsa
+      - pipewire-pulseaudio
+      - gstreamer-plugin-pipewire
+    state: present

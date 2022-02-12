@@ -1,0 +1,16 @@
+---
+- name: enable 'oss' repo
+  zypper_repository:
+    name: oss
+    repo: 'http://download.opensuse.org/tumbleweed/repo/oss/'
+
+- name: enable 'oss-update' repo
+  zypper_repository:
+    name: oss-update
+    repo: 'http://download.opensuse.org/update/tumbleweed'
+
+- name: enable 'zigzag-devel' repo
+  zypper_repository:
+    name: zigzag-devel
+    repo: 'http://download.opensuse.org/repositories/home:/mkrwc:/zigzag:/devel/openSUSE_Tumbleweed/'
+    priority: 20

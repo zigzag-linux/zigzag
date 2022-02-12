@@ -1,0 +1,62 @@
+---
+- name: install general desktop
+  package:
+    name:
+      - zigzag-wallpapers
+      - xdg-user-dirs
+      - xdg-utils
+      - gsettings-backend-dconf
+      - bluez-firmware
+      - udisks2
+    state: present
+
+- name: install plasma desktop
+  package:
+    name:
+      - bluedevil5
+      - colord-kde
+      - ffmpegthumbs
+      - gtk3-metatheme-breeze
+      - kcm_tablet
+      - kde-gtk-config5-gtk3
+      - kdegraphics-thumbnailers
+      - kdenetwork-filesharing
+      - kgamma5
+      - kio-extras5
+      - ksshaskpass5
+      - pam_kwallet
+      - phonon4qt5-backend-gstreamer
+      - pinentry-qt5
+      - plasma-nm5-openvpn
+      - plasma5-defaults-zigzag
+      - plasma5-disks
+      - plasma5-pa
+      - plasma5-session
+      - plasma5-session-wayland
+      - plasma5-systemmonitor
+      - plasma5-thunderbolt
+      - sddm
+      - xdg-desktop-portal-kde
+    state: present
+
+- name: install desktop apps
+  package:
+    name:
+      - dolphin
+      - konsole
+      - ark
+      - kcolorchooser
+      - discover
+      - discover-notifier
+      - discover-backend-flatpak
+      - discover-backend-packagekit
+      - discover-backend-fwupd
+      - kwalletmanager5
+      - spectacle
+    state: present
+
+- name: install breeze gtk for flatpak
+  flatpak: name=org.gtk.Gtk3theme.Breeze state=present
+
+- name: install breeze-dark gtk for flatpak
+  flatpak: name=org.gtk.Gtk3theme.Breeze-Dark state=present

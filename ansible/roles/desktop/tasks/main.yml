@@ -1,0 +1,5 @@
+---
+- import_tasks: graphics.yml
+- import_tasks: audio.yml
+- import_tasks: kde.yml
+- import_tasks: laptop.yml

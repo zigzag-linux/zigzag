@@ -1,0 +1,20 @@
+---
+- name: install font packages
+  package:
+    name:
+      - fonts-config
+      - iosevka-fonts
+      - noto-sans-fonts
+      - noto-sans-sc-fonts
+      - noto-sans-jp-fonts
+      - noto-coloremoji-fonts
+    state: present
+
+- name: install microsoft fonts
+  package: name=fetchmsttfonts state=present
+  when: non_free == true
+
+- name: copy font config
+  template: src=fonts-config.j2 dest=/etc/sysconfig/fonts-config
+  notify:
+    - apply fonts-config

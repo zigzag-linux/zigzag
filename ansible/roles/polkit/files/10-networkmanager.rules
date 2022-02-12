@@ -1,0 +1,11 @@
+/**
+ * Authorize system-wide network management for wheel group
+ */
+ polkit.addRule(function (action, subject) {
+  if (
+    action.id === 'org.freedesktop.NetworkManager.settings.modify.system' &&
+    subject.isInGroup('wheel')
+  ) {
+    return polkit.Result.YES;
+  }
+});

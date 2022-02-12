@@ -1,0 +1,19 @@
+# Since kiwi manages appliance's resolv.conf we need to symlink it after the
+# image is created. This happens before live image boots and in post-install
+---
+- name: create resolve directory
+  file:
+    path: /run/systemd/resolve
+    state: directory
+
+- name: touch stub-resolv.conf
+  file:
+    path: /run/systemd/resolve/stub-resolv.conf
+    state: touch
+
+- name: symlink resolv.conf to resolved stub
+  file:
+    src: /run/systemd/resolve/stub-resolv.conf
+    dest: /etc/resolv.conf
+    state: link
+    force: yes

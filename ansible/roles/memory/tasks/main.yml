@@ -1,0 +1,3 @@
+---
+- import_tasks: oom.yml
+- import_tasks: zram.yml

@@ -1,0 +1,24 @@
+---
+- name: install management and info tools
+  package:
+    name:
+      - rpmconf
+      - deltarpm
+      - sensors
+      - dmidecode
+      - hdparm
+      - sysfsutils
+      - pciutils
+      - usbutils
+      - fwupd
+      - smartmontools
+      - cryptsetup
+      - iotop
+      - xfsprogs
+      - btrfsprogs
+      - btrfsmaintenance
+      - e2fsprogs
+      - ntfsprogs
+      - dosfstools
+      - f2fs-tools
+    state: present

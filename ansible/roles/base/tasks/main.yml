@@ -1,0 +1,19 @@
+---
+# Packages
+- import_tasks: packages/base.yml
+- import_tasks: packages/management.yml
+- import_tasks: packages/tools.yml
+
+# Flatpak
+- import_tasks: flatpak.yml
+
+# Systemd services
+- import_tasks: services.yml
+
+# This file is not provided by aaa_base
+# Without it update process won't regenerate grub config
+- name: fillup /etc/sysconfig/bootloader
+  copy:
+    src: sysconfig.bootloader
+    dest: /etc/sysconfig/bootloader
+    mode: 0644

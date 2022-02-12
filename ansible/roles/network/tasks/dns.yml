@@ -1,0 +1,18 @@
+---
+- name: install systemd-resolved
+  package: name=systemd-network state=present
+
+- name: disable netconfig dns resolution
+  lineinfile:
+    path: /etc/sysconfig/network/config
+    regexp: '^NETCONFIG_DNS_POLICY="auto"'
+    line: 'NETCONFIG_DNS_POLICY=""'
+
+- name: add resolve to hosts in nsswitch.conf
+  lineinfile:
+    path: /etc/nsswitch.conf
+    regexp: '^hosts:'
+    line: 'hosts:  	files mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns'
+
+- name: enable systemd-resolved
+  systemd: name=systemd-resolved enabled=yes

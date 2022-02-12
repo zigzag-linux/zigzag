@@ -1,0 +1,9 @@
+---
+- name: install powertop
+  package: name=powertop state=present
+
+- name: install power-profiles-daemon
+  package: name=power-profiles-daemon state=present
+
+- name: enable power-profiles-daemon
+  systemd: name=power-profiles-daemon enabled=yes
