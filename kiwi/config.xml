@@ -13,7 +13,7 @@
             firmware="uefi"
             kernelcmdline="quiet"
             hybridpersistent="false"/>
-        <version>15.3</version>
+        <version>15.4</version>
         <packagemanager>dnf</packagemanager>
         <locale>en_US</locale>
         <keytable>us</keytable>
@@ -28,19 +28,19 @@
         <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
     </users>
     <repository alias="repo-oss">
-        <source path="http://download.opensuse.org/distribution/leap/15.3/repo/oss/"/>
+        <source path="http://download.opensuse.org/distribution/leap/15.4/repo/oss/"/>
     </repository>
     <repository alias="repo-oss-update">
-        <source path="http://download.opensuse.org/update/leap/15.3/oss/"/>
+        <source path="http://download.opensuse.org/update/leap/15.4/oss/"/>
     </repository>
     <repository alias="repo-backports-update">
-        <source path="http://download.opensuse.org/update/leap/15.3/backports/"/>
+        <source path="http://download.opensuse.org/update/leap/15.4/backports/"/>
     </repository>
     <repository alias="repo-sle-update">
-        <source path="http://download.opensuse.org/update/leap/15.3/sle/"/>
+        <source path="http://download.opensuse.org/update/leap/15.4/sle/"/>
     </repository>
     <repository alias="repo-zigzag" priority="20" imageinclude="true">
-        <source path="obs://home:mkrwc:zigzag:15.3/standard"/>
+        <source path="obs://home:mkrwc:zigzag:15.4/standard"/>
     </repository>
     <packages type="image">
         <package name="ansible"/>

@@ -28,7 +28,6 @@
   package:
     name:
       - sudo
-      - rng-tools
       - finger
       - time
       - timezone

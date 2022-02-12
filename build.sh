@@ -5,7 +5,7 @@
 # Usage: ./build.sh
 #
 
-declare -r DOCKER_TAG=zigzag:15.3
+declare -r DOCKER_TAG=zigzag:15.4
 declare -r DOCKER_RUNTIME='sudo podman'
 
 container_build()
