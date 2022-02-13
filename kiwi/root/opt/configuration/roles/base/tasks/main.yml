@@ -1,12 +1,6 @@
 ---
-# Packages
-- import_tasks: packages/base.yml
-- import_tasks: packages/management.yml
-
-# Flatpak
+- import_tasks: packages.yml
 - import_tasks: flatpak.yml
-
-# Systemd services
 - import_tasks: services.yml
 
 # This file is not provided by aaa_base
