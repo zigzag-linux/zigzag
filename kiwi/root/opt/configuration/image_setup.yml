@@ -33,6 +33,7 @@
     - memory
     - network
     - snapper
+    - immutable
     - samba
     - desktop
     - polkit

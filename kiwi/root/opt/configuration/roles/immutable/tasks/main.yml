@@ -1,0 +1,6 @@
+---
+- import_tasks: setup.yml
+  when: system_immutable and conf_stage == 'image_setup'
+
+- import_tasks: enable.yml
+  when: system_immutable and conf_stage == 'system_install'

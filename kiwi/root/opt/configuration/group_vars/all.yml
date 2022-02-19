@@ -1,3 +1,7 @@
 ---
 # Include non-free packages
 non_free: true
+
+# Make root fs read-only and update transactionally (MicroOS style)
+# (Experimental)
+system_immutable: false

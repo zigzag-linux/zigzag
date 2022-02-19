@@ -1,4 +1,4 @@
-FROM opensuse/leap
+FROM opensuse/leap:15.3
 
 RUN zypper ar obs://Virtualization:/Appliances:/Builder/openSUSE_Leap_\$releasever/ kiwi
 RUN zypper --gpg-auto-import-keys up -y

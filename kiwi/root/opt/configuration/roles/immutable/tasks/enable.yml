@@ -1,0 +1,14 @@
+---
+- name: remove /etc/fstab.sys
+  file:
+    path: /etc/fstab.sys
+    state: absent
+
+- name: setup fstab for overlayfs
+  command: setup-fstab-for-overlayfs
+
+- name: change fstab entry for root to be read-only
+  replace:
+    path: /etc/fstab
+    regexp: '/\s+btrfs\s+'
+    replace: '/ btrfs ro,'

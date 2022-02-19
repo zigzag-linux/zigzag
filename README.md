@@ -4,10 +4,10 @@ Linux workstation that gets stuff done
 
 ## Project Goals
 
-- **Stability** - Provide stable desktop for software development and other professional work. This is the main reason this project bases on OpenSUSE Leap, which has a traditional release cycle. While rolling releases are great, they also by definition bring a lot of continuous changes to the system. When it comes to getting things done, we want to have as few surprises as possible.
+- **Stability** - Provide stable desktop for software development and other professional work. This is the main reason this project bases on openSUSE Leap, which has a traditional release cycle. While rolling releases are great, they also by definition bring a lot of continuous changes to the system. When it comes to getting things done, we want to have as few surprises as possible.
 - **Refined Defaults** - Sensible configuration should be shipped with the default image. If new feature is added it should come pre-configured, so the after-install chores are kept to minimum. When possible single solution is chosen (e.g. KDE Plasma for desktop) in order not to maintain multiple configurations.
 - **Container-first Workflow** - The system is meant to work as a host to running containerized apps. Most of the desktop apps are installed via Flatpak. Docker-compatible runtime (podman) comes pre-installed. While the host runs on battle tested packages, new SDKs and cli tools can be used with the use of [toolbox](https://github.com/kubic-project/microos-toolbox) that ships by default.
-- **Limited Scope** - This is a respin of OpenSUSE Leap. The project does not pretend to be a separate distribution. It strives to be as easy to maintain as possible, with minimal development effort. When possible the focus is on configuration of available upstream-provided solutions.
+- **Limited Scope** - This is a respin of openSUSE Leap. The project does not pretend to be a separate distribution. It strives to be as easy to maintain as possible, with minimal development effort. When possible the focus is on configuration of available upstream-provided solutions.
 
 ## Install
 

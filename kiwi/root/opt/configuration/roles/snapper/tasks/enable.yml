@@ -23,7 +23,7 @@
 
 - name: remove hardcoded root subvolume
   replace:
-    regexp: 'subvol=/@/.snapshots/1/snapshot'
+    regexp: 'subvol=/@/.snapshots/1/snapshot,'
     path: /etc/fstab
 
 - name: enable btrfs quota support
