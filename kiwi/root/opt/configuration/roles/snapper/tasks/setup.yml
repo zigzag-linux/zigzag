@@ -3,7 +3,7 @@
   package:
     name:
       - snapper
-      - snapper-zypp-plugin
+      - python3-dnf-plugin-snapper
       - grub2-snapper-plugin
     state: present
 

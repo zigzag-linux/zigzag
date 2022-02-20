@@ -14,7 +14,7 @@
   package: name=patterns-zigzag-immutable state=present
 
 - name: remove snapper-zypp integration
-  package: name=snapper-zypp-plugin state=absent
+  package: name=python3-dnf-plugin-snapper state=absent
 
 - name: disable timeline snapshots
   lineinfile:
