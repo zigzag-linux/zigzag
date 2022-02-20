@@ -26,7 +26,7 @@
     - name: install translation packages
       command: zigzag-languages
   roles:
-    - zypper
+    - dnf
     - base
     - sudo
     - apparmor
