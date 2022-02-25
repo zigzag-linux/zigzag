@@ -31,7 +31,9 @@
       - kgamma5
       - kio-extras5
       - ksshaskpass5
-      - ksysguard5
+      - plasma5-thunderbolt
+      - plasma5-systemmonitor
+      - plasma5-disks
       - pam_kwallet
       - phonon4qt5-backend-gstreamer
       - pinentry-qt5
