@@ -1,5 +1,8 @@
 ---
 - hosts: all
+  module_defaults:
+    dnf:
+      install_weak_deps: no
   vars:
     conf_stage: image_setup
   pre_tasks:

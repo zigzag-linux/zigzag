@@ -10,6 +10,13 @@
       - udisks2
     state: present
 
+- name: install packagekit components
+  package:
+    name:
+      - appstream-stub-provider
+      - "{{ zigzag_packagekit_backend }}"
+    state: present
+
 - name: install plasma desktop
   package:
     name:
@@ -55,6 +62,3 @@
 
 - name: install breeze gtk for flatpak
   flatpak: name=org.gtk.Gtk3theme.Breeze state=present
-
-- name: install breeze-dark gtk for flatpak
-  flatpak: name=org.gtk.Gtk3theme.Breeze-Dark state=present

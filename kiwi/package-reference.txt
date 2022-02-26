@@ -12,9 +12,8 @@ apparmor-parser
 apparmor-parser-lang
 apparmor-profiles
 AppStream
-appstream-glib
-appstream-glib-lang
 AppStream-lang
+appstream-stub-provider
 argyllcms
 ark
 ark-lang
@@ -105,6 +104,9 @@ discover-backend-packagekit
 discover-lang
 discover-notifier
 dmidecode
+dnf
+dnf-data
+dnf-lang
 dolphin
 dolphin-part
 dolphin-part-lang
@@ -139,8 +141,6 @@ fuse-overlayfs
 fwupd
 fwupd-lang
 gawk
-gcab
-gcab-lang
 gconf2
 gconf2-lang
 gdk-pixbuf-lang
@@ -160,8 +160,6 @@ glib-networking-lang
 gmenudbusmenuproxy
 gpg2
 gpg2-lang
-gpg-pubkey
-gpg-pubkey
 gpg-pubkey
 gpg-pubkey
 gpg-pubkey
@@ -210,7 +208,6 @@ iw
 json-glib-lang
 kactivities5-imports
 kactivitymanagerd
-kactivitymanagerd-lang
 kbd
 kbd-legacy
 kcm_tablet
@@ -348,7 +345,6 @@ libatopology2
 libatspi0
 libattr1
 libaudit1
-libaugeas0
 libauparse0
 libavahi-client3
 libavahi-common3
@@ -401,9 +397,9 @@ libcmrt1
 libcolord2
 libcolorhug2
 libcom_err2
+libcomps0
 libcontainers-common
 libcrack2
-libcreaterepo_c0
 libcroco-0_6-3
 libcrypt1
 libcryptsetup12
@@ -419,6 +415,7 @@ libdevmapper1_03
 libdevmapper-event1_03
 libdialog14
 libdmtx0
+libdnf2
 libdns1605
 libdolphinvcs5
 libdouble-conversion3
@@ -513,7 +510,6 @@ libIex-2_2-23
 libigdgmm11
 libIlmImf-2_2-23
 libIlmThread-2_2-23
-libimagequant0
 libimobiledevice6
 libinput10
 libip4tc2
@@ -731,14 +727,12 @@ libpoppler89
 libpoppler-qt5-1
 libpopt0
 libpostproc55_9
-libprocps7
 libprotobuf-lite20
 libproxy1
 libpsl5
 libpulse0
 libpulse-mainloop-glib0
 libpwquality1
-libpwquality-lang
 libpython3_6m1_0
 libqalculate14
 libqca-qt5
@@ -780,6 +774,7 @@ libraw16
 libre2-9
 libreadline7
 libreiserfscore0
+librepo0
 librest-0_7-0
 librsvg-2-2
 librsvg-lang
@@ -955,7 +950,6 @@ libzio1
 libzip5
 libzstd1
 libzypp
-libzypp-plugin-appdata
 login_defs
 logrotate
 lsof
@@ -1013,7 +1007,7 @@ p11-kit
 p11-kit-tools
 p7zip
 PackageKit
-PackageKit-backend-zypp
+PackageKit-backend-dnf
 PackageKit-branding-openSUSE
 PackageKit-lang
 pam
@@ -1075,7 +1069,6 @@ plasma-framework-lang
 plasma-nm5
 plasma-nm5-lang
 plasma-nm5-openvpn
-pngquant
 podman
 polkit
 polkit-default-privs
@@ -1087,7 +1080,6 @@ powertop
 powertop-lang
 ppp
 prison-qt5-imports
-procps
 psmisc
 psmisc-lang
 python3
@@ -1098,12 +1090,21 @@ python3-base
 python3-bcrypt
 python3-bind
 python3-cffi
-python3-cmdln
-python3-createrepo_c
 python3-cryptography
 python3-curses
+python3-dbus-python
+python3-dnf
+python3-dnf-plugins-extras-common
+python3-dnf-plugin-snapper
+python3-dnf-plugin-system-upgrade
+python3-gobject
+python3-gpg
+python3-hawkey
 python3-Jinja2
 python3-jmespath
+python3-libcomps
+python3-libdnf
+python3-libmodulemd
 python3-MarkupSafe
 python3-packaging
 python3-paramiko
@@ -1121,11 +1122,14 @@ python3-setuptools
 python3-simplejson
 python3-six
 python3-solv
+python3-systemd
 rgb
 rng-tools
 rpm
 rpmconf
 rpm-config-SUSE
+rpm-repo-keys-openSUSE
+rpm-repos-openSUSE-Leap
 rsync
 runc
 samba
@@ -1149,7 +1153,6 @@ shim
 slirp4netns
 smartmontools
 snapper
-snapper-zypp-plugin
 socat
 solid-imports
 sonnet
@@ -1197,6 +1200,7 @@ tlp
 tlp-rdw
 toolbox
 typelib-1_0-Fwupd-2_0
+typelib-1_0-Modulemd-2_0
 ucode-amd
 ucode-intel
 udev
@@ -1274,4 +1278,3 @@ zd1211-firmware
 zigzag-languages
 zigzag-wallpapers
 zram-generator
-zypper

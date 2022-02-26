@@ -1,4 +1,10 @@
 ---
+- name: set dnf specific variables
+  set_fact:
+    zigzag_package_manager: dnf
+    zigzag_snapper_plugin: python3-dnf-plugin-snapper
+    zigzag_packagekit_backend: PackageKit-backend-dnf
+
 - name: set 'install_weak_deps=False' dnf option
   ini_file:
     path: /etc/dnf/dnf.conf
@@ -8,11 +14,16 @@
     option: install_weak_deps
     value: 'False'
 
+- name: ensure dnf cache is empty before mount
+  file:
+    path: /var/cache/dnf
+    state: absent
+
 # this ensures no cached data is left on the image
-- name: make tempfs mount on dnf cache
+- name: mount tempfs on dnf cache directory
   mount:
     path: /var/cache/dnf
-    src: 'tmpfs'
+    src: tmpfs
     fstype: tmpfs
     state: mounted
     fstab: /tmp/tmp.fstab
@@ -30,8 +41,11 @@
     replace: '$releasever'
   with_items: "{{ dnf_repos.files }}"
 
-- name: fix broken symlink to gpg key
+- name: workaround - fix broken symlink to gpg key
   file:
     src: /usr/lib/rpm/gnupg/keys/gpg-pubkey-65176565-61a0ee8f.asc
     dest: /etc/pki/rpm-gpg/RPM-GPG-KEY-openSUSE-Backports
     state: link
+
+- name: install system upgrade dnf plugin
+  package: name=python3-dnf-plugin-system-upgrade state=present

@@ -6,15 +6,11 @@
     path: /etc/fstab.sys
     state: touch
 
-# install this prior to immutable pattern as toolbox could choose docker instead
-- name: install container runtime for toolbox
-  package: name=podman state=present
-
 - name: install immutable pattern
   package: name=patterns-zigzag-immutable state=present
 
-- name: remove snapper-zypp integration
-  package: name=python3-dnf-plugin-snapper state=absent
+- name: remove snapper integration plugin
+  package: name="{{ zigzag_snapper_plugin }}" state=absent
 
 - name: disable timeline snapshots
   lineinfile:
