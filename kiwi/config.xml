@@ -57,8 +57,8 @@
         <package name="ca-certificates-mozilla"/>
         <!-- Listed here so that correct variant is choosen: -->
         <package name="openSUSE-release"/>
-        <package name="systemd-presets-branding-openSUSE"/>
-        <package name="systemd-default-settings-branding-openSUSE"/>
+        <package name="systemd-presets-branding-MicroOS"/>
+        <package name="systemd-default-settings-branding-SLE-Micro"/>
         <package name="cracklib-dict-full"/>
     </packages>
 </image>

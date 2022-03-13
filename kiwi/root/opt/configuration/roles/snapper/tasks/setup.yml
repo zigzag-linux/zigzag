@@ -3,7 +3,6 @@
   package:
     name:
       - snapper
-      - "{{ zigzag_snapper_plugin }}"
       - grub2-snapper-plugin
     state: present
 

@@ -9,9 +9,6 @@
 - name: install immutable pattern
   package: name=patterns-zigzag-immutable state=present
 
-- name: remove snapper integration plugin
-  package: name="{{ zigzag_snapper_plugin }}" state=absent
-
 - name: disable timeline snapshots
   lineinfile:
     path: /etc/snapper/configs/root

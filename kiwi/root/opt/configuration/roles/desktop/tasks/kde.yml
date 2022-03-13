@@ -10,13 +10,6 @@
       - udisks2
     state: present
 
-- name: install packagekit components
-  package:
-    name:
-      - appstream-stub-provider
-      - "{{ zigzag_packagekit_backend }}"
-    state: present
-
 - name: install plasma desktop
   package:
     name:

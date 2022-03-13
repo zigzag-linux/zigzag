@@ -4,6 +4,3 @@
 
 - name: enable avahi service
   systemd: name=avahi-daemon enabled=yes
-
-- name: enable zigzag-languages service
-  systemd: name=zigzag-languages enabled=yes

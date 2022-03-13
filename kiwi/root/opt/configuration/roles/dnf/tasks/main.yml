@@ -1,10 +1,4 @@
 ---
-- name: set dnf specific variables
-  set_fact:
-    zigzag_package_manager: dnf
-    zigzag_snapper_plugin: python3-dnf-plugin-snapper
-    zigzag_packagekit_backend: PackageKit-backend-dnf
-
 - name: set 'install_weak_deps=False' dnf option
   ini_file:
     path: /etc/dnf/dnf.conf
@@ -40,12 +34,3 @@
     regexp: "{{ ansible_distribution_version }}"
     replace: '$releasever'
   with_items: "{{ dnf_repos.files }}"
-
-- name: workaround - fix broken symlink to gpg key
-  file:
-    src: /usr/lib/rpm/gnupg/keys/gpg-pubkey-65176565-61a0ee8f.asc
-    dest: /etc/pki/rpm-gpg/RPM-GPG-KEY-openSUSE-Backports
-    state: link
-
-- name: install system upgrade dnf plugin
-  package: name=python3-dnf-plugin-system-upgrade state=present
