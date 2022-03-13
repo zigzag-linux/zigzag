@@ -10,7 +10,7 @@
 - name: install kernel and firmware
   package:
     name:
-      - kernel-default
+      - kernel-default-optional
       - patterns-zigzag-firmware
     state: present
 
