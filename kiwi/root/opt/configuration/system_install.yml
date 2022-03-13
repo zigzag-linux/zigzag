@@ -13,11 +13,14 @@
         regexp: '^RC_LANG'
         line: 'RC_LANG="{{ item }}"'
       with_items: "{{ lookup('ini', 'LANG type=properties file=/etc/locale.conf') }}"
-  # post_tasks:
-  #   - name: remove configuration playbooks
-  #     file:
-  #       path: "{{ playbook_dir }}"
-  #       state: absent
+    # calamares only creates the fstab entry if root device is an ssd
+    - name: ensure /tmp mountpoint is present in /etc/fstab
+      mount:
+        path: /tmp
+        src: tmpfs
+        fstype: tmpfs
+        opts: defaults,noatime,mode=1777
+        state: present
   roles:
     - live
     - network

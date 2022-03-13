@@ -14,12 +14,12 @@
     option: install_weak_deps
     value: 'False'
 
-- name: ensure dnf cache is empty before mount
+- name: clear dnf cache before mounting
   file:
     path: /var/cache/dnf
     state: absent
 
-# this ensures no cached data is left on the image
+# this prevents cached data left on the image
 - name: mount tempfs on dnf cache directory
   mount:
     path: /var/cache/dnf
@@ -34,7 +34,7 @@
     patterns: "*.repo"
   register: dnf_repos
 
-- name: ensure no hardcoded repo versions present
+- name: remove hardcoded repo versions
   replace:
     path: "{{ item.path }}"
     regexp: "{{ ansible_distribution_version }}"

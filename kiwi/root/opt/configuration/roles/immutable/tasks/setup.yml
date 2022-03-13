@@ -1,6 +1,6 @@
 ---
-# by creating this file, ensure that setup-fstab-for-overlayfs
-# won't setup overlay fstab entries, we will set it up in 'enable' phase
+# by creating this file, prevent setup-fstab-for-overlayfs setup of
+# overlay fstab entries. We will set it up in 'enable' phase
 - name: touch /etc/fstab.sys
   file:
     path: /etc/fstab.sys

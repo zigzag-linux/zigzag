@@ -14,7 +14,7 @@
   register: chattr_cow
   failed_when: "chattr_cow.failed and 'not supported' not in chattr_cow.details"
 
-- name: ensure correct permissions on /.snapshots
+- name: set correct permissions on /.snapshots
   file:
     path: /.snapshots
     owner: root
