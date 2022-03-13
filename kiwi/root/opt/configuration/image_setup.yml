@@ -3,6 +3,7 @@
   module_defaults:
     dnf:
       install_weak_deps: no
+      disable_gpg_check: yes # tmp workaround
   vars:
     conf_stage: image_setup
   pre_tasks:
@@ -19,6 +20,11 @@
     - name: remove dracut-kiwi-live package
       dnf: name=dracut-kiwi-live state=absent autoremove=yes
   post_tasks:
+    - name: workaround - disable gpg check in zigzag-languages
+      lineinfile:
+        path: /usr/lib/python3.6/site-packages/zigzag_languages/commands/dnf.py
+        regexp: '^BASE_ARGS'
+        line: 'BASE_ARGS = ("dnf", "--nogpgcheck", "--quiet")'
     - name: install translation packages
       command: zigzag-languages
   roles:
