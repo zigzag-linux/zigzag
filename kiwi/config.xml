@@ -52,6 +52,7 @@
     </packages>
     <packages type="bootstrap">
         <package name="filesystem"/>
+        <package name="util-linux"/>
         <package name="glibc-locale"/>
         <package name="ca-certificates-mozilla"/>
         <!-- Listed here so that correct variant is choosen: -->

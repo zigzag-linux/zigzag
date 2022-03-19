@@ -6,13 +6,6 @@
   vars:
     conf_stage: image_setup
   pre_tasks:
-    - name: touch missing files to remove xorriso - workaround boo#1089175
-      command: touch {{item}}
-      with_items:
-        - /usr/share/info/xorrisofs.info.gz
-        - /usr/share/info/xorrecord.info.gz
-        - /usr/share/info/xorriso.info.gz
-
     # ensure that the rpm database type is not influenced by kiwi host
     # system, resolves the following warning:
     # > Found NDB Packages.db database while attempting bdb backend:
@@ -24,7 +17,7 @@
     # removed at the beginning so that it's dependencies are marked as
     # manually installed when we list them in the playbook
     - name: remove dracut-kiwi-live package
-      package: name=dracut-kiwi-live state=absent
+      dnf: name=dracut-kiwi-live state=absent autoremove=yes
   post_tasks:
     - name: install translation packages
       command: zigzag-languages

@@ -1,6 +1,5 @@
 ---
-# Include non-free packages
-non_free: true
+install_fetchmsttfonts: true
 
 # Make root fs read-only and update transactionally (MicroOS style)
 # (Experimental)
