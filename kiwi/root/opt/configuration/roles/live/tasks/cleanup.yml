@@ -8,8 +8,9 @@
     state: absent
 
 - name: remove live medium tools
-  package:
+  dnf:
     name:
       - calamares
       - dracut-kiwi-live
     state: absent
+    autoremove: yes

@@ -1,5 +1,9 @@
 ---
 - hosts: all
+  module_defaults:
+    dnf:
+      install_weak_deps: no
+      disable_gpg_check: yes # tmp workaround
   vars:
     conf_stage: image_setup
   pre_tasks:
@@ -14,12 +18,17 @@
     # removed at the beginning so that it's dependencies are marked as
     # manually installed when we list them in the playbook
     - name: remove dracut-kiwi-live package
-      package: name=dracut-kiwi-live state=absent
+      dnf: name=dracut-kiwi-live state=absent autoremove=yes
   post_tasks:
+    - name: workaround - disable gpg check in zigzag-languages
+      lineinfile:
+        path: /usr/lib/python3.6/site-packages/zigzag_languages/commands/dnf.py
+        regexp: '^BASE_ARGS'
+        line: 'BASE_ARGS = ("dnf", "--nogpgcheck", "--quiet")'
     - name: install translation packages
       command: zigzag-languages
   roles:
-    - zypper
+    - dnf
     - base
     - sudo
     - apparmor

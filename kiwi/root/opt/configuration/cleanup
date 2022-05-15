@@ -2,6 +2,6 @@
 
 set -e
 
-zypper remove -y ansible
+dnf --noplugins remove -y ansible
 rm -fr `dirname $0`
 btrfs property set -t subvol / ro true

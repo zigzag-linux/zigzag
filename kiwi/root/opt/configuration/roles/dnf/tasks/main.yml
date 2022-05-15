@@ -1,0 +1,36 @@
+---
+- name: set 'install_weak_deps=False' dnf option
+  ini_file:
+    path: /etc/dnf/dnf.conf
+    no_extra_spaces: yes
+    create: no
+    section: main
+    option: install_weak_deps
+    value: 'False'
+
+- name: clear dnf cache before mounting
+  file:
+    path: /var/cache/dnf
+    state: absent
+
+# this prevents cached data left on the image
+- name: mount tempfs on dnf cache directory
+  mount:
+    path: /var/cache/dnf
+    src: tmpfs
+    fstype: tmpfs
+    state: mounted
+    fstab: /tmp/tmp.fstab
+
+- name: find all dnf repo files
+  find:
+    paths: /etc/yum.repos.d/
+    patterns: "*.repo"
+  register: dnf_repos
+
+- name: remove hardcoded repo versions
+  replace:
+    path: "{{ item.path }}"
+    regexp: "{{ ansible_distribution_version }}"
+    replace: '$releasever'
+  with_items: "{{ dnf_repos.files }}"
