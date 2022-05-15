@@ -1,11 +1,4 @@
 ---
-- name: install NetworkManager
-  package:
-    name:
-      - NetworkManager
-      - NetworkManager-openvpn
-    state: present
-
 - name: check if wicked installed
   package_facts:
     manager: auto

@@ -1,15 +1,4 @@
 ---
-- name: install font packages
-  package:
-    name:
-      - fonts-config
-      - iosevka-fonts-mini
-      - noto-sans-fonts
-      - noto-sans-sc-fonts
-      - noto-sans-jp-fonts
-      - noto-coloremoji-fonts
-    state: present
-
 - name: install microsoft fonts
   package: name=fetchmsttfonts state=present
   when: install_fetchmsttfonts == true

@@ -1,7 +1,4 @@
 ---
-- name: install systemd-resolved
-  package: name=systemd-network state=present
-
 - name: disable netconfig dns resolution
   lineinfile:
     path: /etc/sysconfig/network/config

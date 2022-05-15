@@ -1,6 +1,3 @@
 ---
-- name: install earlyoom
-  package: name=earlyoom state=present
-
 - name: enable earlyoom
   systemd: name=earlyoom enabled=yes

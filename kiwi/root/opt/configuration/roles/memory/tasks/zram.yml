@@ -1,7 +1,4 @@
 ---
-- name: install zram-generator
-  package: name=zram-generator state=present
-
 - name: copy zram-generator configuration
   copy:
     src: zram-generator.conf

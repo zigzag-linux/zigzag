@@ -1,16 +1,4 @@
 ---
-- name: install audio stack
-  package:
-    name:
-      - alsa-firmware
-      - alsa-utils
-      - pipewire
-      - pipewire-modules
-      - pipewire-alsa
-      - pipewire-pulseaudio
-      - gstreamer-plugin-pipewire
-    state: present
-
 - name: workaround - enable wireplumber for all users
   systemd:
     name: wireplumber

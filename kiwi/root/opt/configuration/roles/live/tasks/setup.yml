@@ -1,11 +1,4 @@
 ---
-- name: install live medium tools
-  package:
-    name:
-      - calamares-branding-zigzag
-      - dracut-kiwi-live
-    state: present
-
 - name: copy systemd live service unit
   copy:
     src: zigzag-live.service

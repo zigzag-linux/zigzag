@@ -1,7 +1,4 @@
 ---
-- name: install default polkit rules
-  package: name=polkit-default-privs state=present
-
 - name: copy polkit rules
   copy:
     src: "{{item}}"

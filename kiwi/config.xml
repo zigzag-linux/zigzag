@@ -43,11 +43,26 @@
         <source path="obs://home:mkrwc:zigzag:15.4/standard"/>
     </repository>
     <packages type="image">
-        <package name="ansible"/>
-        <package name="openSUSE-build-key"/>
-    </packages>
-    <packages type="iso">
+        <package name="patterns-zigzag-apparmor"/>
+        <package name="patterns-zigzag-audio"/>
+        <package name="patterns-zigzag-base"/>
+        <package name="patterns-zigzag-desktop"/>
+        <package name="patterns-zigzag-firmware"/>
+        <package name="patterns-zigzag-gfx"/>
+        <package name="patterns-zigzag-immutable"/>
+        <package name="patterns-zigzag-laptop"/>
+        <package name="patterns-zigzag-network"/>
+        <package name="patterns-zigzag-plasma"/>
+        <package name="patterns-zigzag-plasma-apps"/>
+        <package name="patterns-zigzag-utils"/>
+        <package name="patterns-zigzag-xfirmware-intel"/>
+        <package name="patterns-zigzag-xfirmware-nouveau"/>
+        <package name="patterns-zigzag-xfirmware-radeon"/>
+        <package name="patterns-zigzag-xorg"/>
+
         <package name="dracut-kiwi-live"/>
+        <package name="ansible"/>
+        <package name="calamares-branding-zigzag"/>
     </packages>
     <packages type="bootstrap">
         <package name="filesystem"/>

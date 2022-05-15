@@ -102,9 +102,7 @@ discover-backend-packagekit
 discover-lang
 discover-notifier
 dmidecode
-dnf
 dnf-data
-dnf-lang
 dolphin
 dolphin-part
 dolphin-part-lang
@@ -159,6 +157,11 @@ glib-networking-lang
 gmenudbusmenuproxy
 gpg2
 gpg2-lang
+gpg-pubkey
+gpg-pubkey
+gpg-pubkey
+gpg-pubkey
+gpg-pubkey
 gptfdisk
 grep
 grep-lang
@@ -198,7 +201,6 @@ intel-hybrid-driver
 intel-media-driver
 intel-vaapi-driver
 iosevka-fonts-mini
-iotop
 iproute2
 iptables
 iputils
@@ -209,6 +211,7 @@ iw
 json-glib-lang
 kactivities5-imports
 kactivitymanagerd
+kactivitymanagerd-lang
 kbd
 kbd-legacy
 kcm_tablet
@@ -351,6 +354,7 @@ libatopology2
 libatspi0
 libattr1
 libaudit1
+libaugeas0
 libauparse0
 libavahi-client3
 libavahi-common3
@@ -401,7 +405,6 @@ libcmrt1
 libcolord2
 libcolorhug2
 libcom_err2
-libcomps0
 libcontainers-common
 libcrack2
 libcrypt1
@@ -726,6 +729,7 @@ libpoppler117
 libpoppler-qt5-1
 libpopt0
 libpostproc55_9
+libprocps7
 libprotobuf-c1
 libprotobuf-lite20
 libproxy1
@@ -733,6 +737,7 @@ libpsl5
 libpulse0
 libpulse-mainloop-glib0
 libpwquality1
+libpwquality-lang
 libpython3_6m1_0
 libqaccessibilityclient-qt5-0
 libqalculate14
@@ -1026,11 +1031,22 @@ pam_kwallet-common
 parted
 parted-lang
 patterns-base-minimal_base
+patterns-zigzag-apparmor
+patterns-zigzag-audio
+patterns-zigzag-base
+patterns-zigzag-desktop
 patterns-zigzag-firmware
+patterns-zigzag-gfx
 patterns-zigzag-immutable
+patterns-zigzag-laptop
+patterns-zigzag-network
+patterns-zigzag-plasma
+patterns-zigzag-plasma-apps
+patterns-zigzag-utils
 patterns-zigzag-xfirmware-intel
 patterns-zigzag-xfirmware-nouveau
 patterns-zigzag-xfirmware-radeon
+patterns-zigzag-xorg
 pciutils
 perl
 perl-base
@@ -1096,6 +1112,7 @@ powertop
 powertop-lang
 ppp
 prison-qt5-imports
+procps
 psmisc
 psmisc-lang
 pulseaudio-setup
@@ -1108,16 +1125,8 @@ python3-bcrypt
 python3-bind
 python3-cffi
 python3-cryptography
-python3-curses
-python3-dnf
-python3-gobject
-python3-gpg
-python3-hawkey
 python3-Jinja2
 python3-jmespath
-python3-libcomps
-python3-libdnf
-python3-libmodulemd
 python3-MarkupSafe
 python3-ordered-set
 python3-packaging
@@ -1143,8 +1152,6 @@ rgb
 rpm
 rpmconf
 rpm-config-SUSE
-rpm-repo-keys-openSUSE
-rpm-repos-openSUSE-Leap
 rsync
 runc
 samba
@@ -1223,7 +1230,6 @@ toolbox
 tukit
 typelib-1_0-Fwupd-2_0
 typelib-1_0-Json-1_0
-typelib-1_0-Modulemd-2_0
 ucode-amd
 ucode-intel
 udev
@@ -1238,8 +1244,8 @@ usbutils
 util-linux
 util-linux-lang
 util-linux-systemd
-vim
 vim-data-common
+vim-small
 vulkan-tools
 w3m
 wallpaper-branding-openSUSE
@@ -1275,7 +1281,9 @@ xf86-input-wacom
 xf86-video-amdgpu
 xf86-video-ati
 xf86-video-fbdev
+xf86-video-mach64
 xf86-video-nouveau
+xf86-video-r128
 xf86-video-vmware
 xfsprogs
 xhost
@@ -1308,3 +1316,4 @@ zigzag-languages
 zigzag-wallpapers
 zram-generator
 zstd
+zypper

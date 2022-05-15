@@ -1,10 +1,4 @@
 ---
-- name: install sudo
-  package: name=sudo state=present
-
-- name: install wheel group provider
-  package: name=system-group-wheel state=present
-
 - name: copy sudoers config
   copy:
     src: files/sudoers

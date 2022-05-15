@@ -1,12 +1,4 @@
 ---
-- name: install samba packages
-  package:
-    name:
-      - samba
-      - samba-client
-      - cifs-utils
-    state: present
-
 - name: setup usershares directory
   file:
     path: /var/lib/samba/usershares

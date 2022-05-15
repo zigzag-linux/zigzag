@@ -1,11 +1,4 @@
 ---
-- name: install snapper
-  package:
-    name:
-      - snapper
-      - grub2-snapper-plugin
-    state: present
-
 - name: init snapper config
   copy:
     src: /etc/snapper/config-templates/default
