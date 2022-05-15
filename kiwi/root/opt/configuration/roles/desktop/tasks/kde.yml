@@ -37,6 +37,7 @@
       - plasma5-session-wayland
       - sddm
       - xdg-desktop-portal-kde
+      - xdg-desktop-portal-gtk
     state: present
 
 - name: install desktop apps

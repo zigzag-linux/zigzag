@@ -3,16 +3,17 @@
   package:
     name:
       - patterns-base-minimal_base
+      - patterns-zigzag-firmware
       - mozilla-nss-certs
       - openSUSE-signkey-cert
     state: present
 
-- name: install kernel and firmware
-  package:
-    name:
-      - kernel-default-optional
-      - patterns-zigzag-firmware
-    state: present
+- name: install kernel
+  package: name=kernel-default-optional state=present
+  register: kernel_install
+  # Error code 107 means that post-install script failed
+  # This is fine, since we're running in chroot environment
+  failed_when: "kernel_install.failed and kernel_install.rc != 107"
 
 - name: install bootloader
   package:
@@ -45,7 +46,6 @@
       - avahi
       - zigzag-languages
       - bash-completion
-      - command-not-found
       - podman
       - toolbox
       - vim

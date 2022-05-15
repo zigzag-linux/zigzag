@@ -31,6 +31,7 @@ baloo5-widgets-lang
 bash
 bash-completion
 bash-lang
+bash-sh
 bcm20702a1-firmware
 bind-utils
 blog
@@ -68,7 +69,6 @@ colord-color-profiles
 colord-kde
 colord-kde-lang
 colord-lang
-command-not-found
 conmon
 coreutils
 coreutils-lang
@@ -478,7 +478,7 @@ libgomp1
 libgpg-error0
 libgpgme11
 libgpgmepp6
-libgps25
+libgps29
 libgraphene-1_0-0
 libgraphite2-3
 libgsm1
@@ -971,6 +971,7 @@ Mesa-libEGL1
 Mesa-libGL1
 Mesa-libglapi0
 Mesa-libva
+Mesa-vulkan-device-select
 metatheme-breeze-common
 microos-tools
 milou5
@@ -1097,6 +1098,7 @@ ppp
 prison-qt5-imports
 psmisc
 psmisc-lang
+pulseaudio-setup
 python3
 python3-appdirs
 python3-asn1crypto
@@ -1133,7 +1135,6 @@ python3-rpmconf
 python3-setuptools
 python3-simplejson
 python3-six
-python3-solv
 qca-qt5
 qqc2-desktop-style
 qtdeclarative-imports-provides-qt5
@@ -1150,7 +1151,6 @@ samba
 samba-client
 samba-client-libs
 samba-libs
-scout
 sddm
 sddm-branding-openSUSE
 sddm-theme-openSUSE
@@ -1259,6 +1259,8 @@ xclip
 xconsole
 xdg-dbus-proxy
 xdg-desktop-portal
+xdg-desktop-portal-gtk
+xdg-desktop-portal-gtk-lang
 xdg-desktop-portal-kde
 xdg-desktop-portal-kde-lang
 xdg-desktop-portal-lang

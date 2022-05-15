@@ -9,6 +9,15 @@
 - name: install immutable pattern
   package: name=patterns-zigzag-immutable state=present
 
+- name: set 'install_weak_deps=False' dnf option
+  ini_file:
+    path: /etc/dnf/dnf.conf
+    no_extra_spaces: yes
+    create: no
+    section: main
+    option: install_weak_deps
+    value: 'False'
+
 - name: disable timeline snapshots
   lineinfile:
     path: /etc/snapper/configs/root

@@ -19,6 +19,7 @@ kiwi \
     --root $IMAGE_ROOT_DIR
 echo "To continue run ./build.sh again; To start over run 'docker volume rm zigzag-build'"
 else
+mount -t devtmpfs none /dev
 kiwi \
     --color-output \
     --shared-cache-dir=$RESULTS_DIR/cache \
