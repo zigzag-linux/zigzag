@@ -7,3 +7,6 @@
 
 - name: refresh metadata from flatpak remotes
   command: flatpak update --appstream
+
+- name: install breeze gtk for flatpak
+  flatpak: name=org.gtk.Gtk3theme.Breeze state=present

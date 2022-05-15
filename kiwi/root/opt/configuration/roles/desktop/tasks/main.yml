@@ -1,5 +1,17 @@
 ---
-- import_tasks: graphics.yml
-- import_tasks: audio.yml
-- import_tasks: laptop.yml
-- import_tasks: kde.yml
+- name: sets graphical target
+  command: systemctl set-default graphical.target
+
+- import_tasks: flatpak.yml
+
+- name: enable laptop services
+  systemd: name={{item}} enabled=yes
+  with_items:
+    - thermald
+    - tlp
+
+- name: workaround - enable wireplumber for all users
+  systemd:
+    name: wireplumber
+    scope: global
+    enabled: yes

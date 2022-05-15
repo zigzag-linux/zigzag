@@ -1,6 +1,0 @@
----
-- name: workaround - enable wireplumber for all users
-  systemd:
-    name: wireplumber
-    scope: global
-    enabled: yes

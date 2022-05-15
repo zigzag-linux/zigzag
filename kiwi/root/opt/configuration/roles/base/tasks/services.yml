@@ -1,6 +1,0 @@
----
-- name: enable time synchronization service
-  systemd: name=systemd-timesyncd enabled=yes
-
-- name: enable avahi service
-  systemd: name=avahi-daemon enabled=yes

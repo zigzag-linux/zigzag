@@ -1,3 +1,0 @@
----
-- name: install breeze gtk for flatpak
-  flatpak: name=org.gtk.Gtk3theme.Breeze state=present

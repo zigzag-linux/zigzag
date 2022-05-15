@@ -1,3 +1,0 @@
----
-- name: sets graphical target
-  command: systemctl set-default graphical.target

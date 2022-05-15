@@ -1,6 +1,9 @@
 ---
-- import_tasks: flatpak.yml
-- import_tasks: services.yml
+- name: enable time synchronization service
+  systemd: name=systemd-timesyncd enabled=yes
+
+- name: enable avahi service
+  systemd: name=avahi-daemon enabled=yes
 
 # This file is not provided by aaa_base
 # Without it update process won't regenerate grub config

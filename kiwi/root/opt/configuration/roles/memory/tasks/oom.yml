@@ -1,3 +1,0 @@
----
-- name: enable earlyoom
-  systemd: name=earlyoom enabled=yes
